@@ -1,6 +1,7 @@
 package net.chidozie.adventuregame;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileNotFoundException;
@@ -14,7 +15,7 @@ public class AdventureGame extends JFrame implements ActionListener {
 
     public AdventureGame(Player player){
         // Set the title of the JFrame
-        setTitle("Button Click Example");
+        setTitle("Adventure Game Chapter1");
 
         // Set the size of the JFrame
         setSize(400, 300);
@@ -22,11 +23,15 @@ public class AdventureGame extends JFrame implements ActionListener {
         // Set the default close operation
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        //Set the Background
+        setBackground(Color.red);
+
+
         // Create a JPanel to hold the components
         JPanel panel = new JPanel();
 
         // Create a JButton
-        button = new JButton("Click Me!");
+        button = new JButton("Start");
         button.addActionListener(this); // Add ActionListener to the button
 
         // Add the button to the panel
@@ -34,6 +39,7 @@ public class AdventureGame extends JFrame implements ActionListener {
 
         // Add the panel to the JFrame
         add(panel);
+
 
         // Make the JFrame visible
         setVisible(true);
@@ -48,19 +54,18 @@ public class AdventureGame extends JFrame implements ActionListener {
               }
     }
     public static void main(String[] args) throws FileNotFoundException{
+
        AdventureGame adventureGame = new AdventureGame(new Player());
     }
     public void Start(){
         System.out.println("hello");
+        button.setVisible(false);
     }
     public void Save(AdventureGame adventureGame) throws FileNotFoundException {
        try{
-           FileOutputStream fileOutputStream = new FileOutputStream("BinarySaves/Player.svr");
-           FileOutputStream fileOutputStream1 = new FileOutputStream("BinarySaves/Game.svr");
+           FileOutputStream fileOutputStream = new FileOutputStream("BinarySaves/Game.svr");
            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-           ObjectOutputStream objectOutputStream1 = new ObjectOutputStream(fileOutputStream1);
            objectOutputStream.writeObject(adventureGame);
-           objectOutputStream1.writeObject(player);
        }catch(IOException e){
            System.out.println("THere was an Exception" + e);
        }
