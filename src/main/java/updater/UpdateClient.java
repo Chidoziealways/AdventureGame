@@ -4,31 +4,34 @@ import java.io.*;
 import java.net.*;
 
 public class UpdateClient {
-    public static void main(String[] args) throws IOException {
-        Socket socket = new Socket("192.168.100.179", 8080); // Replace with your server's IP address
-        PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
-        BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+    public static void updateJar() throws IOException {
+        String userHome = System.getProperty("user.home");
+        String defaultPath = userHome + "AppData/Roaming/AdventureGame/AdventureGame.jar"; // Default location in user's home directory
+        try {
+            URL url = new URL("http://adventuregame.infinityfreeapp.com/AdventureGame-1.0-SNAPSHOT.jar");
+            HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
+            InputStream inputStream = httpConn.getInputStream();
 
-        // Check for updates
-        out.println("check_for_update");
-        String serverResponse = in.readLine();
-        System.out.println("Current version: " + serverResponse);
-
-        // If an update is needed, download and replace the JAR
-        if (!serverResponse.equals("1.0.1")) { // Check if update is needed
-            out.println("download_update");
-            File jarFile = new File("path/to/your/application.jar"); // Path to your current JAR file
-            byte[] buffer = new byte[4096];
-            InputStream is = socket.getInputStream();
-            FileOutputStream fos = new FileOutputStream(jarFile);
-            BufferedOutputStream bos = new BufferedOutputStream(fos);
-            int bytesRead;
-            while ((bytesRead = is.read(buffer)) != -1) {
-                bos.write(buffer, 0, bytesRead);
+            File jarFile = new File(defaultPath);
+            File parentDir = jarFile.getParentFile();
+            if (!parentDir.exists()) {
+                parentDir.mkdirs(); // Create directory if it doesn't exist
             }
-            bos.close();
+            FileOutputStream fos = new FileOutputStream(jarFile);
+            byte[] buffer = new byte[4096];
+            int bytesRead;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                fos.write(buffer, 0, bytesRead);
+            }
+            fos.close();
+            inputStream.close();
             System.out.println("Update downloaded and replaced.");
+        } catch (MalformedURLException e) {
+            System.out.println("The URL is malformed: " + e.getMessage());
+            e.printStackTrace();
+        } catch (IOException e) {
+            System.out.println("An I/O error occurred: " + e.getMessage());
+            e.printStackTrace();
         }
-        socket.close();
     }
 }

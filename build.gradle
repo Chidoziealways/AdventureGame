@@ -17,3 +17,10 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+task createJar(type: Jar) {
+    from sourceSets.main.output
+    archiveClassifier = 'app'
+    manifest {
+        attributes 'Main-Class': 'net.chidozie.adventuregame.AdventureGame' // Replace with your main class
+    }
+}

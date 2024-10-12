@@ -3,6 +3,7 @@ package net.chidozie.adventuregame;
 import net.chidozie.adventuregame.jpanel.ImagePanel;
 import updater.UpdateClient;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +13,7 @@ import java.io.*;
 public class AdventureGame extends JFrame implements ActionListener, Serializable {
     private Player player;
     private JButton button;
+    public static JTextField textField;
     public AdventureGame(Player player){
         // Set the title of the JFrame
         setTitle("Adventure Game Prologue");
@@ -36,10 +38,29 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         button.setBounds(180, 80, 1000, 100);
         button.addActionListener(this); // Add ActionListener to the button
         button.setBackground(Color.BLACK);
+        textField = new JTextField(20); //
+        textField.setBounds(180, 500, 80, 90);
+        JButton button1 = new JButton("SUBMIT");
+        button1.setBounds(180, 80, 100, 100);
+        button.setVisible(false);
+
 
         // Add the button to the panel
         panel.add(button);
         panel.add(label);
+        panel.add(textField);
+        panel.add(button1);
+
+        button1.addActionListener(e -> {
+            String jarPath = textField.getText();
+            new Thread(() -> {
+                try {
+                   UpdateClient.updateJar();
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                                  }
+            }).start();
+        });
 
         // Add the panel to the JFrame
         add(panel);
@@ -60,8 +81,8 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
               }
     }
     public static void main(String[] args) throws IOException {
-        UpdateClient.main(args);
-       AdventureGame adventureGame = new AdventureGame(new Player());
+        AdventureGame adventureGame = new AdventureGame(new Player());
+        UpdateClient.updateJar();
     }
     public void Start(){
         System.out.println("hello");
