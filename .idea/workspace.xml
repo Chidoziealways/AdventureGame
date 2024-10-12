@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="">
+    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="111100000000000">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/AdventureGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/AdventureGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +17,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AdventureGame" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,19 +58,55 @@
     <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.AdventureGame [:net.chidozie.adventuregame.AdventureGame.main()].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.preview.features.used": "true",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "C:/Users/uzowu/OneDrive/Desktop/AdventureGAme/src/main/java/net/chidozie/adventuregame/Main.java",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.AdventureGame [:net.chidozie.adventuregame.AdventureGame.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AdventureGame [jar].executor&quot;: &quot;Run&quot;,
+    &quot;JAR Application.AdventureGame-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/uzowu/OneDrive/Desktop/AdventureGAme/src/main/java/net/chidozie/adventuregame/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Gradle.AdventureGame [jar]">
+    <configuration name="AdventureGame [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="AdventureGame-1.0-SNAPSHOT.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/AdventureGame-1.0-SNAPSHOT.jar" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.AdventureGame [jar]" />
+        <item itemvalue="JAR Application.AdventureGame-1.0-SNAPSHOT.jar" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -60,6 +116,19 @@
       <option name="presentableId" value="Default" />
       <updated>1727887780025</updated>
     </task>
+    <task id="LOCAL-00001" summary="111100000000000">
+      <option name="closed" value="true" />
+      <created>1728576856929</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1728576856930</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="111100000000000" />
+    <option name="LAST_COMMIT_MESSAGE" value="111100000000000" />
   </component>
 </project>

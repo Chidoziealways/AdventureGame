@@ -10,9 +10,8 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 public class AdventureGame extends JFrame implements ActionListener {
-    private JButton button;
     private Player player;
-
+    private JButton button;
     public AdventureGame(Player player){
         // Set the title of the JFrame
         setTitle("Adventure Game Chapter1");
@@ -28,17 +27,23 @@ public class AdventureGame extends JFrame implements ActionListener {
 
 
         // Create a JPanel to hold the components
-        JPanel panel = new JPanel();
+        JLayeredPane panel = new JLayeredPane();
 
         // Create a JButton
         button = new JButton("Start");
+        JLabel label = new JLabel("HEllo");
+        label.setSize(10, 10);
+        button.setSize(0, 0);
         button.addActionListener(this); // Add ActionListener to the button
 
         // Add the button to the panel
-        panel.add(button);
+        panel.add(button, 10, 100);
+        panel.add(label, 0, 0);
 
         // Add the panel to the JFrame
         add(panel);
+
+        setLayeredPane(panel);
 
 
         // Make the JFrame visible
@@ -60,6 +65,8 @@ public class AdventureGame extends JFrame implements ActionListener {
     public void Start(){
         System.out.println("hello");
         button.setVisible(false);
+        button.setText("Hello");
+        button.setVisible(true);
     }
     public void Save(AdventureGame adventureGame) throws FileNotFoundException {
        try{
