@@ -1,6 +1,7 @@
 package net.chidozie.adventuregame;
 
 import net.chidozie.adventuregame.jpanel.ImagePanel;
+import updater.UpdateClient;
 
 import javax.swing.*;
 import java.awt.*;
@@ -58,8 +59,8 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
 
               }
     }
-    public static void main(String[] args) throws FileNotFoundException{
-
+    public static void main(String[] args) throws IOException {
+        UpdateClient.main(args);
        AdventureGame adventureGame = new AdventureGame(new Player());
     }
     public void Start(){
