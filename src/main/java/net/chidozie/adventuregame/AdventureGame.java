@@ -1,20 +1,19 @@
 package net.chidozie.adventuregame;
 
+import net.chidozie.adventuregame.jpanel.ImagePanel;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
+import java.io.*;
 
-public class AdventureGame extends JFrame implements ActionListener {
+public class AdventureGame extends JFrame implements ActionListener, Serializable {
     private Player player;
     private JButton button;
     public AdventureGame(Player player){
         // Set the title of the JFrame
-        setTitle("Adventure Game Chapter1");
+        setTitle("Adventure Game Prologue");
 
         // Set the size of the JFrame
         setSize(400, 300);
@@ -23,27 +22,28 @@ public class AdventureGame extends JFrame implements ActionListener {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         //Set the Background
-        setBackground(Color.red);
+        ImageIcon icon = new ImageIcon("");
 
 
         // Create a JPanel to hold the components
-        JLayeredPane panel = new JLayeredPane();
+        ImagePanel panel = new ImagePanel(icon.getImage());
 
         // Create a JButton
         button = new JButton("Start");
         JLabel label = new JLabel("HEllo");
         label.setSize(10, 10);
-        button.setSize(0, 0);
+        button.setBounds(180, 80, 1000, 100);
         button.addActionListener(this); // Add ActionListener to the button
+        button.setBackground(Color.BLACK);
 
         // Add the button to the panel
-        panel.add(button, 10, 100);
-        panel.add(label, 0, 0);
+        panel.add(button);
+        panel.add(label);
 
         // Add the panel to the JFrame
         add(panel);
 
-        setLayeredPane(panel);
+
 
 
         // Make the JFrame visible
