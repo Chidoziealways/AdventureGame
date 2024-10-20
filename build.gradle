@@ -3,23 +3,30 @@ plugins {
 }
 
 group = 'net.chidozie.adventuregame'
-version = '1.0-SNAPSHOT'
+version = '1.0'
 
 repositories {
     mavenCentral()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.jogamp.jogl:jogl-all-main:2.3.2'
+    implementation 'org.jogamp.gluegen:gluegen-rt-main:2.3.2'
 }
 
 test {
     useJUnitPlatform()
 }
+
 task createJar(type: Jar) {
     from sourceSets.main.output
-    archiveClassifier = 'app'
+    archiveClassifier = 'game'
     manifest {
         attributes 'Main-Class': 'net.chidozie.adventuregame.AdventureGame' // Replace with your main class
     }
