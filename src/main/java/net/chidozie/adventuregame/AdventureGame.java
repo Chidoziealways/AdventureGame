@@ -82,7 +82,11 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     public void init(GLAutoDrawable drawable) {
         GL2 gl = drawable.getGL().getGL2();
         gl.glEnable(GL.GL_DEPTH_TEST);
-        ModelLoader.loadModel("src/main/resources/your_model.obj");
+        try {
+            ModelLoader.loadModel("");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
