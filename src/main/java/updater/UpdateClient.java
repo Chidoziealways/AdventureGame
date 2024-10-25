@@ -4,20 +4,19 @@ import java.io.*;
 import java.net.*;
 
 public class UpdateClient {
-    public static void updateJar() throws IOException {
-        String userHome = System.getProperty("user.home");
-        String defaultPath = userHome + "AppData/Roaming/AdventureGame/AdventureGame.jar"; // Default location in user's home directory
+    public static void updateJar() {
         try {
-            URL url = new URL("http://adventuregame.infinityfreeapp.com/AdventureGame-1.0-SNAPSHOT.jar");
+            URL url = new URL("https://raw.githubusercontent.com/Chidoziealways/UpdateServer/main/UpdateServer.jar");
             HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpConn.getInputStream();
 
-            File jarFile = new File(defaultPath);
-            File parentDir = jarFile.getParentFile();
-            if (!parentDir.exists()) {
-                parentDir.mkdirs(); // Create directory if it doesn't exist
-            }
-            FileOutputStream fos = new FileOutputStream(jarFile);
+            // Get the current JAR path
+            String jarPath = UpdateClient.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
+            File jarFile = new File(jarPath);
+            File tempFile = new File(jarFile.getParentFile(), "YourApp_temp.jar");
+
+            // Download the new JAR to a temporary file
+            FileOutputStream fos = new FileOutputStream(tempFile);
             byte[] buffer = new byte[4096];
             int bytesRead;
             while ((bytesRead = inputStream.read(buffer)) != -1) {
@@ -25,11 +24,18 @@ public class UpdateClient {
             }
             fos.close();
             inputStream.close();
-            System.out.println("Update downloaded and replaced.");
+
+            // Replace the current JAR with the new one
+            if (jarFile.delete()) {
+                tempFile.renameTo(jarFile);
+                System.out.println("Update downloaded and replaced.");
+            } else {
+                System.out.println("Failed to delete the old JAR file.");
+            }
         } catch (MalformedURLException e) {
             System.out.println("The URL is malformed: " + e.getMessage());
             e.printStackTrace();
-        } catch (IOException e) {
+        } catch (IOException | URISyntaxException e) {
             System.out.println("An I/O error occurred: " + e.getMessage());
             e.printStackTrace();
         }
