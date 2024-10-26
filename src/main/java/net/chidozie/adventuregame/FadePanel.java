@@ -2,14 +2,12 @@ package net.chidozie.adventuregame;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class FadePanel extends JPanel {
     private float alpha = 1f; // Fully opaque
 
     public FadePanel() {
-        setBackground(Color.BLACK); // Set a background color for visibility
+        setOpaque(false); // Make sure the panel is transparent
     }
 
     @Override
