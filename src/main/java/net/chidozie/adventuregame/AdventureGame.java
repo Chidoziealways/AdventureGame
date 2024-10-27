@@ -1,19 +1,26 @@
 package net.chidozie.adventuregame;
 
+import com.google.gson.Gson;
 import updater.UpdateClient;
 import javax.swing.*;
+import javax.swing.Timer;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
 import java.io.*;
-import java.util.Arrays;
-import java.util.Optional;
-import java.util.Properties;
+import java.util.*;
 
-public class AdventureGame extends JFrame implements ActionListener, Serializable {
-    public static final String PROPERTIES_FILE = "resources/properties/run.properties";
+
+
+public class AdventureGame extends JFrame implements ActionListener, Serializable{
+    public static final String PROPERTIES_FILE = "Run/run.properties";
+    private static final String SAVE_DIR = "Saves";
+    private static final String SAVE_FILE_PATH = SAVE_DIR + "/savefile.json";
+    private static double health = 100.0;
+    private static double level = 0.0;
+    private static Map<String, String> playerData = new HashMap<>();
     private static Player player;
     private JButton button;
     public static JTextField textField;
@@ -21,15 +28,18 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     private JPanel cardPanel;
     private JProgressBar progressBar;
     private JLabel jlabel;
-    private String uname;
-    private String gender;
+    private static String uname;
+    private static String gender;
 
     public AdventureGame(Player player) throws IOException {
-       // checkFirstRun();
+       checkFirstRun();
         System.out.println("Setting up JFrame...");
         setTitle("Adventure Game Prologue");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+
+        setVisible(true);
 
         // Initialize CardLayout and CardPanel
         cardLayout = new CardLayout();
@@ -47,6 +57,7 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         cardPanel.add(firstTime, "First Time");
         cardPanel.add(mainScreen, "Main Screen");
 
+
         // Add CardPanel to JFrame
         setContentPane(cardPanel);
 
@@ -58,6 +69,10 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         startProgressBar(1);
         System.out.println("JFrame setup complete.");
     }
+
+
+
+
 
     private JPanel createLoadingScreen() {
         JPanel loadingScreen = new JPanel();
@@ -181,10 +196,21 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
                 gender.start();
             }
         });
+        JButton done = new JButton("DONE");
+        done.setBounds(100, 500, 100, 50);
+        done.setVisible(false);
         submitButton2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                gender = jTextField.getText();
+                    gender = jTextField.getText();
+                    done.setVisible(true);
+            }
+        });
+        done.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                player = new Player(uname,gender, level, health);
+                savePlayer(player);
             }
         });
 
@@ -192,6 +218,7 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         firstTime.add(jTextField);
         firstTime.add(submitButton);
         firstTime.add(submitButton2);
+        firstTime.add(done);
 
         return firstTime;
     }
@@ -279,6 +306,8 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     }
 
     public static void main(String[] args) throws IOException {
+
+
         new AdventureGame(player);
         UpdateClient.updateJar();
     }
@@ -294,15 +323,27 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     }
 
 
+    public void savePlayer(Player player) {
+        Gson gson = new Gson();
+        File saveDir = new File(SAVE_DIR);
+        if (!saveDir.exists()) {
+            if (saveDir.mkdirs()) {
+                System.out.println("Save directory created: " + SAVE_DIR);
+            } else {
+                System.out.println("Failed to create save directory: " + SAVE_DIR);
+                return; // Exit if directory creation fails
+            }
+        }
 
-    public void Save(AdventureGame adventureGame) throws FileNotFoundException {
-        try (FileOutputStream fileOutputStream = new FileOutputStream("BinarySaves/Game.svr");
-             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream)) {
-            objectOutputStream.writeObject(adventureGame);
+        try (FileWriter writer = new FileWriter(SAVE_FILE_PATH)) {
+            gson.toJson(player, writer);
+            System.out.println("Player data saved.");
         } catch (IOException e) {
-            System.out.println("There was an Exception: " + e);
+            e.printStackTrace();
         }
     }
+
+
 
     public void Load() {
         // Implementation for loading the game
@@ -342,5 +383,6 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
             return false; // Fallback in case of an error
         }
     }
+
 
 }

@@ -18,16 +18,24 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'org.jogamp.jogl:jogl-all-main:2.3.2'
     implementation 'org.jogamp.gluegen:gluegen-rt-main:2.3.2'
+    implementation 'com.google.code.gson:gson:2.8.8'
+    implementation 'org.jogamp.jogl:jogl-all-main:2.3.2'
+    implementation 'org.jogamp.gluegen:gluegen-rt-main:2.3.2'
+    implementation 'org.jogamp.jogl:jogl-all:2.3.2'
 }
 
 test {
     useJUnitPlatform()
 }
 
-task createJar(type: Jar) {
-    from sourceSets.main.output
-    archiveClassifier = 'game'
+jar {
     manifest {
-        attributes 'Main-Class': 'net.chidozie.adventuregame.AdventureGame' // Replace with your main class
+        attributes(
+                'Main-Class': 'net.chidozie.adventuregame.AdventureGame'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
+
