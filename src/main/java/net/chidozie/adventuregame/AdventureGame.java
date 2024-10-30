@@ -1,6 +1,14 @@
 package net.chidozie.adventuregame;
 
+import com.chidozie.MapSerializer;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.jogamp.opengl.*;
+import com.jogamp.opengl.GL;
+import com.jogamp.opengl.GLCapabilities;
+import com.jogamp.opengl.awt.GLCanvas;
+import org.joml.Matrix4f;
+import org.joml.Vector3f;
 import updater.UpdateClient;
 import javax.swing.*;
 import javax.swing.Timer;
@@ -9,69 +17,189 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentEvent;
 import java.awt.event.ComponentListener;
+import java.awt.image.BufferedImage;
 import java.io.*;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.*;
+import org.lwjgl.glfw.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import javax.imageio.ImageIO;
+import javax.swing.plaf.basic.BasicProgressBarUI;
 
 
-
-public class AdventureGame extends JFrame implements ActionListener, Serializable{
+public class AdventureGame extends JFrame implements ActionListener, Serializable {
     public static final String PROPERTIES_FILE = "Run/run.properties";
     private static final String SAVE_DIR = "Saves";
     private static final String SAVE_FILE_PATH = SAVE_DIR + "/savefile.json";
     private static double health = 100.0;
     private static double level = 0.0;
     private static Map<String, String> playerData = new HashMap<>();
+    private Map<String, Object> screenState = new HashMap<>();
     private static Player player;
     private JButton button;
-    public static JTextField textField;
     private CardLayout cardLayout;
     private JPanel cardPanel;
     private JProgressBar progressBar;
+    private Map<String, JPanel> screens = new HashMap<>();
     private JLabel jlabel;
     private static String uname;
     private static String gender;
+    private GLCanvas canvas;
+    private static long window;
+    private Font titleFont;
+    private Font labelfont;
+    Vector3f[] vertices = {
+            new Vector3f(-0.5f, -0.5f, 0.5f),
+            new Vector3f( 0.5f, -0.5f, 0.5f),
+            new Vector3f( 0.5f, 0.5f, 0.5f),
+            new Vector3f(-0.5f, 0.5f, 0.5f),
+            new Vector3f(-0.5f, -0.5f, -0.5f),
+            new Vector3f( 0.5f, -0.5f, -0.5f),
+            new Vector3f( 0.5f, 0.5f, -0.5f),
+            new Vector3f(-0.5f, 0.5f, -0.5f)
+    };
+    int[] indices = {
+            0, 1, 2, 2, 3, 0,
+            4, 5, 6, 6, 7, 4,
+            0, 1, 5, 5, 4, 0,
+            3, 2, 6, 6, 7, 3,
+            0, 3, 7, 7, 4, 0,
+            1, 2, 6, 6, 5, 1
+    };
+    private Matrix4f viewMatrix = new Matrix4f();
+    private Matrix4f projectionMatrix = new Matrix4f();
+    private CountDownLatch latch = new CountDownLatch(1);
 
-    public AdventureGame(Player player) throws IOException {
-       checkFirstRun();
+
+
+
+    public AdventureGame(Player player) throws IOException, InterruptedException {
+        checkFirstRun();
+        System.out.println(System.getProperty("java.library.path"));
+
         System.out.println("Setting up JFrame...");
-        setTitle("Adventure Game Prologue");
+        setTitle("Adventure Game");
         setSize(800, 600);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
+        // Set the icon image using a relative path
+        String iconPath = "additional/assets/images/Scorpion.png";
+        File iconFile = new File(iconPath);
 
-        setVisible(true);
 
+        // Check if the icon file exists
+        if (!iconFile.exists()) {
+            try {
+                // URL of the icon file on OneDrive
+                URL oneDriveUrl = new URL("https://1drv.ms/i/s!Ah_0Zcex0RSTh_5iXBPDWYy7j7NEkw?e=ClwspF");
+                // Download and save the icon
+                try (InputStream in = oneDriveUrl.openStream()) {
+                    Files.copy(in, iconFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        ImageIcon icon = new ImageIcon(iconPath);
+        setIconImage(icon.getImage());
+
+
+
+        GLCapabilities capabilities = new GLCapabilities(GLProfile.get(GLProfile.GL2));
+        capabilities.setDepthBits(24);
+        capabilities.setDoubleBuffered(true);
+        canvas = new GLCanvas(capabilities);
+        canvas.addGLEventListener(new GLEventListener() {
+            @Override public void init(GLAutoDrawable drawable) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+            }
+            @Override public void dispose(GLAutoDrawable drawable) {
+
+            }
+            @Override public void display(GLAutoDrawable drawable) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
+                // Your rendering code here
+                }
+                @Override public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glViewport(0, 0, width, height);
+            }
+        });
         // Initialize CardLayout and CardPanel
         cardLayout = new CardLayout();
         cardPanel = new JPanel(cardLayout);
 
-        // Create panels for different screens
-        JPanel loadingScreen = createLoadingScreen();
-        JPanel titleScreen = createTitleScreen();
-        JPanel firstTime = createFirstTime();
-        JPanel mainScreen = createMainScreen();
+        // Create panels for di2fferent screens
 
-        // Add panels to CardPanel
-        cardPanel.add(loadingScreen, "Loading Screen");
-        cardPanel.add(titleScreen, "Title Screen");
-        cardPanel.add(firstTime, "First Time");
-        cardPanel.add(mainScreen, "Main Screen");
+
 
 
         // Add CardPanel to JFrame
         setContentPane(cardPanel);
 
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                GLFW.glfwDestroyWindow(window);
+                GLFW.glfwTerminate();
+            }
+        });
+
         // Make JFrame visible after everything is set up
         setVisible(true);
         this.player = player;
-
-        // Start Progress Bar
-        startProgressBar(1);
+        new Thread(() -> {
+            try {
+                init();
+                latch.countDown();
+                // Indicate initialization is complete
+                System.out.println("COMPLETE");
+                setupScreens();
+                // Start Progress Bar
+                startProgressBar(1);
+                } catch (Exception e) {
+                System.out.println("Initialization Exception");
+                System.err.println(e);
+                e.printStackTrace();
+            }
+        }).start();
         System.out.println("JFrame setup complete.");
     }
 
 
 
+
+    private void init() {
+        canvas.addGLEventListener(new GLEventListener() {
+            @Override public void init(GLAutoDrawable drawable) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glClearColor(0f, 0f, 0f, 1f);
+            }
+            @Override public void dispose(GLAutoDrawable drawable) {
+                // Cleanup
+                }
+            @Override public void display(GLAutoDrawable drawable) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
+                // Render your models here
+                player.render(null, null);
+            }
+            @Override public void reshape(GLAutoDrawable drawable, int x, int y, int width, int height) {
+                GL2 gl = drawable.getGL().getGL2();
+                gl.glViewport(0, 0, width, height);
+            }
+        }); // Request rendering immediately
+         canvas.display();
+    }
 
 
     private JPanel createLoadingScreen() {
@@ -79,16 +207,21 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         loadingScreen.setLayout(null);
 
         // Components
-        Font pixel = new Font("Pixel", Font.BOLD, 100);
+        titleFont = new Font("Pixel", Font.BOLD, 100);
         JLabel loadingTitle = new JLabel("ADVENTURE GAME");
-        loadingTitle.setFont(pixel);
+        loadingTitle.setFont(titleFont);
         loadingTitle.setBounds(200, 200, 1000, 100);
 
         progressBar = new JProgressBar(0, 100);
         progressBar.setBounds(130, 500, 1000, 30);
-        progressBar.setUI(new javax.swing.plaf.basic.BasicProgressBarUI() {
-            protected Color getSelectionBackground() { return Color.WHITE; }
-            protected Color getSelectionForeground() { return Color.RED; }
+        progressBar.setUI(new BasicProgressBarUI() {
+            protected Color getSelectionBackground() {
+                return Color.WHITE;
+            }
+
+            protected Color getSelectionForeground() {
+                return Color.RED;
+            }
         });
         progressBar.setForeground(Color.RED);
         progressBar.setBackground(Color.BLACK);
@@ -104,29 +237,55 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     }
 
     private JPanel createTitleScreen() {
-        JPanel titleScreen = new JPanel();
-        titleScreen.setLayout(null);
-        titleScreen.setBackground(Color.LIGHT_GRAY);
+        JPanel titleScreen = getjPanel();
 
-        JLabel label = new JLabel("Title Screen");
-        label.setBounds(10, 10, 80, 20);
+        JLabel label = new JLabel("Adventure Game");
+        label.setBounds(400, 10, 1000, 90);
+        label.setFont(titleFont);
 
         button = new JButton("Start");
-        button.setBounds(200, 150, 100, 30);
+        button.setBounds(400, 150, 600, 90);
         button.addActionListener(this);
-
-        textField = new JTextField(20);
-        textField.setBounds(180, 500, 80, 30);
+        // Load the image
+        ImageIcon startButtonIcon = new ImageIcon("additional/assets/images/Scorpion.png");
+        button.setIcon(startButtonIcon);
+        // Optional:
+        button.setBorderPainted(false);
+        button.setContentAreaFilled(false);
+        button.setHorizontalTextPosition(JButton.CENTER);
+        button.setVerticalTextPosition(JButton.CENTER);
 
         JButton closeButton = new JButton("Quit Game");
-        closeButton.setBounds(200, 600, 100, 30);
+        closeButton.setBounds(400, 550, 600, 90);
         closeButton.addActionListener(e -> dispose());
 
         titleScreen.add(label);
         titleScreen.add(button);
-        titleScreen.add(textField);
+
         titleScreen.add(closeButton);
 
+        return titleScreen;
+    }
+
+    private JPanel getjPanel() {
+        JPanel titleScreen = new JPanel(){
+            BufferedImage image;
+            {
+                try {
+                image = ImageIO.read(new File("additional/assets/images/Scorpion.png"));
+            } catch (IOException ex) {
+                    ex.printStackTrace();
+            }
+
+            }
+            @Override protected void paintComponent(Graphics g) {
+                super.paintComponent(g); if (image != null)
+                { g.drawImage(image, 0, 0, this.getWidth(), this.getHeight(), this);
+                }
+            }
+        };
+        titleScreen.setLayout(null);
+        titleScreen.setBackground(Color.LIGHT_GRAY);
         return titleScreen;
     }
 
@@ -135,8 +294,8 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         firstTime.setLayout(null);
 
         JLabel jLabel = new JLabel();
-        jLabel.setBounds(200, 100, 1000, 200);
-        Font labelfont = new Font("Pixel", Font.BOLD, 30);
+        jLabel.setBounds(200, 100, 1000, 100);
+        labelfont = new Font("Pixel", Font.BOLD, 30);
         jLabel.setFont(labelfont);
 
         JTextField jTextField = new JTextField();
@@ -147,9 +306,14 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         submitButton.setBounds(200, 300, 200, 30);
         submitButton.setVisible(false);
 
-        JButton submitButton2 = new JButton("Submit");
-        submitButton2.setBounds(200, 300, 200, 30);
-        submitButton2.setVisible(false);
+        JCheckBox jCheckBox = new JCheckBox("Male");
+        jCheckBox.setBounds(100, 400, 90, 60);
+        jCheckBox.setVisible(false);
+
+        JCheckBox jCheckBox2 = new JCheckBox("Female");
+        jCheckBox2.setBounds(400, 400, 90, 60);
+        jCheckBox2.setVisible(false);
+
 
         firstTime.addComponentListener(new ComponentListener() {
             @Override
@@ -168,7 +332,7 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
                 SlowTyper stext = new SlowTyper(jLabel, text, 200, Arrays.asList(
                         Optional.of(() -> jTextField.setVisible(true)),
                         Optional.of(() -> submitButton.setVisible(true))
-                        ));
+                ));
                 stext.start();
             }
 
@@ -179,19 +343,17 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         });
 
 
-
         submitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                 uname = jTextField.getText();
+                uname = jTextField.getText();
                 jTextField.setVisible(false);
                 submitButton.setVisible(false);
                 jLabel.setText(" ");
-                String text = "Hello" + uname + "What is your gender?";
+                String text = "Hello " + uname + " What is your gender?";
                 SlowTyper gender = new SlowTyper(jLabel, text, 100, Arrays.asList(
-                        Optional.of(() -> submitButton2.setVisible(true)),
-                        Optional.of(() -> jTextField.setText(" ")),
-                        Optional.of(() -> jTextField.setVisible(true))
+                        Optional.of(() -> jCheckBox.setVisible(true)),
+                        Optional.of(() -> jCheckBox2.setVisible(true))
                 ));
                 gender.start();
             }
@@ -199,37 +361,102 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         JButton done = new JButton("DONE");
         done.setBounds(100, 500, 100, 50);
         done.setVisible(false);
-        submitButton2.addActionListener(new ActionListener() {
+
+        ActionListener checkBoxListener = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                    gender = jTextField.getText();
+                if (jCheckBox.isSelected()) {
+                    gender = "Male";
                     done.setVisible(true);
+                }
             }
-        });
+        };
+        ActionListener checkBoxListener2 = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                if (jCheckBox2.isSelected()) {
+                    gender = "Female";
+                    done.setVisible(true);
+                }
+            }
+        };
+
+        jCheckBox.addActionListener(checkBoxListener);
+        jCheckBox2.addActionListener(checkBoxListener2);
+
         done.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                player = new Player(uname,gender, level, health);
-                savePlayer(player);
+                player = new Player(uname, gender, level, health, 0, -61, 0, vertices, indices);
+                savePlayer(player, "Prologue Screen", null);
+                fadeToScreen("Prologue Screen", 30);
             }
         });
 
         firstTime.add(jLabel);
         firstTime.add(jTextField);
         firstTime.add(submitButton);
-        firstTime.add(submitButton2);
         firstTime.add(done);
+        firstTime.add(jCheckBox2);
+        firstTime.add(jCheckBox);
 
         return firstTime;
     }
 
-    private JPanel createMainScreen(){
-        JPanel mainScreen = new JPanel();
-        mainScreen.setLayout(null);
+    private JPanel createPrologueScreen() {
+        JPanel prologueScreen = new JPanel();
+        prologueScreen.setLayout(null);
+        final String[] fText = new String[1];
+        final SlowTyper[] stext = new SlowTyper[1];
+        JTextArea firstText = new JTextArea();
+        firstText.setBounds(100, 100, 1000, 200);
+        firstText.setFont(labelfont);
+        firstText.setWrapStyleWord(true);
+        firstText.setLineWrap(true);
+        firstText.setOpaque(false);
+        firstText.setEditable(true);
+        firstText.setFocusable(false);
+        prologueScreen.addComponentListener(new ComponentListener() {
+            @Override
+            public void componentResized(ComponentEvent e) {
 
+            }
+            @Override
+            public void componentMoved(ComponentEvent e) {
 
+            }
+            @Override
+            public void componentShown(ComponentEvent e) {
 
-        return mainScreen;
+                setTitle("Adventure Game-Prologue");
+                firstText.setVisible(true);
+                stext[0] = new SlowTyper(firstText, "In 1945..., there was a war between the Japanese and the Americans. The Americans dropped a bomb on top of Hiroshima, Japan. Devastating the entire city... Or so they thought.... Years later, the Japanese Defense Ministry later on found out that the bomb was dropped by a UFO found above the country at the time the bomb was dropped.", 50, Arrays.asList(
+                        Optional.of(() -> FadeUtility.fadeOutComponents(1000, firstText)),
+                        Optional.of(() -> firstText.setText("")),
+                        Optional.of(() -> FadeUtility.fadeInComponents(1000, firstText)),
+                        Optional.of(() -> firstText.setText("H"))
+                ));
+                stext[0].start();
+            }
+            @Override
+            public void componentHidden(ComponentEvent e) {
+
+            }
+        });
+        prologueScreen.add(firstText);
+        return prologueScreen;
+    }
+
+    public void setupScreens() throws InterruptedException {
+        cardPanel.add(createLoadingScreen(), "Loading Screen");
+        cardPanel.add(createTitleScreen(), "Title Screen");
+        cardPanel.add(createFirstTime(), "First Time");
+        cardPanel.add(createPrologueScreen(), "Prologue Screen");
+    }
+
+    private void addScreen(String name, JPanel screen) {
+        screens.put(name, screen);
+        cardPanel.add(screen, name);
     }
 
     private void startProgressBar(int delay) {
@@ -243,7 +470,7 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
                 jlabel.setText(progress + "%");
                 if (progress >= 100) {
                     ((Timer) e.getSource()).stop();
-                        fadeToScreen("Title Screen", 100);
+                    fadeToScreen("Title Screen", 100);
                 }
             }
         });
@@ -253,7 +480,11 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == button) {
-            Start();
+            try {
+                Start();
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
+            }
         }
     }
 
@@ -275,6 +506,7 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         });
         timer.start();
     }
+
 
     private void fadeIn() {
         Timer timer = new Timer(30, new ActionListener() {
@@ -304,40 +536,90 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
         }
         repaint();
     }
+    public void switchToScreen(String screenName) {
+        CardLayout layout = (CardLayout) cardPanel.getLayout();
+        layout.show(cardPanel, screenName);
+        JPanel screen = screens.get(screenName);
+        if (screen != null) {
+            cardPanel.revalidate();
+            cardPanel.repaint();
+        } else {
+            System.err.println("Screen not found: " + screenName);
+        }
+    }
 
     public static void main(String[] args) throws IOException {
-
-
-        new AdventureGame(player);
+        SwingUtilities.invokeLater(() -> {
+            try {
+                new AdventureGame(player);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
         UpdateClient.updateJar();
     }
 
-    public void Start() {
-        if (checkFirstRun()) {
-            System.out.println("First time running, showing First Time screen.");
-            cardLayout.show(cardPanel, "First Time");
-        } else {
-            System.out.println("This is not the first run.");
-            // Other actions for subsequent runs
-        }
+    public void Start() throws IOException {
+       if(checkFirstRun()){
+           System.out.println("First time running, showing First Time screen.");
+           cardLayout.show(cardPanel, "First Time");
+       }else{
+           System.out.println("THis is not the first run");
+           loadGame();
+       }
     }
 
 
-    public void savePlayer(Player player) {
-        Gson gson = new Gson();
-        File saveDir = new File(SAVE_DIR);
+    public void savePlayer(Player player, String currentScreen, Map<String, Object> screenState) {
+        PlayerState playerState = new PlayerState(player, currentScreen, screenState);
+        Gson gson = new GsonBuilder().registerTypeAdapter(Map.class, new MapSerializer()).create();
+        File saveDir = new File("Saves");
         if (!saveDir.exists()) {
-            if (saveDir.mkdirs()) {
-                System.out.println("Save directory created: " + SAVE_DIR);
-            } else {
-                System.out.println("Failed to create save directory: " + SAVE_DIR);
-                return; // Exit if directory creation fails
-            }
+            saveDir.mkdirs(); // Create directories if they don't exist
+             }
+        try (FileWriter writer = new FileWriter("Saves/playerState.json")) {
+            gson.toJson(playerState, writer);
+            System.out.println("Player state saved.");
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+    }
 
-        try (FileWriter writer = new FileWriter(SAVE_FILE_PATH)) {
-            gson.toJson(player, writer);
-            System.out.println("Player data saved.");
+    public PlayerState loadPlayer() throws IOException {
+        Gson gson = new GsonBuilder().registerTypeAdapter(Map.class, new MapSerializer()).create();
+        try (BufferedReader reader = new BufferedReader(new FileReader("Saves/playerState.json"))) {
+            return gson.fromJson(reader, PlayerState.class);
+        }
+    }
+    public void loadGame() {
+        try {
+            PlayerState playerState = loadPlayer();
+            if (playerState == null) {
+                System.err.println("Failed to load player state.");
+                return;
+            }
+
+            player = new Player(
+                playerState.getUsername(),
+                playerState.getGender(),
+                playerState.getLevel(),
+                playerState.getHealth(),
+                playerState.getX(),
+                playerState.getY(),
+                playerState.getZ(),
+                vertices, // Assume vertices are defined
+                indices   // Assume indices are defined
+            );
+
+            // Restore screen and state
+            String currentScreen = playerState.getCurrentScreen();
+            Map<String, Object> screenState = playerState.getScreenState();
+
+           fadeToScreen(currentScreen, 90);
+
+            // Handle specific points within the screen state
+
+            System.out.println("Player state loaded and applied.");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -345,15 +627,11 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
 
 
 
-    public void Load() {
-        // Implementation for loading the game
-    }
-
-    public void MainGame() {
+        public static void MainGame () {
         // Implementation for the main game logic
     }
 
-    public static boolean checkFirstRun() {
+        public static boolean checkFirstRun () {
         Properties properties = new Properties();
         File file = new File("Run/run.properties");
 
@@ -383,6 +661,4 @@ public class AdventureGame extends JFrame implements ActionListener, Serializabl
             return false; // Fallback in case of an error
         }
     }
-
-
-}
+    }
