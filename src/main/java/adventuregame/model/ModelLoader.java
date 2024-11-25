@@ -1,4 +1,4 @@
-package model;
+package adventuregame.model;
 
 import jassimp.*;
 
@@ -11,7 +11,7 @@ public class ModelLoader {
                 EnumSet.of(AiPostProcessSteps.Triangulate,
                         AiPostProcessSteps.FlipUVs));
         if (scene == null) {
-            throw new RuntimeException("Error loading model");
+            throw new RuntimeException("Error loading adventuregame.model");
         }
         processNode((AiNode) scene.getSceneRoot(), scene);
     }

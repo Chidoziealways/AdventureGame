@@ -2,14 +2,18 @@ plugins {
     id 'java'
 }
 
-group = 'net.chidozie.adventuregame'
-version = '1.0'
+group = 'adventuregame.net.chidozie.adventuregame'
+version = '0.0.1'
 
 repositories {
     mavenCentral()
     flatDir {
         dirs 'libs'
     }
+    maven { url "https://libraries.minecraft.net" }
+    maven { url "https://hub.spigotmc.org/stash/releases" }
+    maven { url "https://maven.mojang.com" }
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
@@ -31,6 +35,10 @@ dependencies {
     runtimeOnly 'org.lwjgl:lwjgl:3.3.1:natives-windows'
     runtimeOnly 'org.lwjgl:lwjgl-glfw:3.3.1:natives-windows'
     runtimeOnly 'org.lwjgl:lwjgl-opengl:3.3.1:natives-windows'
+    implementation 'org.lwjgl:lwjgl-stb:3.3.2'
+    implementation 'com.mojang:brigadier:1.0.18'
+    implementation 'com.mojang:datafixerupper:4.0.26'
+    implementation 'com.github.Querz:NBT:6.1'
 }
 
 test {
@@ -38,20 +46,24 @@ test {
 }
 
 jar {
+    duplicatesStrategy = 'exclude'
     manifest {
         attributes(
-                'Main-Class': 'net.chidozie.adventuregame.AdventureGame'
+                'Main-Class': 'adventuregame.net.chidozie.adventuregame.AdventureGame'
         )
     }
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
     }
 }
+
 task runGame(type: JavaExec) {
-    main = 'net.chidozie.adventuregame.AdventureGame'
+    main = 'adventuregame.net.chidozie.adventuregame.AdventureGame'
     classpath = sourceSets.main.runtimeClasspath
     // Optional: Set JVM args if needed
     jvmArgs = ['-Xms512m', '-Xmx1024m']
-    jvmArgs = ['java-- add - opens java.base / java.lang = ALL - UNNAMED - jar your - application.jar']
 
+}
+tasks.withType(org.gradle.api.tasks.Copy) {
+    duplicatesStrategy = 'exclude'
 }

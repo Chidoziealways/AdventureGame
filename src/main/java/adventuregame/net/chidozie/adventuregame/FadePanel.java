@@ -1,4 +1,4 @@
-package net.chidozie.adventuregame;
+package adventuregame.net.chidozie.adventuregame;
 
 import javax.swing.*;
 import java.awt.*;
