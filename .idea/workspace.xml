@@ -5,35 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="111100000000000">
-      <change afterPath="$PROJECT_DIR$/hs_err_pid15068.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/PlayerModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/SaveManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/game/GameWindow.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/map/MapRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/create/net/chidozie/create/Create.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/tilemap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_20_2024_4_04_PM__Changes_.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/Run/run.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Saves/playerState.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Mesh.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Renderer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Shader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Vertex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/io/Input.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/io/Window.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/maths/Vector3f.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/shaders/mainFragment.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/shaders/mainVertex.glsl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/yumin.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/yumindb.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/yuminl.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Run/run.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Saves/playerState.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/MapSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/com/chidozie/MapSerializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/ModelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/model/ModelLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/PlayerModelLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/model/PlayerModelLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/AdventureGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/AdventureGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/ByteBufferAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/ByteBufferAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/FadePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/FadePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/FadeUtility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/FadeUtility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/PlayerState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/PlayerState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/Renderable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Renderable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/Skybox.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/SlowTyper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/SlowTyper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/chidozie/adventuregame/TextureData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/TextureData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/updater/UpdateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/updater/UpdateClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/com/chidozie/MapSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/model/ModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/model/PlayerModelLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/AdventureGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/AdventureGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/ByteBufferAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/FadePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/FadeUtility.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/PlayerModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/PlayerState.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Renderable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/SaveManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/SlowTyper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/TextureData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/Triangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/game/GameWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/map/MapRenderer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/create/net/chidozie/create/Create.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/LICENSE.TXT" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/LICENSE.TXT" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/tilemap.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/tilemap.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +71,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AdventureGame" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="AdventureGame" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -96,7 +111,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Chidoziealways/AdventureGame.git&quot;,
-    &quot;accountId&quot;: &quot;8931dee7-c1a6-4f21-ac4e-c118d47e2c91&quot;
+    &quot;accountId&quot;: &quot;1af16092-c594-48c1-b492-a5f99433d4ff&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -118,6 +133,7 @@
     &quot;Gradle.AdventureGame [:net.chidozie.adventuregame.AdventureGame.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [:net.chidozie.create.Create.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [:updater.UpdateClient.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AdventureGame [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [clean].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [createJar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [jar].executor&quot;: &quot;Run&quot;,
@@ -132,7 +148,7 @@
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/uzowu/OneDrive/Desktop/My Forge For Modding-mdk/build.gradle&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/uzowu/IdeaProjects/AdventureGame/src/main/resources/assets/shaders&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/uzowu/OneDrive/Desktop/AdventureGAme/src/main/java/net/chidozie/adventuregame/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
@@ -140,7 +156,38 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\shaders" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main" />
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src" />
+    </key>
+  </component>
   <component name="RunManager" selected="Gradle.AdventureGame [runGame]">
+    <configuration name="AdventureGame [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="AdventureGame [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -153,28 +200,6 @@
         <option name="taskNames">
           <list>
             <option value="clean" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="AdventureGame [createJar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="createJar" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -236,10 +261,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.AdventureGame [runGame]" />
+        <item itemvalue="Gradle.AdventureGame [clean]" />
+        <item itemvalue="Gradle.AdventureGame [build]" />
         <item itemvalue="JAR Application.AdventureGame-0.0.1.jar" />
         <item itemvalue="Gradle.AdventureGame [jar]" />
-        <item itemvalue="Gradle.AdventureGame [clean]" />
-        <item itemvalue="Gradle.AdventureGame [createJar]" />
       </list>
     </recent_temporary>
   </component>
@@ -284,7 +309,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728732498009</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="111100000000000">
+      <option name="closed" value="true" />
+      <created>1732554069483</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732554069483</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
