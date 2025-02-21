@@ -2,20 +2,19 @@ plugins {
     id 'java'
 }
 
-group = 'adventuregame.net.chidozie.adventuregame'
+group = 'net.adventuregame.game'
 version = '0.0.1'
 project.ext.lwjglVersion = "3.3.5"
 project.ext.lwjglNatives = "natives-windows"
+project.ext.jomlVersion = "1.10.8"
+project.ext.jomlPrimVersion = "1.10.0"
 
 repositories {
     mavenCentral()
+    maven {url = 'https://libraries.minecraft.net'}
     flatDir {
         dirs 'libs'
     }
-    maven { url "https://libraries.minecraft.net" }
-    maven { url "https://hub.spigotmc.org/stash/releases" }
-    maven { url "https://maven.mojang.com" }
-    maven { url 'https://jitpack.io' }
 }
 
 sourceSets {
@@ -43,7 +42,24 @@ dependencies {
     implementation "org.lwjgl:lwjgl-openvr"
     implementation "org.lwjgl:lwjgl-par"
     implementation "org.lwjgl:lwjgl-stb"
-    implementation "org.lwjgl:lwjgl-vulkan"
+    implementation "org.joml:joml:${jomlVersion}"
+    implementation "org.joml:joml-primitives:${jomlPrimVersion}"
+    implementation "com.google.code.gson:gson:2.12.0"
+    implementation 'com.google.guava:guava:33.4.0-jre'
+    implementation 'com.google.guava:failureaccess:1.0.2'
+    implementation 'com.google.errorprone:error_prone_core:2.35.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+    implementation 'com.google.guava:listenablefuture:36.0.0'
+    implementation 'com.google.j2objc:j2objc-annotations:2.8'
+    implementation 'org.slf4j:slf4j-api:2.0.16'
+    implementation "org.apache.logging.log4j:log4j-api:2.19.0"
+    implementation "org.apache.logging.log4j:log4j-core:2.19.0"
+    implementation "org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0"
+    implementation "org.apache.commons:commons-compress:1.22"
+    implementation "org.apache.commons:commons-lang3:3.13.0"
+    implementation "com.mojang:brigadier:1.0.18"
+    implementation "com.mojang:datafixerupper:6.0.8"
+    implementation "com.mojang:authlib:5.0.47"
     runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
     runtimeOnly "org.lwjgl:lwjgl-assimp::$lwjglNatives"
     runtimeOnly "org.lwjgl:lwjgl-bgfx::$lwjglNatives"
@@ -65,7 +81,7 @@ jar {
     duplicatesStrategy = 'exclude'
     manifest {
         attributes(
-                'Main-Class': 'adventuregame.net.chidozie.adventuregame.AdventureGame'
+                'Main-Class': 'net.adventuregame.game.AdventureMain'
         )
     }
     from {
@@ -74,10 +90,10 @@ jar {
 }
 
 task runGame(type: JavaExec) {
-    main = 'adventuregame.net.chidozie.adventuregame.AdventureGame'
+    main = 'net.adventuregame.game.AdventureMain'
     classpath = sourceSets.main.runtimeClasspath
     // Optional: Set JVM args if needed
-    jvmArgs = ['-Xms512m', '-Xmx1024m']
+    jvmArgs = ['-Xms512m', '-Xmx2024m']
 
 }
 tasks.withType(org.gradle.api.tasks.Copy) {
