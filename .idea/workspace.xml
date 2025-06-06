@@ -4,205 +4,85 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="About to Move on to COMPLETE Optimisation.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/audio/AudioManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/audio/Source.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/audio/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/Character.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/FontRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/FontShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/FontType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/GUIText.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/Line.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/MetaFile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/TextMaster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/TextMeshCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/TextMeshData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/font/Word.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/gaussianBlur/HorizontalBlur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/gaussianBlur/HorizontalBlurShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/gaussianBlur/VerticalBlur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/gaussianBlur/VerticalBlurShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/normalmap/ModelDataNM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/normalmap/NormalMappedObjLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/normalmap/NormalMappingRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/normalmap/NormalMappingShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/normalmap/VertexNM.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/postProcessing/ContrastChanger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/postProcessing/ContrastShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/postProcessing/Fbo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/postProcessing/ImageRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/postProcessing/PostProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/EntityRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/KeyInputManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/Loader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/MasterRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/ModelData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/MouseInput.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/OBJFileLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/TerrainRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/Vertex.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/WindowManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shaders/ShaderProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shaders/StaticShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shaders/TerrainShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shadows/ShadowBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shadows/ShadowFrameBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shadows/ShadowMapEntityRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shadows/ShadowMapMasterRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/shadows/ShadowShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/HeightsGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/Terrain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/textures/ModelTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/textures/TerrainTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/textures/TerrainTexturePack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/textures/TextureData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/bloom/BrightFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/bloom/BrightFilterShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/bloom/CombineFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/bloom/CombineShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Camera.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Entity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Light.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/AdventureGame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/AdventureMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/gameObjects/Tree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/models/RawModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/models/TexturedModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/InsertionSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/Particle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/ParticleRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/ParticleShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/ParticleSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/ParticleTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/粒子の先生.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/skybox/SkyBoxRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/skybox/SkyBoxShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/sounds/Music.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/sounds/Sounds.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/Consts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/Maths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/MousePicker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/water/WaterFrameBuffers.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/water/WaterRenderer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/water/WaterShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/water/WaterTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Terrain Generation Code.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/acacia.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/barrel.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/bunny.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/dragon.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/fern.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/person.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/stall.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/torch.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/tree_legacy.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/bloom/brightFilterFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/bloom/combineFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/bloom/simpleVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/contrast/contrastFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/contrast/contrastVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/fragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/vertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/gaussianBlur/blurFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/gaussianBlur/horizontalBlurVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/gaussianBlur/verticalBlurVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/guis/guiFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/guis/guiVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/normalmap/normalMapFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/normalmap/normalMapVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/particles/particleFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/particles/particleGeometryShader.geom" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/particles/particleVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/shadows/shadowFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/shadows/shadowVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/skybox/skyboxFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/skybox/skyboxVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/terrains/terrainFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/terrains/terrainVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/water/waterFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/water/waterVertexShader.vert" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/sounds/ao_to_natsu.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/sounds/bounce.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/sounds/bounce.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/DuDvmaps/waterDUDV.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/acacia leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/bark07.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/barrel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/blendMap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/Night Sky Textures.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/bottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/front.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lnegx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lnegy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lnegz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lposx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lposy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/lposz.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightBack.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightBottom.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightFront.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightLeft.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightRight.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/nightTop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cubemaps/top.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/dirt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/dragon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/fern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.fnt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMmincho.fnt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMmincho.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/grass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/grassFlowers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/gui/health.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/gui/socuwan.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/normalmaps/acacia leaf_n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/normalmaps/bark07_n.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/normalmaps/barrelNormal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/normalmaps/normalMap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/particles/fire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/particles/particleStar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/path.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/playerTexture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/specularmaps/barrelS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/specularmaps/torchS.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/stallTexture.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/torch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/tree.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_10_25_2024_6_21_PM_[Changes]/shelved.patch" beforeDir="false" />
+    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="Added Kotlin to the game!">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/Run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/scala_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildSrc/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildSrc/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/convention.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readMe.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/codec/Vector3fCodec.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/data/CodecRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/GameInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/GameLoop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/SaveLoadManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Gold.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/GunItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Items.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/entities/BulletEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/entities/GunEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/mobs/BadGuy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/mobs/HostileMob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/mobs/Mob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/mobs/Pathfinding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/player/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/registries/ItemRegistry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/registries/Registry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/resources/ResourceKey.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/resources/ResourceLocation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/story/Dialogue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/story/Quest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/story/StoryHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/story/StoryManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/story/StoryStage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/Settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureMain.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameState.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameStateSerializable.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/KatanaItem.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/ItemEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/KatanaEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/Inventory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/save/SaveManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Credits.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/mobs/BG.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/gui/crosshair.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/icon/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/AdventureGame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Mesh.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Renderer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Shader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/graphics/Vertex.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/io/Input.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/io/Window.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/maths/Vector3f.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/net/chidozie/adventuregame/engine/utils/FileUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/adventuregame/updater/UpdateClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/updater/UpdateClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/LICENSE.TXT" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/shaders/mainFragment.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/shaders/mainVertex.glsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/yumin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/yumindb.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/yuminl.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/models/player.obj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HI" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run/run.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Saves/playerState.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hs_err_pid15068.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/assimp4j-5.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/MouseInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/WindowManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/WindowManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/HeightsGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/HeightsGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/Terrain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/terrains/Terrain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Camera.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Camera.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/entities/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/AdventureGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/AdventureGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/game/AdventureMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/gameObjects/Tree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/gameDecor/Tree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/Particle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/particles/Particle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/Consts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/MousePicker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/toolbox/MousePicker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Terrain Generation Code.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/fragmentShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/fragmentShader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/normalmap/normalMapFragmentShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/normalmap/normalMapFragmentShader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.fnt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.fnt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/yuMincho.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,12 +116,6 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AdventureGame" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="AdventureGame" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
               </path>
             </expand>
@@ -255,6 +129,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="module-info" />
+        <option value="Enum" />
+        <option value="Kotlin Script" />
+        <option value="Package Object" />
+        <option value="Scala Worksheet" />
+        <option value="Kotlin Class" />
+        <option value="kotlin.jupyter.empty" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Script Gradle.gradle" />
         <option value="Class" />
       </list>
     </option>
@@ -278,31 +161,38 @@
     <option name="loggerId" value="Slf4j" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
   <component name="ProjectId" id="2mtEO2mK31VGOa1eeneWeFi5hta" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
-    <option name="showMembers" value="true" />
     <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Gradle.AdventureGame [:adventuregame.net.chidozie.adventuregame.AdventureGame.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AdventureGame [:net.adventuregame.game.AdventureMain.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [:net.chidozie.adventuregame.AdventureGame.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [:net.chidozie.create.Create.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [:updater.UpdateClient.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [build].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AdventureGame [compileGroovy].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.AdventureGame [compileScala].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [createJar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [jar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.AdventureGame [runGame].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build AdventureGame.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
     &quot;JAR Application.AdventureGame-0.0.1.jar.executor&quot;: &quot;Run&quot;,
     &quot;JAR Application.AdventureGame-1.0-SNAPSHOT.jar.executor&quot;: &quot;Run&quot;,
     &quot;JAR Application.AdventureGame-1.0-game.jar.executor&quot;: &quot;Run&quot;,
@@ -310,21 +200,31 @@
     &quot;JAR Application.YourApp_temp.jar.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JDK&quot;: &quot;corretto-21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/uzowu/IdeaProjects/AdventureGame&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/uzowu/IdeaProjects/AdventureGame/build/libs&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/uzowu/OneDrive/Desktop/AdventureGAme/src/main/java/net/chidozie/adventuregame/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.19975787&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;jdk.preference.JDK&quot;: [
+      &quot;24=C:/Program Files/Java/jdk-24&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\build\libs" />
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures\icon" />
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures\gui" />
+      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\models\mobs" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame" />
-      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\shaders" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures" />
@@ -332,9 +232,19 @@
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="net.adventuregame.player" />
+      <recent name="net.adventuregame.items.entities" />
+    </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="net.adventuregame.game" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="net.adventuregame.player" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.AdventureGame [runGame]">
-    <configuration name="AdventureGame [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Application.Run">
+    <configuration name="AdventureGame [compileGroovy]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -345,7 +255,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="build" />
+            <option value="compileGroovy" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -356,7 +266,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="AdventureGame [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AdventureGame [compileScala]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -367,7 +277,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="compileScala" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -405,7 +315,7 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -426,26 +336,26 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/AdventureGame-0.0.1.jar" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="AdventureGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="AdventureGame" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Application.Run" />
+      <item itemvalue="Gradle.AdventureGame [compileGroovy]" />
+      <item itemvalue="Gradle.AdventureGame [compileScala]" />
+      <item itemvalue="Gradle.AdventureGame [jar]" />
+      <item itemvalue="Gradle.AdventureGame [runGame]" />
+      <item itemvalue="JAR Application.AdventureGame-0.0.1.jar" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.AdventureGame [runGame]" />
-        <item itemvalue="Gradle.AdventureGame [clean]" />
-        <item itemvalue="Gradle.AdventureGame [build]" />
-        <item itemvalue="JAR Application.AdventureGame-0.0.1.jar" />
         <item itemvalue="Gradle.AdventureGame [jar]" />
+        <item itemvalue="JAR Application.AdventureGame-0.0.1.jar" />
+        <item itemvalue="Gradle.AdventureGame [runGame]" />
+        <item itemvalue="Gradle.AdventureGame [compileScala]" />
+        <item itemvalue="Gradle.AdventureGame [compileGroovy]" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ScalaProjectSettings">
+    <option name="scala3DisclaimerShown" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -496,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732554069483</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="About to Move on to COMPLETE Optimisation.">
+      <option name="closed" value="true" />
+      <created>1740152896757</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740152896757</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -513,7 +431,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="111100000000000" />
     <MESSAGE value="About to Move on to COMPLETE Optimisation." />
-    <option name="LAST_COMMIT_MESSAGE" value="About to Move on to COMPLETE Optimisation." />
+    <MESSAGE value="Added Kotlin to the game!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Kotlin to the game!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -522,6 +441,15 @@
           <properties class="java.net.UnknownHostException" package="java.net" />
           <option name="timeStamp" value="1" />
         </breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/Vertex.java</url>
+          <line>15</line>
+          <properties class="com.chidozie.core.renderEngine.Vertex">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

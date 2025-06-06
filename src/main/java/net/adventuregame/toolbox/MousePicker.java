@@ -1,6 +1,5 @@
 package net.adventuregame.toolbox;
 
-import com.chidozie.core.renderEngine.MouseInput;
 import com.chidozie.core.renderEngine.WindowManager;
 import com.chidozie.core.terrains.Terrain;
 import net.adventuregame.entities.*;
@@ -9,7 +8,6 @@ import org.joml.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MousePicker {
@@ -25,8 +23,8 @@ public class MousePicker {
 
     private Matrix4f projectionMatrix;
     private Matrix4f viewMatrix;
+    private Entity closestEntity;
     private Camera camera;
-    private MouseInput mInput;
     private WindowManager window;
 
     private Terrain terrain;
@@ -41,7 +39,6 @@ public class MousePicker {
         viewMatrix = Maths.createViewMatrix(camera);
         this.terrain = terrain;
         this.entities = entities;
-        mInput = cam.getmInput();
         window = AdventureMain.getWindow();
     }
 
@@ -65,7 +62,7 @@ public class MousePicker {
         }
 
         // Check for the closest entity in the ray range
-        Entity closestEntity = getClosestEntity(currentRay);
+        closestEntity = getClosestEntity(currentRay);
         if (closestEntity != null) {
             log.info("Caught");
             closestEntity.getModel().getTexture().setSelected(true);
@@ -102,8 +99,8 @@ public class MousePicker {
 
 
     private Vector3f calculateMouseRay() {
-        float mouseX = mInput.getDisplsVec().x;
-        float mouseY = mInput.getDisplsVec().y;
+        float mouseX = window.getDisplsVec().x;
+        float mouseY = window.getDisplsVec().y;
         Vector2f normalizedCoords = getNormalisedDeviceCoordinates(mouseX, mouseY);
         Vector4f clipCoords = new Vector4f(normalizedCoords.x, normalizedCoords.y, -1.0f, 1.0f);
         Vector4f eyeCoords = toEyeCoords(clipCoords);
@@ -191,4 +188,7 @@ public class MousePicker {
         return terrain;
     }
 
+    public Entity getClosestEntity() {
+        return closestEntity;
+    }
 }

@@ -56,7 +56,7 @@ void main(void){
 		vec4 mapInfo = texture(specularMap, pass_textureCoordinates);
 		totalSpecular *= mapInfo.r;
 		if(mapInfo.g > 0.5) {
-			out_BrightColor = textureColour + vec4(totalSpecular, 1.0);
+			out_BrightColor = textureColour + vec4(totalSpecular, 1.0) * 20;
 			totalDiffuse = vec3(1.0);
 		}
 	}

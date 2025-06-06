@@ -1,0 +1,27 @@
+[versions]
+    adventuregame = "0.0.1-alpha"
+    lwjgl = "3.3.5"
+    lwjglNatives = "natives-windows"
+    jomlVersion = "1.10.8"
+    jomlPrimVersion = "1.10.0"
+    jopt-simple = "5.0.4"
+    gson = "2.12.0"
+    guava = "33.4.0-jre"
+    failureaccess = "1.0.2"
+    errorprone = "2.35.0"
+    findbugs = "3.0.2"
+    listenablefuture = "36.0.0"
+    annotations = "2.8"
+
+[libraries]
+    jopt-simple = { group = "net.sf.jopt-simple", name = "jopt-simple", version.ref = "jopt-simple" } # Forge's temporary hacky solution
+    lwjgl = { group = "org.lwjgl", name = "lwjgl-bom", version.ref = "lwjgl" }
+    joml = { group = "org.joml", name = "joml", version.ref = "jomlVersion" }
+    jomlPrim = { group = "org.joml", name = "joml-primitives", version.ref = "jomlPrimVersion" }
+    gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+    guava = { group = "com.google.guava", name = "guava", version.ref = "guava" }
+    failureaccess = { group = "com.google.guava", name = "failureaccess", version.ref = "failureaccess" }
+    errorprone = { group = "com.google.errorprone", name = "error_prone_core", version.ref = "errorprone" }
+    findbugs = { group = "com.google.code.findbugs", name = "jsr305", version.ref = "findbugs" }
+    listenablefuture = { group = "com.google.guava", name = "listenablefuture", version.ref = "listenablefuture" }
+    annotations = { group = "com.google.j2objc", name = "j2objc-annotations", version.ref = "annotations" }

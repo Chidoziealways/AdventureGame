@@ -13,10 +13,15 @@ public class HeightsGenerator {
     private static final Logger log = LoggerFactory.getLogger(HeightsGenerator.class);
 
     private Random random = new Random();
-    private int seed;
+    int seed;
 
-    public HeightsGenerator() {
-        this.seed = random.nextInt(1000000000);
+    public HeightsGenerator(int seed) {
+        if(seed == 0) {
+            this.seed = random.nextInt(1000000000);
+        } else {
+            this.seed = seed;
+        }
+        log.info("Generated A Seed");
     }
 
     public float generateHeight(int x, int z) {

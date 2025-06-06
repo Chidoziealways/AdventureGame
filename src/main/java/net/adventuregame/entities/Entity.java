@@ -106,4 +106,8 @@ public class Entity {
     public void setScale(float scale) {
         this.scale = scale;
     }
+
+    public int getTextureIndex() {
+        return textureIndex;
+    }
 }
