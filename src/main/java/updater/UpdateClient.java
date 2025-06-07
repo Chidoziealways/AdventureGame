@@ -1,50 +1,54 @@
 package updater;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URISyntaxException;
 import java.net.URL;
+import java.net.URISyntaxException;
 
 public class UpdateClient {
+    // Change this to your actual GitHub release URL
+    private static final String DOWNLOAD_URL = "https://github.com/Chidoziealways/AdventureGame/releases/download/0.0.1-alpha/AdventureGame-0.0.1-alpha.jar";
+
     public static void updateJar() {
         try {
-            System.out.println("今日は！波佐志半蔵");
-            URL url = new URL("https://raw.githubusercontent.com/Chidoziealways/UpdateServer/main/UpdateServer.jar");
-            HttpURLConnection httpConn = (HttpURLConnection) url.openConnection();
-            InputStream inputStream = httpConn.getInputStream();
+            System.out.println("[UpdateClient] Downloading update from GitHub Releases...");
 
-            // Get the current JAR path
+            // Get path to current JAR file
             String jarPath = UpdateClient.class.getProtectionDomain().getCodeSource().getLocation().toURI().getPath();
-            File jarFile = new File(jarPath);
-            File tempFile = new File(jarFile.getParentFile(), "YourApp_temp.jar");
+            File currentJar = new File(jarPath);
+            File tempJar = new File(currentJar.getParentFile(), "temp-update.jar");
 
-            // Download the new JAR to a temporary file
-            FileOutputStream fos = new FileOutputStream(tempFile);
-            byte[] buffer = new byte[4096];
-            int bytesRead;
-            while ((bytesRead = inputStream.read(buffer)) != -1) {
-                fos.write(buffer, 0, bytesRead);
+            // Open connection to GitHub
+            HttpURLConnection conn = (HttpURLConnection) new URL(DOWNLOAD_URL).openConnection();
+            conn.setRequestProperty("User-Agent", "UpdateClient");
+            InputStream in = conn.getInputStream();
+
+            // Download to temp file
+            try (FileOutputStream out = new FileOutputStream(tempJar)) {
+                byte[] buffer = new byte[8192];
+                int len;
+                while ((len = in.read(buffer)) != -1) {
+                    out.write(buffer, 0, len);
+                }
             }
-            fos.close();
-            inputStream.close();
 
-            // Replace the current JAR with the new one
-            if (jarFile.delete()) {
-                tempFile.renameTo(jarFile);
-                System.out.println("Update downloaded and replaced.");
+            // Close the connection
+            in.close();
+
+            // Replace the current JAR
+            if (currentJar.delete()) {
+                if (tempJar.renameTo(currentJar)) {
+                    System.out.println("[UpdateClient] Update complete. Restart the game to apply.");
+                } else {
+                    System.err.println("[UpdateClient] Couldn't rename the temp JAR.");
+                }
             } else {
-                System.out.println("Failed to delete the old JAR file.");
+                System.err.println("[UpdateClient] Couldn't delete the original JAR.");
             }
-        } catch (MalformedURLException e) {
-            System.out.println("The URL is malformed: " + e.getMessage());
-            e.printStackTrace();
+
         } catch (IOException | URISyntaxException e) {
-            System.out.println("An I/O error occurred: " + e.getMessage());
             e.printStackTrace();
+            System.err.println("[UpdateClient] Update failed: " + e.getMessage());
         }
     }
 }

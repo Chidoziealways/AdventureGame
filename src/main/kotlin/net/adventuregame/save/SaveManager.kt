@@ -7,9 +7,12 @@ import com.google.gson.JsonParser
 import com.mojang.serialization.JsonOps
 import net.adventuregame.game.GameState
 import net.adventuregame.game.GameStateSerializable
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import java.io.File
 
 object SaveManager {
+    val log: Logger = LoggerFactory.getLogger(SaveManager::class.java)
 
     val saveFile = File("saves/world.json")
 
@@ -24,10 +27,10 @@ object SaveManager {
 
                 saveFile.parentFile.mkdirs()
                 saveFile.writeText(prettyJson)
-                println("✅ Game saved to ${saveFile.absolutePath}")
+                log.info("✅ Game saved to ${saveFile.absolutePath}")
             },
             {
-                println("❌ Failed to encode GameState for saving.")
+                log.error("❌ Failed to encode GameState for saving.")
             }
         )
     }
@@ -35,7 +38,7 @@ object SaveManager {
 
     fun loadGame(window: WindowManager): GameState? {
         if (!saveFile.exists()) {
-            println("⚠️ No save file found.")
+            log.error("⚠️ No save file found.")
             return null
         }
 
@@ -44,7 +47,7 @@ object SaveManager {
 
         val result = GameStateSerializable.GAME_STATE_CODEC.decode(JsonOps.INSTANCE, jsonElement)
 
-        println("Loading File ${saveFile.absolutePath}")
+        log.info("Loading File ${saveFile.absolutePath}")
 
         return result.result()
             .map { pair -> GameState.fromSerializable(pair.first, window) }

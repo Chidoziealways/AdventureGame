@@ -1,5 +1,9 @@
 package net.adventuregame.entities;
 
+import com.mojang.serialization.Codec;
+import com.mojang.serialization.codecs.RecordCodecBuilder;
+import net.adventuregame.codec.TexturedModelCodec;
+import net.adventuregame.codec.Vector3fCodec;
 import net.adventuregame.models.TexturedModel;
 
 import org.joml.Vector3f;
@@ -110,4 +114,17 @@ public class Entity {
     public int getTextureIndex() {
         return textureIndex;
     }
+
+    public static final Codec<Entity> CODEC = RecordCodecBuilder.create(instance ->
+            instance.group(
+                    TexturedModelCodec.CODEC.fieldOf("model").forGetter(entity -> entity.model),
+                    Codec.INT.optionalFieldOf("textureIndex", 0).forGetter(Entity::getTextureIndex),
+                    Vector3fCodec.CODEC.fieldOf("position").forGetter(entity -> entity.position),
+                    Codec.FLOAT.fieldOf("rotX").forGetter(entity -> entity.rotX),
+                    Codec.FLOAT.fieldOf("rotY").forGetter(entity -> entity.rotY),
+                    Codec.FLOAT.fieldOf("rotZ").forGetter(entity -> entity.rotZ),
+                    Codec.FLOAT.fieldOf("scale").forGetter(entity -> entity.scale)
+            ).apply(instance, Entity::new
+            )
+    );
 }

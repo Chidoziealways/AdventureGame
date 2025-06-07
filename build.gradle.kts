@@ -18,9 +18,6 @@ repositories {
 
 sourceSets {
     named("main") {
-        java.srcDirs("src/main/java", "src/main/kotlin")
-        java.srcDir("src/main/java")
-        kotlin.srcDir("src/main/kotlin")
         resources.srcDir("src/main/resources")
     }
 }

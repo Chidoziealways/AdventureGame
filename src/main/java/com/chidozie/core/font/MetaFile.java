@@ -3,10 +3,7 @@ package com.chidozie.core.font;
 import com.chidozie.core.renderEngine.WindowManager;
 import net.adventuregame.game.AdventureMain;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -58,7 +55,7 @@ public class MetaFile {
 	 * @param file
 	 *            - the font file.
 	 */
-	protected MetaFile(File file) {
+	protected MetaFile(String file) {
 		window = AdventureMain.getWindow();
 		this.aspectRatio = (double) window.getWidth() / (double) window.getHeight();
 		openFile(file);
@@ -162,17 +159,22 @@ public class MetaFile {
 	/**
 	 * Opens the font file, ready for reading.
 	 *
-	 * @param file
+	 * @param path
 	 *            - the font file.
 	 */
-	private void openFile(File file) {
+	private void openFile(String path) {
 		try {
-			reader = new BufferedReader(new FileReader(file));
+			InputStream input = getClass().getClassLoader().getResourceAsStream("assets/adventuregame/textures/font/" + path + ".fnt");
+			if (input == null) {
+				throw new FileNotFoundException("Font meta file not found in classpath: " + path);
+			}
+			reader = new BufferedReader(new InputStreamReader(input));
 		} catch (Exception e) {
 			e.printStackTrace();
-			System.err.println("Couldn't read font meta file!");
+			System.err.println("Couldn't read font meta file: " + path);
 		}
 	}
+
 
 
 	/**

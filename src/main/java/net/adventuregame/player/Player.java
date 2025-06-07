@@ -22,6 +22,7 @@ import static org.lwjgl.glfw.GLFW.*;
 
 import net.adventuregame.toolbox.MousePicker;
 import org.joml.Vector3f;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,6 +43,10 @@ public class Player extends Mob {
     private float currentTurnSpeed = 0;
     private float upwardsSpeed = 0;
     private Mob target;
+
+    private long lastSelectTime = 0;
+    private static final long SELECT_COOLDOWN_MS = 200;
+
 
     private boolean isInAir = false;
 
@@ -87,44 +92,60 @@ public class Player extends Mob {
     }
 
     private void checkInputs() {
-        if (window.isKeyPressed(WALK_FORWARD_KEY)) {
-            this.currentSpeed = RUN_SPEED;
-            if (window.isKeyPressed(GLFW_KEY_W) && window.isKeyPressed(GLFW_KEY_LEFT_SHIFT)) {
-                this.currentSpeed = RUN_SPEED * 5;
+        long currentTime = System.currentTimeMillis();
+        if (currentTime - lastSelectTime > SELECT_COOLDOWN_MS) {
+            if (window.isKeyPressed(WALK_FORWARD_KEY)) {
+                this.currentSpeed = RUN_SPEED;
+                if (window.isKeyPressed(GLFW_KEY_W) && window.isKeyPressed(GLFW_KEY_LEFT_SHIFT)) {
+                    this.currentSpeed = RUN_SPEED * 5;
+                }
+            } else if (window.isKeyPressed(WALK_BACKWARDS_KEY)) {
+                this.currentSpeed = -RUN_SPEED;
+            }else {
+                this.currentSpeed = 0;
             }
-        } else if (window.isKeyPressed(WALK_BACKWARDS_KEY)) {
-            this.currentSpeed = -RUN_SPEED;
-        }else {
-            this.currentSpeed = 0;
-        }
 
-        if (window.isKeyPressed(RIGHT_TURN_KEY_1) || window.isKeyPressed(RIGHT_TURN_KEY_2)) {
-            this.currentTurnSpeed = -TURN_SPEED;
-        } else if (window.isKeyPressed(LEFT_TURN_KEY_1) || window.isKeyPressed(LEFT_TURN_KEY_2)) {
-            this.currentTurnSpeed = TURN_SPEED;
-        }else {
-            this.currentTurnSpeed = 0;
-        }
+            if (window.isKeyPressed(RIGHT_TURN_KEY_1) || window.isKeyPressed(RIGHT_TURN_KEY_2)) {
+                this.currentTurnSpeed = -TURN_SPEED;
+            } else if (window.isKeyPressed(LEFT_TURN_KEY_1) || window.isKeyPressed(LEFT_TURN_KEY_2)) {
+                this.currentTurnSpeed = TURN_SPEED;
+            }else {
+                this.currentTurnSpeed = 0;
+            }
 
-        if (window.isKeyPressed(GLFW_KEY_K)) {
-            attack(target);
-        }
+            if (window.isKeyPressed(GLFW_KEY_K)) {
+                attack(target);
+            }
 
-        if (window.isKeyPressed(JUMP_KEY)) {
-            jump();
-        }
+            if (window.isKeyPressed(JUMP_KEY)) {
+                jump();
+            }
 
-
-
-        if (window.isButtonPressed(GLFW_MOUSE_BUTTON_1)) {
-            if (getInventory().hasItem(GunItem.class)) {
-                GunItem gunItem = getInventory().getItem(GunItem.class);
-                if (gunItem.canFire() && getInventory().getSelectedItem() == gunItem) {
-                    log.info("Firing");
-                    gunItem.fire();
-                    shootBullet();
+            if (window.isButtonPressed(GLFW_MOUSE_BUTTON_1)) {
+                if (getInventory().hasItem(GunItem.class)) {
+                    GunItem gunItem = getInventory().getItem(GunItem.class);
+                    if (gunItem.canFire() && getInventory().getSelectedItem() == gunItem) {
+                        log.info("Firing");
+                        gunItem.fire();
+                        shootBullet();
+                    }
                 }
             }
+
+            if (window.isKeyPressed(GLFW_KEY_Q)) {
+                inventory.selectPrevious();
+                log.info("🔁 Selected Previous Item: {}", inventory.getSelectedItemName());
+                lastSelectTime = currentTime;
+            }
+
+            if (window.isKeyPressed(GLFW_KEY_E)) {
+                inventory.selectNext();
+                log.info("🔁 Selected Next Item: {}", inventory.getSelectedItemName());
+                lastSelectTime = currentTime;
+            }
+
+            if (window.isKeyPressed(GLFW_KEY_F6)) window.toggleMouseLock();
+            if (window.isKeyPressed(GLFW_KEY_F5)) Objects.requireNonNull(GameState.getInstance().getCamera()).toggleCameraMode();
         }
     }
 

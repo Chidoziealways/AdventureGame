@@ -83,6 +83,19 @@ class Inventory {
                 '}'
     }
 
+    fun selectNext() {
+        if (items.isEmpty()) return
+        selectedIndex = (selectedIndex + 1) % items.size
+    }
+
+    fun selectPrevious() {
+        if (items.isEmpty()) return
+        selectedIndex = (selectedIndex - 1 + items.size) % items.size
+    }
+
+    fun getSelectedItemName(): String? = selectedItem?.name
+
+
     companion object {
         // ======== CODEC =========
         val CODEC: Codec<Inventory> = RecordCodecBuilder.create { instance: RecordCodecBuilder.Instance<Inventory> ->

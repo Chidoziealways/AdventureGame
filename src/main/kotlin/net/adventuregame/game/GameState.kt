@@ -77,7 +77,6 @@ class GameState private constructor(window: WindowManager) {
         terrains.add(terrain!!)
 
         // Player & camera
-        player = Player(Vector3f(214.8f, 0f, -1108.0f), 0f, 0f, 0f, 1f)
         storyManager = StoryManager()
         storyHandler = StoryHandler(this)
         camera = Camera(player)
@@ -93,10 +92,10 @@ class GameState private constructor(window: WindowManager) {
     /** 2) Fonts, GUI text, audio & advancements  */
     fun loadFontsAndAudio() {
         TextMaster.init(loader)
-        val font = FontType(
+        /*val font = FontType(
             loader.loadFontTextureAtlas("yuMincho"),
             File("src/main/resources/assets/adventuregame/textures/font/yuMincho.fnt")
-        )
+        )*/
 
         //GUIText title = new GUIText("Adventure Game", 3, font, new Vector2f(0f,0f), 0.5f, true);
         //title.setColour(1,0,0);
@@ -106,8 +105,6 @@ class GameState private constructor(window: WindowManager) {
 
     /** 3) Populate the world with lights, flora, props, mobs & pickups  */
     fun initWorld() {
-        Items.registerAll()
-
         // Sun
         val sun = Light(Vector3f(100e6f, 150e6f, -100e6f), Vector3f(1.3f, 1.3f, 1.3f))
         lights.add(sun)
@@ -147,16 +144,20 @@ class GameState private constructor(window: WindowManager) {
         val bg = BadGuy(Vector3f(100f, 0f, -50f), Vector3f(0f, 0f, 0f), 1f, 20f, "BadGuy1")
         entities.add(bg)
 
-        // Gun pickup
-        val pistolEntity = Items.PISTOL.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 0f, 5f)).also {
-            log.info(mark, "Pistol: {}", it)
-            entities.add(it)
-        } as GunEntity
 
-        val katanaEntity = Items.KATANA.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 0f, 5f)).also {
-            log.info(mark, "Katana: {}", it)
-            entities.add(it)
-        } as KatanaEntity
+        if(!player!!.hasItemByName("pistol")) {
+            // Gun pickup
+            val pistolEntity = Items.PISTOL.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 1f, 5f)).also {
+                log.info(mark, "Pistol: {}", it)
+                entities.add(it)
+            } as GunEntity
+        }
+        if(!player!!.hasItemByName("katana")) {
+            val katanaEntity = Items.KATANA.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 1f, 5f)).also {
+                log.info(mark, "Katana: {}", it)
+                entities.add(it)
+            } as KatanaEntity
+        }
     }
 
     /** 4) Set up GUI, water, particles & post-processing  */
@@ -194,9 +195,6 @@ class GameState private constructor(window: WindowManager) {
         }
         picker!!.update()
 
-        if (window.isKeyPressed(GLFW.GLFW_KEY_F6)) window.toggleMouseLock()
-        if (window.isKeyPressed(GLFW.GLFW_KEY_F5)) camera!!.toggleCameraMode()
-
         particleSystem!!.generateParticles(player!!.position)
     }
 
@@ -226,6 +224,7 @@ class GameState private constructor(window: WindowManager) {
         CodecRegistry.registerAll()
         this.window = window
 
+        player = Player(Vector3f(214.8f, 0f, -1108.0f), 0f, 0f, 0f, 1f)
         terrain = Terrain(0, -1, loader, texturePack, blendMap, 0)
 
         seed = terrain!!.seed
@@ -238,6 +237,7 @@ class GameState private constructor(window: WindowManager) {
             seed = seed!!,
             player = player,
             storyManager = storyManager
+            //entities = entities
         )
     }
 
@@ -279,7 +279,7 @@ class GameState private constructor(window: WindowManager) {
 
         private val loader = Loader()
         private var renderer: MasterRenderer? = null
-        private val entities: MutableList<Entity?> = ArrayList()
+        private var entities: MutableList<Entity?> = ArrayList()
         private val terrains: MutableList<Terrain> = ArrayList()
         private val lights: MutableList<Light> = ArrayList()
         private val normalMapEntities: MutableList<Entity> = ArrayList()
@@ -336,7 +336,10 @@ class GameState private constructor(window: WindowManager) {
                 seed = serializable.seed
                 player = serializable.player
                 storyManager = serializable.storyManager
+                //entities = serializable.entities as MutableList<Entity?>
                 terrain = Terrain(0, -1, loader, texturePack, blendMap, serializable.seed)
+            }.also {
+                log.info("Inventory: ${serializable.player!!.inventory}")
             }
         }
     }

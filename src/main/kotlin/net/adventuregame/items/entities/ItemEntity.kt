@@ -19,7 +19,7 @@ open class ItemEntity(model: TexturedModel, pos: Vector3f, rot: Vector3f, scale:
 
         // Check if player is nearby
         val player = GameState.player // You must have a global access or pass it in
-        if (position.distance(player!!.position) < 0.5f) {
+        if (position.distance(player!!.position) < 2.0f) {
             // Add the gun item to the player's inventory
             player.inventory.addItem(item)
             log.info("Added to Inventory")

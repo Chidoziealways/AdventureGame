@@ -1,0 +1,1 @@
+**Just so you know**, the Class that's in Japanese (粒子の先生) is pronounced ryuushinosensei. if you want to select it, just type l and it'll pop up. I don't know why 'L'(in lower case), but it works

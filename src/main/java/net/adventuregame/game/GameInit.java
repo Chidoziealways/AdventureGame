@@ -2,12 +2,19 @@
 package net.adventuregame.game;
 
 import com.chidozie.core.renderEngine.WindowManager;
+import net.adventuregame.items.Items;
 import net.adventuregame.save.SaveManager;
 
+/**
+ * @version 1
+ * @since 0.0.1
+ * @author Chidozie Derek Chidozie-Uzowulu
+ */
 public class GameInit {
     private final GameState state;
 
     public GameInit(WindowManager window) {
+        Items.registerAll();
         if (SaveManager.INSTANCE.getSaveFile().exists()) {
             this.state = SaveManager.INSTANCE.loadGame(window);
         } else {
