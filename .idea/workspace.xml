@@ -4,32 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="Added SAVE AND LOAD">
-      <change afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/hud/HudShader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/gui/HotbarRenderer3D.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/hud/hudFragmentShader.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/hud/hudVertexShader.vert" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/buildSrc/src/main/kotlin/convention.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/buildSrc/src/main/kotlin/convention.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/game.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/MasterRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/MasterRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiRenderer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiRenderer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/guis/GuiTexture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Gold.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Gold.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/GunItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/GunItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Item.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Item.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Items.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/net/adventuregame/items/Items.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/updater/UpdateClient.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureMain.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameState.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/TitleScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/TitleScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/KatanaItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/KatanaItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/fragmentShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/entities/fragmentShader.frag" afterDir="false" />
-    </list>
+    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="Commit before changing laptop" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -357,7 +332,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749204788709</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Commit before changing laptop">
+      <option name="closed" value="true" />
+      <created>1753006995576</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1753006995576</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,7 +359,8 @@
     <MESSAGE value="About to Move on to COMPLETE Optimisation." />
     <MESSAGE value="Added Kotlin to the game!" />
     <MESSAGE value="Added SAVE AND LOAD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added SAVE AND LOAD" />
+    <MESSAGE value="Commit before changing laptop" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit before changing laptop" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
