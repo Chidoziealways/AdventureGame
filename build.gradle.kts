@@ -1,6 +1,16 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("convention")
     kotlin("jvm")
+}
+
+kotlin {
+    jvmToolchain(24)
+
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_24)
+    }
 }
 
 val group_id: String by project
@@ -53,15 +63,15 @@ dependencies {
     implementation(libs.findbugs)
     implementation(libs.listenablefuture)
     implementation(libs.annotations)
-    implementation("org.slf4j:slf4j-api:2.0.16")
-    implementation("org.apache.logging.log4j:log4j-api:2.19.0")
-    implementation("org.apache.logging.log4j:log4j-core:2.19.0")
-    implementation("org.apache.logging.log4j:log4j-slf4j2-impl:2.19.0")
-    implementation("org.apache.commons:commons-compress:1.26.0")
-    implementation("org.apache.commons:commons-lang3:3.13.0")
-    implementation("com.mojang:brigadier:1.0.18")
-    implementation("com.mojang:datafixerupper:6.0.8")
-    implementation("com.mojang:authlib:5.0.47")
+    implementation(libs.slf4jApi)
+    implementation(libs.log4jApi)
+    implementation(libs.log4jCore)
+    implementation(libs.log4jSl4fj)
+    implementation(libs.compress)
+    implementation(libs.lang)
+    implementation(libs.brigadier)
+    implementation(libs.dfu)
+    implementation(libs.authlib)
 
     runtimeOnly("org.lwjgl:lwjgl::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-assimp::$lwjglNatives")

@@ -1,5 +1,5 @@
 [versions]
-    adventuregame = "0.0.1-alpha"
+    adventuregame = "0.0.3-alpha"
     lwjgl = "3.3.5"
     lwjglNatives = "natives-windows"
     jomlVersion = "1.10.8"
@@ -12,6 +12,13 @@
     findbugs = "3.0.2"
     listenablefuture = "36.0.0"
     annotations = "2.8"
+    slf4j = "2.0.16"
+    log4j = "2.19.0"
+    compress = "1.26.0"
+    lang = "3.13.0"
+    brigadier = "1.0.18"
+    dfu = "6.0.8"
+    authlib = "5.0.47"
 
 [libraries]
     jopt-simple = { group = "net.sf.jopt-simple", name = "jopt-simple", version.ref = "jopt-simple" } # Forge's temporary hacky solution
@@ -25,3 +32,12 @@
     findbugs = { group = "com.google.code.findbugs", name = "jsr305", version.ref = "findbugs" }
     listenablefuture = { group = "com.google.guava", name = "listenablefuture", version.ref = "listenablefuture" }
     annotations = { group = "com.google.j2objc", name = "j2objc-annotations", version.ref = "annotations" }
+    slf4jApi = { group = "org.slf4j", name = "slf4j-api", version.ref = "slf4j" }
+    log4jApi = { group = "org.apache.logging.log4j", name = "log4j-api", version.ref = "log4j" }
+    log4jCore = { group = "org.apache.logging.log4j", name = "log4j-core", version.ref = "log4j"}
+    log4jSl4fj = { group = "org.apache.logging.log4j", name = "log4j-slf4j2-impl", version.ref = "log4j" }
+    compress = { group = "org.apache.commons", name = "commons-compress", version.ref = "compress" }
+    lang = { group = "org.apache.commons", name = "commons-lang3", version.ref = "lang" }
+    brigadier = { group = "com.mojang", name = "brigadier", version.ref = "brigadier" }
+    dfu = { group = "com.mojang", name = "datafixerupper", version.ref = "dfu" }
+    authlib = { group = "com.mojang", name = "authlib", version.ref = "authlib" }

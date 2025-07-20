@@ -22,8 +22,10 @@ import net.adventuregame.entities.Camera
 import net.adventuregame.entities.Entity
 import net.adventuregame.entities.Light
 import net.adventuregame.gameDecor.Tree
+import net.adventuregame.gui.HotbarRenderer3D
 import net.adventuregame.guis.GuiRenderer
 import net.adventuregame.guis.GuiTexture
+import net.adventuregame.hud.HudShader
 import net.adventuregame.items.Items
 import net.adventuregame.items.entities.GunEntity
 import net.adventuregame.items.entities.ItemEntity
@@ -83,6 +85,7 @@ class GameState private constructor(window: WindowManager) {
 
         // Renderer & picker
         renderer = MasterRenderer(loader, camera)
+        hotbarRenderer = HotbarRenderer3D(HudShader())
         picker = MousePicker(camera, renderer!!.projectionMatrix, terrain, entities)
 
         // Put player in the world
@@ -205,7 +208,8 @@ class GameState private constructor(window: WindowManager) {
         waterRenderer!!.render(waters, camera, lights[0])
         粒子の先生.update(camera)
         粒子の先生.renderParticles(camera)
-        guiRenderer!!.render(guis)
+        hotbarRenderer!!.render()
+        guiRenderer!!.render()
         TextMaster.render()
     }
 
@@ -279,6 +283,7 @@ class GameState private constructor(window: WindowManager) {
 
         private val loader = Loader()
         private var renderer: MasterRenderer? = null
+        private var hotbarRenderer: HotbarRenderer3D? = null
         private var entities: MutableList<Entity?> = ArrayList()
         private val terrains: MutableList<Terrain> = ArrayList()
         private val lights: MutableList<Light> = ArrayList()

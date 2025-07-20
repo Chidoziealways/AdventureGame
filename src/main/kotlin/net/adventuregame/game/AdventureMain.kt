@@ -4,10 +4,8 @@ import com.chidozie.core.renderEngine.WindowManager
 import joptsimple.OptionException
 import joptsimple.OptionParser
 import joptsimple.OptionSet
-import net.adventuregame.items.Items
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
-import updater.UpdateClient
 import java.io.IOException
 
 /**
@@ -60,7 +58,6 @@ object AdventureMain {
         log.info("Launching at {}x{}\n", width, height)
         // Now pass width/height into your WindowManager or GameInit
         try {
-            UpdateClient.updateJar()
             window = WindowManager(true, width, height)
             game = AdventureGame(window)
             game!!.run()

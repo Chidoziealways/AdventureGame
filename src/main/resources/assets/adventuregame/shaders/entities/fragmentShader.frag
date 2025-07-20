@@ -91,8 +91,7 @@ void main(void) {
 
     // Apply bluish tint if isSelected is greater than 0.5
     if (isSelected > 0.5) {
-        vec4 blueTint = vec4(0.2, 0.2, 1.0, 1.0); // Adjust the values for the desired bluish look
-        finalColor = mix(finalColor, blueTint, 0.5); // Adjust the blend factor as needed
+        finalColor.rgb = mix(finalColor.rgb, vec3(0.2, 0.2, 1.0), 0.4);
     }
 
     out_Colour = finalColor;

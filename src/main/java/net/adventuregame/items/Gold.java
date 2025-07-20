@@ -14,4 +14,9 @@ public class Gold extends Item {
     public ItemEntity createEntity(Vector3f position) {
         return null;
     }
+
+    @Override
+    public TexturedModel getGuiModel() {
+        return null;
+    }
 }

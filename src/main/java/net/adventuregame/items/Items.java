@@ -17,7 +17,7 @@ public class Items {
 
     public static final KatanaItem KATANA = new KatanaItem(
             "katana",
-            new TexturedModel(OBJFileLoader.loadOBJ("stall", GunItem.loader), new ModelTexture(GunItem.loader.loadGameTexture("stallTexture")))
+            new TexturedModel(OBJFileLoader.loadOBJ("torch", GunItem.loader), new ModelTexture(GunItem.loader.loadGameTexture("torch")))
     );
 
     public static void registerAll() {

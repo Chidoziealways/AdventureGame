@@ -76,4 +76,9 @@ public class GunItem extends Item {
     public ItemEntity createEntity(Vector3f position) {
         return new GunEntity(model, 0, position, 0, this);
     }
+
+    @Override
+    public TexturedModel getGuiModel() {
+        return model;
+    }
 }

@@ -5,13 +5,6 @@ plugins {
     eclipse
 }
 
-java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(23))
-
-    withSourcesJar()
-    withJavadocJar()
-}
-
 idea {
     module {
         isDownloadSources = true
@@ -27,8 +20,6 @@ repositories {
     }
 
 }
-
-val libs = project.versionCatalogs.find("libs")
 
 tasks.withType<Jar>().configureEach {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE

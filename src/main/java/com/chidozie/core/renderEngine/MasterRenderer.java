@@ -38,10 +38,19 @@ public class MasterRenderer {
 
     private StaticShader entityShader = new StaticShader();
     private EntityRenderer entityRenderer;
+
+    public EntityRenderer getEntityRenderer() {
+        return entityRenderer;
+    }
+
     private TerrainRenderer terrainRenderer;
     private TerrainShader terrainShader = new TerrainShader();
     private SkyBoxRenderer skyBoxRenderer;
     private ShadowMapMasterRenderer shadowMapRenderer;
+
+    public StaticShader getEntityShader() {
+        return entityShader;
+    }
 
     private NormalMappingRenderer normalMapRenderer;
 

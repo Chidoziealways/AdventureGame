@@ -17,11 +17,12 @@ import java.io.File
 
 class TitleScreen(private val window: WindowManager, loader: Loader) {
     private val guiRenderer = GuiRenderer(loader)
-    private val guiTextures = mutableListOf<GuiTexture>()
     private var musicSource: Source? = null
 
     var title: GUIText? = null
     var enter: GUIText? = null
+    var bgGui: GuiTexture? = null
+    var startButton: GuiTexture? = null
 
     var shouldStartGame = false
         private set
@@ -33,10 +34,8 @@ class TitleScreen(private val window: WindowManager, loader: Loader) {
 
         val backgroundTex = loader.loadGameTexture("gui/title_bg")
         val startButtonTex = loader.loadGameTexture("gui/start_button")
-        val bgGui = GuiTexture(backgroundTex, Vector2f(0f, 0f), Vector2f(1f, 1f))
-        val startButton = GuiTexture(startButtonTex, Vector2f(0f, -0.3f), Vector2f(0.4f, 0.2f))
-        guiTextures.add(bgGui)
-        guiTextures.add(startButton)
+        bgGui = GuiTexture(backgroundTex, Vector2f(0f, 0f), Vector2f(1f, 1f))
+        startButton = GuiTexture(startButtonTex, Vector2f(0f, -0.3f), Vector2f(0.4f, 0.2f))
 
         val buffer = AudioManager.loadSound("ao_to_natsu")
         musicSource!!.setLooping(true)
@@ -64,17 +63,18 @@ class TitleScreen(private val window: WindowManager, loader: Loader) {
             checkInput()
 
             GL11.glClear(GL11.GL_COLOR_BUFFER_BIT or GL11.GL_DEPTH_BUFFER_BIT)
-            guiRenderer.render(guiTextures)
+            guiRenderer.render()
             TextMaster.render()
             window.update()
         }
-        guiRenderer.cleanUp()
-        guiTextures.clear()
         musicSource!!.stop()
         musicSource!!.delete()
         TextMaster.removeText(enter)
         TextMaster.removeText(title)
         TextMaster.cleanUp()
+        GuiRenderer.removeGui(bgGui)
+        GuiRenderer.removeGui(startButton)
+        guiRenderer.cleanUp()
     }
 
     private fun checkInput() {

@@ -11,7 +11,11 @@ class KatanaItem(name: String, val model: TexturedModel) : Item(name){
         return KatanaEntity(model, 0, position, 0f, this);
     }
 
+    override fun getGuiModel(): TexturedModel? {
+        return model
+    }
+
     override fun toString(): String {
-        return name;
+        return name
     }
 }

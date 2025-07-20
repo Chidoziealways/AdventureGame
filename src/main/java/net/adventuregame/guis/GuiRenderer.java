@@ -8,6 +8,7 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL13;
 import org.lwjgl.opengl.GL20;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static org.lwjgl.opengl.GL30.glBindVertexArray;
@@ -16,6 +17,7 @@ public class GuiRenderer {
 
     private final RawModel quad;
     private GuiShader shader;
+    private static List<GuiTexture> guis = new ArrayList<>();
 
     public GuiRenderer(Loader loader) {
         float[] positions = {-1, 1, -1, -1, 1, 1, 1, -1};
@@ -23,7 +25,7 @@ public class GuiRenderer {
         shader = new GuiShader();
     }
 
-    public void render(List<GuiTexture> guis) {
+    public void render() {
         shader.start();
         glBindVertexArray(quad.getVaoId());
         GL20.glEnableVertexAttribArray(0);
@@ -46,6 +48,14 @@ public class GuiRenderer {
 
     public void cleanUp() {
         shader.cleanup();
+    }
+
+    public static void addGui(GuiTexture gui) {
+        guis.add(gui);
+    }
+
+    public static void removeGui(GuiTexture gui) {
+        guis.remove(gui);
     }
 
 }

@@ -12,6 +12,7 @@ public class GuiTexture {
         this.texture = texture;
         this.position = position;
         this.scale = scale;
+        GuiRenderer.addGui(this);
     }
 
     public int getTexture() {

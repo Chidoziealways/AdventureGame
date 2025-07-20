@@ -17,4 +17,6 @@ public abstract class Item{
     }
 
     public abstract ItemEntity createEntity(Vector3f position);
+
+    public abstract TexturedModel getGuiModel();
 }
