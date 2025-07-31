@@ -81,15 +81,15 @@ class GameState private constructor(window: WindowManager) {
         // Player & camera
         storyManager = StoryManager()
         storyHandler = StoryHandler(this)
-        camera = Camera(player)
+        camera = Camera(player!!)
 
         // Renderer & picker
         renderer = MasterRenderer(loader, camera)
         hotbarRenderer = HotbarRenderer3D(HudShader())
-        picker = MousePicker(camera, renderer!!.projectionMatrix, terrain, entities)
+        picker = MousePicker(camera!!, renderer!!.projectionMatrix, terrain, entities)
 
         // Put player in the world
-        entities.add(player)
+        entities.add(player!!)
     }
 
     /** 2) Fonts, GUI text, audio & advancements  */
@@ -137,7 +137,7 @@ class GameState private constructor(window: WindowManager) {
             NormalMappedObjLoader.loadOBJ("barrel", loader),
             ModelTexture(loader.loadGameTexture("barrel"))
         )
-        barrel.texture.normalMap = loader.loadGameTexture("normalmaps/barrelNormal")
+        barrel.texture!!.normalMap = loader.loadGameTexture("normalmaps/barrelNormal")
         barrel.texture.shineDamper = 10f
         barrel.texture.reflectivity = 0.5f
         barrel.texture.specularMap = loader.loadGameTexture("specularmaps/barrelS")
@@ -171,7 +171,7 @@ class GameState private constructor(window: WindowManager) {
         val wsh = WaterShader()
         waterRenderer = WaterRenderer(loader, wsh, renderer!!.projectionMatrix, fbos)
         waters.add(WaterTile(1000f, -1000f, -10f))
-        粒子の先生.init(loader, renderer!!.projectionMatrix)
+        粒子の先生.init(loader, renderer!!.projectionMatrix!!)
 
         val pt = ParticleTexture(loader.loadParticleTexture("fire"), 8, false)
         particleSystem = ParticleSystem(pt, 50f, 25f, 0.3f, 4f, 1f)
@@ -193,7 +193,7 @@ class GameState private constructor(window: WindowManager) {
         storyHandler!!.update()
         camera!!.move()
         for (e in ArrayList(entities)) {
-            if (e is BadGuy) e.updateAI(terrain)
+            if (e is BadGuy) e.updateAI(terrain!!)
             if (e is ItemEntity) e.update()
         }
         picker!!.update()
@@ -205,9 +205,9 @@ class GameState private constructor(window: WindowManager) {
     fun render() {
         renderer!!.renderShadowMap(entities, lights[0])
         renderer!!.renderScene(entities, normalMapEntities, terrains, lights, camera, Vector4f(0f, 1f, 0f, 100f))
-        waterRenderer!!.render(waters, camera, lights[0])
-        粒子の先生.update(camera)
-        粒子の先生.renderParticles(camera)
+        waterRenderer!!.render(waters, camera!!, lights[0])
+        粒子の先生.update(camera!!)
+        粒子の先生.renderParticles(camera!!)
         hotbarRenderer!!.render()
         guiRenderer!!.render()
         TextMaster.render()
@@ -284,7 +284,7 @@ class GameState private constructor(window: WindowManager) {
         private val loader = Loader()
         private var renderer: MasterRenderer? = null
         private var hotbarRenderer: HotbarRenderer3D? = null
-        private var entities: MutableList<Entity?> = ArrayList()
+        private var entities: MutableList<Entity> = ArrayList()
         private val terrains: MutableList<Terrain> = ArrayList()
         private val lights: MutableList<Light> = ArrayList()
         private val normalMapEntities: MutableList<Entity> = ArrayList()
@@ -305,7 +305,7 @@ class GameState private constructor(window: WindowManager) {
         }
 
         @JvmStatic
-        fun addEntity(entity: Entity?) {
+        fun addEntity(entity: Entity) {
             entities.add(entity)
         }
 

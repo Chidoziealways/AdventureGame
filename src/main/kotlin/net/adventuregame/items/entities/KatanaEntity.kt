@@ -1,7 +1,5 @@
 package net.adventuregame.items.entities
 
-import net.adventuregame.entities.Entity
-import net.adventuregame.game.GameState
 import net.adventuregame.items.KatanaItem
 import net.adventuregame.models.TexturedModel
 import org.joml.Vector3f

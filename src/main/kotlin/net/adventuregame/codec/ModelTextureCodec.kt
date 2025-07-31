@@ -19,14 +19,14 @@ object ModelTextureCodec {
             Codec.INT.fieldOf("numberOfRows").forGetter { it.numberOfRows }
         ).apply(instance) { texId, normMap, specMap, shine, reflect, trans, fakeLight, hasSpec, selected, rows ->
             ModelTexture(texId).also {
-                it.setNormalMap(normMap)
-                if (hasSpec) it.setSpecularMap(specMap)
+                it.normalMap = normMap
+                if (hasSpec) it.specularMap = specMap
                 it.shineDamper = shine
                 it.reflectivity = reflect
-                it.setHasTransparency(trans)
-                it.setUseFakeLighting(fakeLight)
-                it.setSelected(selected)
-                it.setNumberOfRows(rows)
+                it.isHasTransparency = trans
+                it.isUseFakeLighting = fakeLight
+                it.isSelected = selected
+                it.numberOfRows = rows
             }
         }
     }

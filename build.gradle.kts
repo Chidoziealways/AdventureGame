@@ -1,16 +1,5 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
     id("convention")
-    kotlin("jvm")
-}
-
-kotlin {
-    jvmToolchain(24)
-
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_24)
-    }
 }
 
 val group_id: String by project
@@ -19,11 +8,12 @@ group = group_id
 version = libs.versions.adventuregame.get()
 
 repositories {
-    mavenCentral()
     maven { url = uri("https://libraries.minecraft.net") }
     flatDir {
         dirs("libs")
     }
+    mavenCentral()
+    maven { url = uri("https://maven.google.com") }
 }
 
 sourceSets {
@@ -86,7 +76,12 @@ dependencies {
     runtimeOnly("org.lwjgl:lwjgl-stb::$lwjglNatives")
 
     implementation(libs.jopt.simple)
-    implementation(kotlin("stdlib-jdk8"))
+
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.0") // for coroutines
+    // or for serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+
+    implementation("org.luaj:luaj-jse:3.0.1")
 }
 
 tasks.test {

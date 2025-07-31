@@ -16,6 +16,6 @@ class KatanaItem(name: String, val model: TexturedModel) : Item(name){
     }
 
     override fun toString(): String {
-        return name
+        return name!!
     }
 }

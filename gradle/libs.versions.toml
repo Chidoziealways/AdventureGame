@@ -1,6 +1,6 @@
 [versions]
     adventuregame = "0.0.3-alpha"
-    lwjgl = "3.3.5"
+    lwjgl = "3.3.6"
     lwjglNatives = "natives-windows"
     jomlVersion = "1.10.8"
     jomlPrimVersion = "1.10.0"

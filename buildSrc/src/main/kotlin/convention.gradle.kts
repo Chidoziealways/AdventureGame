@@ -1,8 +1,18 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
-    java
+    kotlin("jvm")
     `maven-publish`
     idea
     eclipse
+}
+
+kotlin {
+    jvmToolchain(24)
+
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_24)
+    }
 }
 
 idea {

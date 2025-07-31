@@ -19,11 +19,11 @@ const vec3 outLineColour = vec3(1.0, 0.0, 0.0);
 
 void main(void){
 
-    float distance = 1.0 - texture(fontAtlas, pass_textureCoords).a;
-    float alpha = 1.0 - smoothstep(width, width + edge, distance);
+    float distance = texture(fontAtlas, pass_textureCoords).r;
+    float alpha = smoothstep(width, width + edge, distance);
 
-    float distance2 = 1.0 - texture(fontAtlas, pass_textureCoords + offset).a;
-    float outLineAlpha = 1.0 - smoothstep(borderWidth, borderWidth + borderEdge, distance2);
+    float distance2 = texture(fontAtlas, pass_textureCoords + offset).r;
+    float outLineAlpha = smoothstep(borderWidth, borderWidth + borderEdge, distance2);
 
     float overallAlpha = alpha + (1.0 - alpha) * outLineAlpha;
     vec3 overallColour = mix(outLineColour, colour, alpha / overallAlpha);

@@ -34,7 +34,7 @@ class HotbarRenderer3D(
 
         for (i in items.indices) {
             val item = items[i] ?: continue
-            val model: TexturedModel = item.guiModel ?: continue
+            val model: TexturedModel = item.getGuiModel() ?: continue
 
             val x = startX + i * itemSpacing
             val y = -0.5f
@@ -59,14 +59,14 @@ class HotbarRenderer3D(
         val texture = model.texture
 
         // Bind VAO
-        GL30.glBindVertexArray(raw.vaoId)
+        GL30.glBindVertexArray(requireNotNull(raw).vaoId)
         GL20.glEnableVertexAttribArray(0) // position
         GL20.glEnableVertexAttribArray(1) // texCoords
         GL20.glEnableVertexAttribArray(2) // normals
 
         // Shader uniforms
         shader.loadMvpMatrix(mvp)
-        shader.loadUseFakeLighting(texture.isUseFakeLighting)
+        shader.loadUseFakeLighting(texture!!.isUseFakeLighting)
         shader.loadNumberOfRows(texture.numberOfRows.toFloat())
         shader.loadOffset(0f, 0f) // No texture atlas offsets in GUI
         shader.loadIsSelected(isSelected)

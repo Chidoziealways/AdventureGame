@@ -18,7 +18,7 @@ data class GameStateSerializable(
         val GAME_STATE_CODEC: Codec<GameStateSerializable> = RecordCodecBuilder.create { instance ->
             instance.group(
                 Codec.INT.fieldOf("seed").forGetter(GameStateSerializable::seed),
-                Player.CODEC.fieldOf("player").forGetter(GameStateSerializable::player),
+                Player.CODEC!!.fieldOf("player").forGetter(GameStateSerializable::player),
                 StoryManager.CODEC.fieldOf("story").forGetter(GameStateSerializable::storyManager)
                 //Entity.CODEC.listOf().fieldOf("entities").forGetter(GameStateSerializable::entities)
             ).apply(instance, ::GameStateSerializable)

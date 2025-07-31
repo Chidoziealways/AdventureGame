@@ -42,7 +42,7 @@ class Inventory {
         return false
     }
 
-    fun <T : Item?> getItem(itemType: Class<T>): T? {
+    fun <T : Item> getItem(itemType: Class<T>): T? {
         for (item in items) {
             if (item != null && itemType.isInstance(item)) {
                 return itemType.cast(item)

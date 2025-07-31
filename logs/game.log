@@ -31,3 +31,585 @@
 2025-06-22 13:02:59 [main] INFO  net.adventuregame.items.entities.ItemEntity - Added to Inventory
 2025-06-22 13:02:59 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
 2025-06-22 13:02:59 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\uzowu\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 07:03:45 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:03:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:03:47 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 07:03:48 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 07:03:48 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:03:48 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.game.GameState - Pistol: pistol
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.game.GameState - Katana: katana
+2025-07-30 07:10:02 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:03 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:03 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:03 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-30 07:10:03 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-30 07:10:03 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 07:10:10 [main] INFO  net.adventuregame.items.entities.ItemEntity - Added to Inventory
+2025-07-30 07:10:10 [main] INFO  net.adventuregame.items.entities.ItemEntity - Added to Inventory
+2025-07-30 07:10:10 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-30 07:10:10 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 07:11:52 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:52 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:52 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:54 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:56 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:56 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:57 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:11:57 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:14 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:17 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:17 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:26 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:27 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:28 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:12:29 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:15:05 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:15:05 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:15:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 07:15:10 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:24:16 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:24:20 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:24:21 [main] ERROR net.adventuregame.game.AdventureMain - Fatal error during game startup!
+java.lang.NullPointerException: null
+	at net.adventuregame.player.Player.<init>(Player.kt:202) ~[main/:?]
+	at net.adventuregame.player.Player$Companion.fromCodec(Player.kt:220) ~[main/:?]
+	at net.adventuregame.player.Player.CODEC$lambda$9$lambda$8(Player.kt:244) ~[main/:?]
+	at com.mojang.datafixers.util.Function4.lambda$curry2$2(Function4.java:14) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult$Instance.ap2(DataResult.java:318) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.kinds.Applicative.ap4(Applicative.java:84) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$7.decode(RecordCodecBuilder.java:404) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$1(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.lambda$flatMap$11(DataResult.java:139) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:137) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.Decoder.parse(Decoder.java:18) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.FieldDecoder.decode(FieldDecoder.java:29) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$1.decode(MapCodec.java:34) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$5.decode(RecordCodecBuilder.java:324) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$1(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.lambda$flatMap$11(DataResult.java:139) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:137) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-6.0.8.jar:?]
+	at net.adventuregame.save.SaveManager.loadGame(SaveManager.kt:48) ~[main/:?]
+	at net.adventuregame.game.GameInit.<init>(GameInit.kt:21) ~[main/:?]
+	at net.adventuregame.game.AdventureGame.<init>(AdventureGame.kt:11) ~[main/:?]
+	at net.adventuregame.game.AdventureMain.main(AdventureMain.kt:62) ~[main/:?]
+2025-07-30 10:25:03 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:25:06 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:08 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:08 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:08 [main] ERROR net.adventuregame.game.AdventureMain - Fatal error during game startup!
+java.lang.NullPointerException: null
+	at net.adventuregame.player.Player.initAfterDecode(Player.kt:188) ~[main/:?]
+	at net.adventuregame.player.Player$Companion.fromCodec(Player.kt:222) ~[main/:?]
+	at net.adventuregame.player.Player.CODEC$lambda$9$lambda$8(Player.kt:244) ~[main/:?]
+	at com.mojang.datafixers.util.Function4.lambda$curry2$2(Function4.java:14) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult$Instance.ap2(DataResult.java:318) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.kinds.Applicative.ap4(Applicative.java:84) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$7.decode(RecordCodecBuilder.java:404) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$1(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.lambda$flatMap$11(DataResult.java:139) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:137) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.Decoder.parse(Decoder.java:18) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.FieldDecoder.decode(FieldDecoder.java:29) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$1.decode(MapCodec.java:34) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$5.decode(RecordCodecBuilder.java:324) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.decode(RecordCodecBuilder.java:107) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.lambda$compressedDecode$1(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.lambda$flatMap$11(DataResult.java:139) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.DataResult.flatMap(DataResult.java:137) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapDecoder.compressedDecode(MapDecoder.java:52) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.decode(MapCodec.java:91) ~[datafixerupper-6.0.8.jar:?]
+	at net.adventuregame.save.SaveManager.loadGame(SaveManager.kt:48) ~[main/:?]
+	at net.adventuregame.game.GameInit.<init>(GameInit.kt:21) ~[main/:?]
+	at net.adventuregame.game.AdventureGame.<init>(AdventureGame.kt:11) ~[main/:?]
+	at net.adventuregame.game.AdventureMain.main(AdventureMain.kt:62) ~[main/:?]
+2025-07-30 10:25:29 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:25:31 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:25:31 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:25:33 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:25:33 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:33 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:25:35 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:25:35 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:25:35 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 10:25:35 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:45 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:48 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:27:49 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:27:49 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:27:52 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:27:53 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:53 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:27:56 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:27:56 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:27:56 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 10:27:56 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:06 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:28:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-30 10:28:08 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:28:32 [main] ERROR net.adventuregame.game.AdventureMain - Fatal error during game startup!
+java.lang.NullPointerException: null
+	at net.adventuregame.story.StoryManager.CODEC$lambda$6$lambda$4(StoryManager.kt:216) ~[main/:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance.lambda$ap3$6(RecordCodecBuilder.java:290) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.encode(RecordCodecBuilder.java:112) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.encode(MapCodec.java:96) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.Encoder.encodeStart(Encoder.java:14) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.FieldEncoder.encode(FieldEncoder.java:24) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$1.encode(MapCodec.java:39) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$Instance$6.encode(RecordCodecBuilder.java:297) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.codecs.RecordCodecBuilder$2.encode(RecordCodecBuilder.java:112) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.MapCodec$MapCodecCodec.encode(MapCodec.java:96) ~[datafixerupper-6.0.8.jar:?]
+	at com.mojang.serialization.Encoder.encodeStart(Encoder.java:14) ~[datafixerupper-6.0.8.jar:?]
+	at net.adventuregame.save.SaveManager.saveGame(SaveManager.kt:21) ~[main/:?]
+	at com.chidozie.core.renderEngine.WindowManager.init$lambda$2(WindowManager.kt:91) ~[main/:?]
+	at org.lwjgl.glfw.GLFWKeyCallbackI.callback(GLFWKeyCallbackI.java:44) ~[lwjgl-glfw-3.3.6.jar:build 1]
+	at org.lwjgl.system.JNI.invokeV(Native Method) ~[lwjgl-3.3.6.jar:build 1]
+	at org.lwjgl.glfw.GLFW.glfwPollEvents(GLFW.java:3484) ~[lwjgl-glfw-3.3.6.jar:build 1]
+	at com.chidozie.core.renderEngine.WindowManager.update(WindowManager.kt:147) ~[main/:?]
+	at net.adventuregame.game.GameLoop.run(GameLoop.kt:19) ~[main/:?]
+	at net.adventuregame.game.AdventureGame.run(AdventureGame.kt:27) ~[main/:?]
+	at net.adventuregame.game.AdventureMain.main(AdventureMain.kt:63) ~[main/:?]
+2025-07-30 10:30:42 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:30:44 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:44 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:45 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:45 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:45 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:45 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:45 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:30:45 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:30:47 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:30:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:47 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:30:49 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:30:49 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:49 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 10:30:49 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:53 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:53 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:53 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:30:54 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-30 10:30:55 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:30:56 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:43:44 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:43:47 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:43:47 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:43:49 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:43:49 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:43:49 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:43:52 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:43:52 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:43:52 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 10:43:52 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:13 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:18 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 10:48:19 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 10:48:19 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:48:21 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:48:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:21 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 10:48:23 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 10:48:23 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 10:48:23 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 10:48:23 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:54 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:00:56 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 11:00:56 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:00:57 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:00:57 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:57 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:00:58 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:00:58 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:00:58 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 11:00:58 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:07 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:47 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:01:50 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 11:01:50 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:01:51 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:01:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:51 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:01:52 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:01:52 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:52 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 11:01:52 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:01:55 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:15 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:16 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 11:12:16 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:12:17 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:12:17 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:17 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-30 11:12:18 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-30 11:12:18 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:18 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-30 11:12:18 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-30 11:12:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-30 11:12:25 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-30 11:12:25 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-30 11:12:57 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:12:58 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:12:59 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:13:01 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:13:01 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:14:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:14:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:14:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:14:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:14:07 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:22:31 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:22:36 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-30 11:22:42 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 05:48:10 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 05:49:58 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 05:51:44 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:00:23 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:01:50 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:08:30 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:10:20 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:14:19 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:14:22 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:14:22 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:14:23 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:14:23 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:23 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:14:24 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:14:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:24 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:14:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:14:26 [main] ERROR net.adventuregame.game.AdventureMain - Fatal error during game startup!
+java.lang.NullPointerException: null
+	at com.chidozie.core.font.TextMeshCreator.createStructure(TextMeshCreator.kt:39) ~[main/:?]
+	at com.chidozie.core.font.TextMeshCreator.createTextMesh(TextMeshCreator.kt:13) ~[main/:?]
+	at com.chidozie.core.font.FontType.loadText(FontType.kt:44) ~[main/:?]
+	at com.chidozie.core.font.TextMaster.loadText(TextMaster.kt:21) ~[main/:?]
+	at com.chidozie.core.font.GUIText.<init>(GUIText.kt:106) ~[main/:?]
+	at net.adventuregame.game.TitleScreen.<init>(TitleScreen.kt:55) ~[main/:?]
+	at net.adventuregame.game.AdventureGame.run(AdventureGame.kt:34) ~[main/:?]
+	at net.adventuregame.game.AdventureMain.main(AdventureMain.kt:63) ~[main/:?]
+2025-07-31 06:18:47 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:18:51 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:18:51 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:18:52 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:18:52 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:52 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:18:53 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:18:53 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:53 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:18:53 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:18:54 [main] ERROR net.adventuregame.game.AdventureMain - Fatal error during game startup!
+java.lang.NullPointerException: null
+	at com.chidozie.core.font.TextMeshCreator.createStructure(TextMeshCreator.kt:39) ~[main/:?]
+	at com.chidozie.core.font.TextMeshCreator.createTextMesh(TextMeshCreator.kt:13) ~[main/:?]
+	at com.chidozie.core.font.FontType.loadText(FontType.kt:47) ~[main/:?]
+	at com.chidozie.core.font.TextMaster.loadText(TextMaster.kt:21) ~[main/:?]
+	at com.chidozie.core.font.GUIText.<init>(GUIText.kt:106) ~[main/:?]
+	at net.adventuregame.game.TitleScreen.<init>(TitleScreen.kt:55) ~[main/:?]
+	at net.adventuregame.game.AdventureGame.run(AdventureGame.kt:34) ~[main/:?]
+	at net.adventuregame.game.AdventureMain.main(AdventureMain.kt:63) ~[main/:?]
+2025-07-31 06:23:10 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:14 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:23:14 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:23:15 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:23:15 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:15 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:23:16 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:23:16 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:16 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:23:16 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:46 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-31 06:23:47 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:23:54 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:25:53 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:26:00 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:26:00 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:26:00 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:26:00 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:26:01 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:26:01 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:26:01 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:26:01 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:26:03 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:26:03 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:26:03 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:26:04 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:26:04 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:26:04 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:26:04 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:50 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:36:54 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:36:54 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:36:57 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:36:57 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:57 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:36:59 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:36:59 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:36:59 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:36:59 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:17 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:45:21 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:45:21 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:45:22 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:45:22 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:22 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:45:24 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:45:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:45:24 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:45:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:50 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-31 06:46:51 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:46:52 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-31 06:46:52 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:58:08 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 06:58:11 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:58:11 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:58:12 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:58:12 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:58:12 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:58:12 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 06:58:12 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 06:58:12 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:58:13 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:58:13 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:58:13 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 06:58:14 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 06:58:14 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 06:58:14 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 06:58:14 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:17 [main] INFO  net.adventuregame.game.AdventureMain - Launching at 1600x900
+
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:21 [main] INFO  net.adventuregame.save.SaveManager - Loading File C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 09:07:21 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 09:07:23 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 09:07:23 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:23 [main] INFO  com.chidozie.core.terrains.HeightsGenerator - Generated A Seed
+2025-07-31 09:07:24 [main] INFO  com.chidozie.core.terrains.Terrain - Generated Terrain of 0.0x-2000.0
+2025-07-31 09:07:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:24 [main] INFO  net.adventuregame.game.GameState - Inventory: Inventory{items=[pistol, katana, null, null, null, null, null, null, null], selectedIndex=0}
+2025-07-31 09:07:24 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.TexturedModel - Created Textured Model With
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.particles.ParticleShader - numberOfRowsLocation: 0
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.particles.ParticleShader - projectionMatrixLocation: 1
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.models.RawModel - CREATED A RAW MODEL
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.story.StoryHandler - Found the 'Lost Sword'
+2025-07-31 09:07:40 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json
+2025-07-31 09:09:11 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-31 09:09:13 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-31 09:09:28 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-31 09:09:29 [main] INFO  net.adventuregame.toolbox.MousePicker - Caught
+2025-07-31 09:09:40 [main] INFO  net.adventuregame.save.SaveManager - ✅ Game saved to C:\Users\Hanzo\IdeaProjects\AdventureGame\saves\world.json

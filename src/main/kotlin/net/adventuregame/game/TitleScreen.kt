@@ -13,16 +13,16 @@ import org.joml.Vector2f
 import org.joml.Vector3f
 import org.lwjgl.glfw.GLFW
 import org.lwjgl.opengl.GL11
-import java.io.File
 
 class TitleScreen(private val window: WindowManager, loader: Loader) {
-    private val guiRenderer = GuiRenderer(loader)
-    private var musicSource: Source? = null
 
-    var title: GUIText? = null
-    var enter: GUIText? = null
-    var bgGui: GuiTexture? = null
-    var startButton: GuiTexture? = null
+    private val guiRenderer = GuiRenderer(loader)
+    private var musicSource: Source
+
+    private val title: GUIText
+    private val enter: GUIText
+    private val bgGui: GuiTexture
+    private val startButton: GuiTexture
 
     var shouldStartGame = false
         private set
@@ -32,54 +32,63 @@ class TitleScreen(private val window: WindowManager, loader: Loader) {
 
         musicSource = Source()
 
-        val backgroundTex = loader.loadGameTexture("gui/title_bg")
-        val startButtonTex = loader.loadGameTexture("gui/start_button")
-        bgGui = GuiTexture(backgroundTex, Vector2f(0f, 0f), Vector2f(1f, 1f))
-        startButton = GuiTexture(startButtonTex, Vector2f(0f, -0.3f), Vector2f(0.4f, 0.2f))
+        // Background and button textures
+        bgGui = GuiTexture(loader.loadGameTexture("title/title_adventure_game"), Vector2f(0f, 0f), Vector2f(1f, 1f))
+        startButton = GuiTexture(loader.loadGameTexture("gui/start_button"), Vector2f(0f, -0.3f), Vector2f(0.4f, 0.2f))
 
-        val buffer = AudioManager.loadSound("ao_to_natsu")
-        musicSource!!.setLooping(true)
-        musicSource!!.setVolume(0.5f)
-        musicSource!!.setPosition(Vector3f(0f, 0f, 0f))
-        musicSource!!.play(buffer)
+        // Load and play music
+        AudioManager.loadSound("ao_to_natsu").also { buffer ->
+            musicSource.apply {
+                setLooping(true)
+                setVolume(0.5f)
+                setPosition(Vector3f(0f, 0f, 0f))
+                play(buffer)
+            }
+        }
 
         window.toggleMouseLock()
 
+        // Load fonts and text
         TextMaster.init(loader)
-        val font = FontType(
-            loader.loadFontTextureAtlas("calibri"),
-            "calibri"
-        )
+        val font = AdventureGame.font
 
-        title = GUIText("Adventure Game", 3f, font, Vector2f (0f, 0f), 0.5f, true)
-        title!!.setColour(1f,0f,0f);
+        title = GUIText("Adventure Game", 3f, font, Vector2f(0f, 0f), 0.5f, true).apply {
+            setColour(1f, 0f, 0f)
+        }
 
-        enter = GUIText("Press the Enter Key to Start!!", 2f, font, Vector2f(0f, 0.9f), 0.9f, true)
-        enter!!.setColour(0f, 1f, 1f)
+        enter = GUIText("Press the Enter Key to Start!!", 2f, font, Vector2f(0f, 0.9f), 0.9f, true).apply {
+            setColour(0f, 1f, 1f)
+        }
     }
 
     fun run() {
         while (!window.windowShouldClose() && !shouldStartGame) {
             checkInput()
-
             GL11.glClear(GL11.GL_COLOR_BUFFER_BIT or GL11.GL_DEPTH_BUFFER_BIT)
             guiRenderer.render()
             TextMaster.render()
             window.update()
         }
-        musicSource!!.stop()
-        musicSource!!.delete()
-        TextMaster.removeText(enter)
-        TextMaster.removeText(title)
-        TextMaster.cleanUp()
-        GuiRenderer.removeGui(bgGui)
-        GuiRenderer.removeGui(startButton)
-        guiRenderer.cleanUp()
+
+        cleanup()
     }
 
     private fun checkInput() {
         if (window.isKeyPressed(GLFW.GLFW_KEY_ENTER)) {
             shouldStartGame = true
         }
+    }
+
+    private fun cleanup() {
+        musicSource.stop()
+        musicSource.delete()
+
+        TextMaster.removeText(enter)
+        TextMaster.removeText(title)
+        TextMaster.cleanUp()
+
+        GuiRenderer.removeGui(bgGui)
+        GuiRenderer.removeGui(startButton)
+        guiRenderer.cleanUp()
     }
 }
