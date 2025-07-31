@@ -1,7 +1,7 @@
 package net.adventuregame.particles
 
 import com.chidozie.core.renderEngine.WindowManager
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import net.adventuregame.player.Player
 import org.joml.Vector2f
 import org.joml.Vector3f

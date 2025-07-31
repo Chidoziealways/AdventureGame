@@ -1,4 +1,4 @@
-package net.adventuregame.entities
+package net.adventuregame.entity
 
 import net.adventuregame.game.AdventureMain
 import net.adventuregame.player.Player

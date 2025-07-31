@@ -3,7 +3,7 @@ package net.adventuregame.gameDecor
 import com.chidozie.core.renderEngine.Loader
 import com.chidozie.core.renderEngine.OBJFileLoader
 import com.chidozie.core.textures.ModelTexture
-import net.adventuregame.entities.Entity
+import net.adventuregame.entity.Entity
 import net.adventuregame.models.TexturedModel
 import org.joml.Vector3f
 

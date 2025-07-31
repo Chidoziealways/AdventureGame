@@ -1,8 +1,8 @@
 package com.chidozie.core.shadows
 
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Entity
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Entity
+import net.adventuregame.entity.Light
 import net.adventuregame.models.TexturedModel
 import org.joml.Matrix4f
 import org.joml.Vector2f

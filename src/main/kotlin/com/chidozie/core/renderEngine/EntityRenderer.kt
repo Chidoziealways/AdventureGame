@@ -1,7 +1,7 @@
 package com.chidozie.core.renderEngine
 
 import com.chidozie.core.shaders.StaticShader
-import net.adventuregame.entities.Entity
+import net.adventuregame.entity.Entity
 import net.adventuregame.game.AdventureMain
 import net.adventuregame.models.TexturedModel
 import net.adventuregame.toolbox.Maths

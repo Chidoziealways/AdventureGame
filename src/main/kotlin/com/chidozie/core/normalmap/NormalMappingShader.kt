@@ -1,7 +1,7 @@
 package com.chidozie.core.normalmap
 
 import com.chidozie.core.shaders.ShaderProgram
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Light
 import org.joml.Matrix4f
 import org.joml.Vector2f
 import org.joml.Vector3f

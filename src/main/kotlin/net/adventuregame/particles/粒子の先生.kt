@@ -1,7 +1,7 @@
 package net.adventuregame.particles
 
 import com.chidozie.core.renderEngine.Loader
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import org.joml.Matrix4f
 import org.slf4j.LoggerFactory
 

@@ -1,7 +1,7 @@
 package com.chidozie.core.shaders
 
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Light
 import net.adventuregame.toolbox.Maths
 import org.joml.Matrix4f
 import org.joml.Vector3f

@@ -1,6 +1,6 @@
 package net.adventuregame.toolbox
 
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import org.joml.Matrix4f
 import org.joml.Vector2f
 import org.joml.Vector3f

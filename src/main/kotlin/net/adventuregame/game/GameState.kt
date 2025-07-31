@@ -1,7 +1,6 @@
 package net.adventuregame.game
 
 import com.chidozie.core.audio.AudioManager
-import com.chidozie.core.font.FontType
 import com.chidozie.core.font.TextMaster
 import com.chidozie.core.normalmap.NormalMappedObjLoader
 import com.chidozie.core.postProcessing.Fbo
@@ -10,17 +9,15 @@ import com.chidozie.core.renderEngine.Loader
 import com.chidozie.core.renderEngine.MasterRenderer
 import com.chidozie.core.renderEngine.OBJFileLoader
 import com.chidozie.core.renderEngine.WindowManager
+import com.chidozie.core.scripts.LuaEngine
 import com.chidozie.core.terrains.Terrain
 import com.chidozie.core.textures.ModelTexture
 import com.chidozie.core.textures.TerrainTexture
 import com.chidozie.core.textures.TerrainTexturePack
-import com.mojang.datafixers.kinds.App
-import com.mojang.serialization.Codec
-import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.data.CodecRegistry
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Entity
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Entity
+import net.adventuregame.entity.Light
 import net.adventuregame.gameDecor.Tree
 import net.adventuregame.gui.HotbarRenderer3D
 import net.adventuregame.guis.GuiRenderer
@@ -36,7 +33,6 @@ import net.adventuregame.models.TexturedModel
 import net.adventuregame.particles.ParticleSystem
 import net.adventuregame.particles.ParticleTexture
 import net.adventuregame.particles.粒子の先生
-import net.adventuregame.player.Inventory
 import net.adventuregame.player.Player
 import net.adventuregame.story.StoryHandler
 import net.adventuregame.story.StoryManager
@@ -51,8 +47,6 @@ import org.apache.logging.log4j.Marker
 import org.apache.logging.log4j.MarkerManager
 import org.joml.Vector3f
 import org.joml.Vector4f
-import org.lwjgl.glfw.GLFW
-import java.io.File
 import java.util.*
 
 /**
@@ -80,6 +74,8 @@ class GameState private constructor(window: WindowManager) {
 
         // Player & camera
         storyManager = StoryManager()
+        println("Game runtime StoryManager: ${storyManager.hashCode()}")
+        LuaEngine.loadAllScripts()
         storyHandler = StoryHandler(this)
         camera = Camera(player!!)
 
@@ -149,14 +145,20 @@ class GameState private constructor(window: WindowManager) {
 
 
         if(!player!!.hasItemByName("pistol")) {
+            val x = 214.8f + 5f
+            val z = -1108 + 5f
+            val y = terrain!!.getHeightOfTerrain(x, z)
             // Gun pickup
-            val pistolEntity = Items.PISTOL.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 1f, 5f)).also {
+            val pistolEntity = Items.PISTOL.createEntity(Vector3f(x, y, z)).also {
                 log.info(mark, "Pistol: {}", it)
                 entities.add(it)
             } as GunEntity
         }
         if(!player!!.hasItemByName("katana")) {
-            val katanaEntity = Items.KATANA.createEntity(Vector3f(214.8f, 0f, -1108.0f).add(5f, 1f, 5f)).also {
+            val x = 214.8f + 5f
+            val z = -1108 + 5f
+            val y = terrain!!.getHeightOfTerrain(x, z)
+            val katanaEntity = Items.KATANA.createEntity(Vector3f(x, y, z)).also {
                 log.info(mark, "Katana: {}", it)
                 entities.add(it)
             } as KatanaEntity
@@ -324,17 +326,6 @@ class GameState private constructor(window: WindowManager) {
                 }
                 return t
             }
-
-        private val defeatedBosses: MutableSet<String> = HashSet()
-
-        fun markBossDefeated(bossId: String) {
-            defeatedBosses.add(bossId.lowercase(Locale.getDefault()))
-        }
-
-        @JvmStatic
-        fun isBossDefeated(bossId: String): Boolean {
-            return defeatedBosses.contains(bossId.lowercase(Locale.getDefault()))
-        }
 
         fun fromSerializable(serializable: GameStateSerializable, window: WindowManager): GameState {
             return getInstance(window).apply {

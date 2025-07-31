@@ -1,7 +1,7 @@
 package com.chidozie.core.shadows
 
 import com.chidozie.core.renderEngine.WindowManager
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import net.adventuregame.game.AdventureMain
 import net.adventuregame.toolbox.Consts
 import org.joml.Matrix4f

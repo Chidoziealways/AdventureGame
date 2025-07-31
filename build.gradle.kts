@@ -84,6 +84,35 @@ dependencies {
     implementation("org.luaj:luaj-jse:3.0.1")
 }
 
+tasks.named("processResources") {
+    dependsOn(generateLuaIndex)
+}
+
+val generateLuaIndex by tasks.registering {
+    group = "build"
+    description = "Generates scripts/index.txt with all built-in Lua scripts"
+
+    val scriptsDir = file("src/main/resources/scripts")
+    val outputFile = file("src/main/resources/scripts/index.txt")
+
+    doLast {
+        if (!scriptsDir.exists()) {
+            println("⚠️ No scripts folder found.")
+            return@doLast
+        }
+
+        val luaFiles = scriptsDir.walkTopDown()
+            .filter { it.isFile && it.extension == "lua" }
+            .map { it.relativeTo(scriptsDir).invariantSeparatorsPath }
+            .sorted()
+            .toList()
+
+        outputFile.writeText(luaFiles.joinToString("\n"))
+        println("✅ Generated index.txt with ${luaFiles.size} scripts.")
+    }
+}
+
+
 tasks.test {
     useJUnitPlatform()
 }

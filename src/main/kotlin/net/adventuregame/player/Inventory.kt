@@ -33,6 +33,12 @@ class Inventory {
         println("Inventory is full. Couldn't add item: " + item.name)
     }
 
+    fun addItemByName(itemName: String) {
+        val item = ItemRegistry.get(itemName)
+
+        addItem(item!!)
+    }
+
     fun hasItem(itemType: Class<out Item?>): Boolean {
         for (item in items) {
             if (item != null && itemType.isInstance(item)) {

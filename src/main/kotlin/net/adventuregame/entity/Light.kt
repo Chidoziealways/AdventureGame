@@ -1,4 +1,4 @@
-package net.adventuregame.entities
+package net.adventuregame.entity
 
 import org.joml.Vector3f
 import org.slf4j.Logger

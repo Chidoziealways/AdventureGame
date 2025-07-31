@@ -1,9 +1,9 @@
 package com.chidozie.core.normalmap
 
 import com.chidozie.core.renderEngine.MasterRenderer
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Entity
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Entity
+import net.adventuregame.entity.Light
 import net.adventuregame.models.TexturedModel
 import net.adventuregame.toolbox.Maths
 import org.joml.Matrix4f

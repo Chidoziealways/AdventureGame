@@ -1,13 +1,11 @@
 package net.adventuregame.story
 
-import com.mojang.datafixers.util.Function3
 import com.mojang.datafixers.util.Pair
 import com.mojang.serialization.Codec
 import com.mojang.serialization.DataResult
 import com.mojang.serialization.DynamicOps
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.game.GameState
-import net.adventuregame.game.GameState.Companion.isBossDefeated
 import java.util.*
 import java.util.function.Function
 import java.util.function.Supplier
@@ -19,20 +17,26 @@ class StoryManager {
     var currentDialogue: Dialogue? = null
         private set
 
+    fun addQuest(id: String, quest: Quest) {
+        quests[id] = quest
+        println("Quest Added: $id")
+        println("Total Quests: ${quests.keys}")
+    }
+
     private fun initQuests() {
         // Define quests per stage, you can expand these with real game logic conditions
         quests.put(
             "find_lost_sword", Quest(
                 "find_lost_sword",
-                "Find the legendary katana in the Forbidden Forest.",
-                Supplier { GameState.player!!.hasItemByName("katana") })
+                "Find the legendary katana in the Forbidden Forest."
+            ) { GameState.player!!.hasItemByName("katana") }
         )
 
         quests.put(
             "defeat_shin_shogun", Quest(
                 "defeat_shin_shogun",
                 "Defeat the corrupted Shin Shogun and end the Shin Virus.",
-                Supplier { isBossDefeated("shin_shogun") })
+                Supplier { GameState.player!!.isBossDefeated("shin_shogun") })
         )
     }
 

@@ -1,10 +1,13 @@
 package net.adventuregame.mobs
 
 import com.chidozie.core.terrains.Terrain
-import net.adventuregame.entities.Entity
+import net.adventuregame.entity.Entity
 import net.adventuregame.game.GameState.Companion.getEntities
 import net.adventuregame.models.TexturedModel
+import net.adventuregame.scripting.api.LuaEntityAPI
 import org.joml.Vector3f
+import org.luaj.vm2.LuaValue
+import org.luaj.vm2.lib.jse.CoerceJavaToLua
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
@@ -28,12 +31,28 @@ abstract class Mob(
         print("hh")
     }
 
-    abstract fun move(terrain: Terrain?)
+    open fun move(terrain: Terrain?) {
+        LuaEntityAPI.getEventsForType(this.name ?: return)
+            ?.get("onMove")
+            ?.let { it.call(CoerceJavaToLua.coerce(this)) }
+    }
 
 
-    abstract fun TakeDamage(damage: Float, Attacker: Mob?)
+    open fun TakeDamage(damage: Float, Attacker: Mob?) {
+        health -= damage
 
-    abstract fun Die()
+        LuaEntityAPI.getEventsForType(this.name ?: return)
+            ?.get("onDamage")
+            ?.let { it.call(CoerceJavaToLua.coerce(this), LuaValue.valueOf(damage.toInt())) }
+
+        if (health <= 0f) Die()
+    }
+
+    open fun Die() {
+        LuaEntityAPI.getEventsForType(this.name ?: return)
+            ?.get("onDeath")
+            ?.let { it.call(CoerceJavaToLua.coerce(this)) }
+    }
 
     abstract fun attack(target: Mob?)
 

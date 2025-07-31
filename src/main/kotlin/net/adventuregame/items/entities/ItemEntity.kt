@@ -1,6 +1,6 @@
 package net.adventuregame.items.entities
 
-import net.adventuregame.entities.Entity
+import net.adventuregame.entity.Entity
 import net.adventuregame.game.GameState
 import net.adventuregame.game.GameState.Companion.removeEntity
 import net.adventuregame.items.Item

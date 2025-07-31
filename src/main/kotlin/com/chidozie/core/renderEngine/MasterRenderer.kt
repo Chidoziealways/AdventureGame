@@ -5,9 +5,9 @@ import com.chidozie.core.shaders.StaticShader
 import com.chidozie.core.shaders.TerrainShader
 import com.chidozie.core.shadows.ShadowMapMasterRenderer
 import com.chidozie.core.terrains.Terrain
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Entity
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Entity
+import net.adventuregame.entity.Light
 import net.adventuregame.game.AdventureMain
 import net.adventuregame.models.TexturedModel
 import net.adventuregame.skybox.SkyBoxRenderer

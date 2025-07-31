@@ -1,6 +1,5 @@
-package net.adventuregame.entities
+package net.adventuregame.entity
 
-import com.mojang.datafixers.util.Function7
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.codec.TexturedModelCodec

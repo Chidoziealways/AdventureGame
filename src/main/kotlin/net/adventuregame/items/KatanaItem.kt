@@ -1,6 +1,5 @@
 package net.adventuregame.items
 
-import net.adventuregame.entities.Entity
 import net.adventuregame.items.entities.ItemEntity
 import net.adventuregame.items.entities.KatanaEntity
 import net.adventuregame.models.TexturedModel

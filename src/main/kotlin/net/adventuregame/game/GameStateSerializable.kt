@@ -2,7 +2,6 @@ package net.adventuregame.game
 
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
-import net.adventuregame.entities.Entity
 import net.adventuregame.player.Player
 import net.adventuregame.story.StoryManager
 

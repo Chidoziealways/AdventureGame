@@ -2,8 +2,8 @@ package net.adventuregame.toolbox
 
 import com.chidozie.core.renderEngine.WindowManager
 import com.chidozie.core.terrains.Terrain
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Entity
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Entity
 import net.adventuregame.game.AdventureMain
 import org.joml.Matrix4f
 import org.joml.Vector2f

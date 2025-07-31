@@ -5,11 +5,10 @@ import com.chidozie.core.renderEngine.OBJFileLoader
 import com.chidozie.core.renderEngine.WindowManager
 import com.chidozie.core.terrains.Terrain
 import com.chidozie.core.textures.ModelTexture
-import com.mojang.datafixers.util.Function4
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.codec.Vector3fCodec
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import net.adventuregame.game.AdventureMain
 import net.adventuregame.game.GameState
 import net.adventuregame.game.GameState.Companion.addEntity
@@ -35,6 +34,8 @@ class Player(
     position: Vector3f, rotX: Float, rotY: Float, rotZ: Float,
     scale: Float
 ) : Mob(playerTMod, 0, position, Vector3f(rotX, rotY, rotZ), scale, 20f, false, "Player1", RUN_SPEED) {
+    private val defeatedBosses: MutableSet<String> = HashSet()
+
     private var window = AdventureMain.window
     private var currentSpeed = 0f
     private var currentTurnSpeed = 0f
@@ -51,6 +52,7 @@ class Player(
     private var picker: MousePicker?
 
     override fun move(terrain: Terrain?) {
+        super.move(terrain)
         checkInputs()
         super.increaseRotation(0f, currentTurnSpeed * WindowManager.frameTimeSeconds, 0f)
         val distance: Float = currentSpeed * WindowManager.frameTimeSeconds
@@ -138,17 +140,8 @@ class Player(
     }
 
 
-    override fun TakeDamage(damage: Float, Attacker: Mob?) {
-        this.health -= damage
-        log.info("{} took {} damage from {}!", name, damage, Attacker?.name)
-
-        if (this.health <= 0) {
-            Die()
-        }
-    }
-
-
     override fun Die() {
+        super.Die()
         log.info("{} has died! Respawning...", name)
         this.health = 20f // Reset health
         position.set(0f, 5f, 0f) // Respawn position
@@ -196,6 +189,14 @@ class Player(
         return inventory.allItems.stream()
             .filter { obj: Item? -> Objects.nonNull(obj) }
             .anyMatch { item: Item? -> item!!.name.equals(itemName, ignoreCase = true) }
+    }
+
+    fun markBossDefeated(bossId: String) {
+        defeatedBosses.add(bossId.lowercase(Locale.getDefault()))
+    }
+
+    fun isBossDefeated(bossId: String): Boolean {
+        return defeatedBosses.contains(bossId.lowercase(Locale.getDefault()))
     }
 
     init {

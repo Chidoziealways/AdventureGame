@@ -2,7 +2,7 @@ package net.adventuregame.skybox
 
 import com.chidozie.core.renderEngine.WindowManager
 import com.chidozie.core.shaders.ShaderProgram
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import net.adventuregame.toolbox.Maths
 import org.joml.Matrix4f
 import org.joml.Vector3f

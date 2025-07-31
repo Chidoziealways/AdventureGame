@@ -2,8 +2,8 @@ package net.adventuregame.water
 
 import com.chidozie.core.renderEngine.Loader
 import com.chidozie.core.renderEngine.WindowManager
-import net.adventuregame.entities.Camera
-import net.adventuregame.entities.Light
+import net.adventuregame.entity.Camera
+import net.adventuregame.entity.Light
 import net.adventuregame.models.RawModel
 import net.adventuregame.toolbox.Maths
 import org.joml.Matrix4f

@@ -1,7 +1,7 @@
 package net.adventuregame.particles
 
 import com.chidozie.core.renderEngine.Loader
-import net.adventuregame.entities.Camera
+import net.adventuregame.entity.Camera
 import net.adventuregame.models.RawModel
 import net.adventuregame.toolbox.Maths
 import org.joml.Matrix4f
