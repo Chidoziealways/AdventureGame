@@ -1,6 +1,6 @@
 package net.adventuregame.guis
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 import org.joml.Matrix4f
 
 class GuiShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {

@@ -1,6 +1,6 @@
 package net.adventuregame.models
 
-import com.chidozie.core.textures.ModelTexture
+import com.adv.core.textures.ModelTexture
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 

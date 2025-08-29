@@ -1,6 +1,6 @@
 package net.adventuregame.bloom
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 
 class BrightFilterShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     override fun getAllUniformLocations() {

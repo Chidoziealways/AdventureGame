@@ -1,7 +1,6 @@
 package net.adventuregame.items
 
-import com.chidozie.core.renderEngine.Loader
-import com.mojang.datafixers.util.Function4
+import com.adv.core.renderEngine.Loader
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.items.entities.GunEntity

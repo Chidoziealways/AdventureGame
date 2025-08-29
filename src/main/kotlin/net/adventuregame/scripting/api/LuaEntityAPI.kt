@@ -21,16 +21,22 @@ object LuaEntityAPI {
                 val eventTable = LuaTable()
                 val onDeath = t.get("onDeath")
                 val onDamage = t.get("onDamage")
+                val onAttack = t.get("onAttack")
                 val onMove = t.get("onMove")
+                val updateAI = t.get("updateAI")
+                val tickAI = t.get("tickAI")
 
                 if (!onDeath.isnil()) eventTable.set("onDeath", onDeath)
                 if (!onDamage.isnil()) eventTable.set("onDamage", onDamage)
                 if (!onMove.isnil()) eventTable.set("onMove", onMove)
+                if (!updateAI.isnil()) eventTable.set("updateAI", updateAI)
+                if (!tickAI.isnil()) eventTable.set("tickAI", tickAI)
+                if (!onAttack.isnil()) eventTable.set("onAttack", onAttack)
 
                 eventMap[type] = eventTable
                 println("📜 Registered events for entity type: $type")
 
-                return LuaValue.TRUE
+                return TRUE
             }
         })
 

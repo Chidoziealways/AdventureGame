@@ -1,7 +1,7 @@
 package net.adventuregame.toolbox
 
-import com.chidozie.core.renderEngine.WindowManager
-import com.chidozie.core.terrains.Terrain
+import com.adv.core.renderEngine.WindowManager
+import com.adv.core.terrains.Terrain
 import net.adventuregame.entity.Camera
 import net.adventuregame.entity.Entity
 import net.adventuregame.game.AdventureMain
@@ -36,21 +36,26 @@ class MousePicker(
         window = AdventureMain.window
     }
 
-
     fun update() {
-        viewMatrix = Maths.createViewMatrix(camera)
-        currentRay = calculateMouseRay()
-        if (intersectionInRange(0f, RAY_RANGE, currentRay)) {
-            currentTerrainPoint = binarySearch(0, 0f, RAY_RANGE, currentRay)
-        } else {
-            currentTerrainPoint = null
+        // Deselect everything first
+        for (entity in entities) {
+            for (model in entity.GetModels()) {
+                model.texture?.isSelected = false
+            }
         }
 
-        // Check for the closest entity in the ray range
+        viewMatrix = Maths.createViewMatrix(camera)
+        currentRay = calculateMouseRay()
+        currentTerrainPoint = if (intersectionInRange(0f, RAY_RANGE, currentRay)) {
+            binarySearch(0, 0f, RAY_RANGE, currentRay)
+        } else null
+
         closestEntity = getClosestEntity(currentRay)
         if (closestEntity != null) {
             log.info("Caught")
-            closestEntity!!.model?.texture?.isSelected = true
+            for (model in closestEntity!!.GetModels()) {
+                model.texture?.isSelected = true
+            }
         }
     }
 

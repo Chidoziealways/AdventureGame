@@ -1,11 +1,18 @@
 package net.adventuregame.story
 
+import com.adv.core.font.GUIText
 import com.mojang.datafixers.util.Pair
 import com.mojang.serialization.Codec
 import com.mojang.serialization.DataResult
 import com.mojang.serialization.DynamicOps
 import com.mojang.serialization.codecs.RecordCodecBuilder
+import net.adventuregame.cutscene.Cutscene
+import net.adventuregame.cutscene.CutsceneLine
+import net.adventuregame.game.AdventureGame
 import net.adventuregame.game.GameState
+import net.adventuregame.guis.GuiTexture
+import net.adventuregame.player.Player
+import org.joml.Vector2f
 import java.util.*
 import java.util.function.Function
 import java.util.function.Supplier
@@ -17,6 +24,9 @@ class StoryManager {
     var currentDialogue: Dialogue? = null
         private set
 
+    val player: Player
+        get() = GameState.getInstance().player
+
     fun addQuest(id: String, quest: Quest) {
         quests[id] = quest
         println("Quest Added: $id")
@@ -25,96 +35,34 @@ class StoryManager {
 
     private fun initQuests() {
         // Define quests per stage, you can expand these with real game logic conditions
-        quests.put(
-            "find_lost_sword", Quest(
-                "find_lost_sword",
-                "Find the legendary katana in the Forbidden Forest."
-            ) { GameState.player!!.hasItemByName("katana") }
-        )
-
-        quests.put(
-            "defeat_shin_shogun", Quest(
-                "defeat_shin_shogun",
-                "Defeat the corrupted Shin Shogun and end the Shin Virus.",
-                Supplier { GameState.player!!.isBossDefeated("shin_shogun") })
-        )
-    }
-
-    fun advanceStage() {
-        when (currentStage) {
-            StoryStage.THE_AWAKENING -> currentStage = StoryStage.THE_LOST_SWORD
-            StoryStage.THE_LOST_SWORD -> currentStage = StoryStage.THE_SHIN_SHOGUN_RETURN
-            StoryStage.THE_SHIN_SHOGUN_RETURN -> currentStage = StoryStage.THE_FINAL_CONFRONTATION
-            StoryStage.THE_FINAL_CONFRONTATION -> currentStage = StoryStage.NEW_DAWN
-            StoryStage.NEW_DAWN -> {
-                // Story complete — maybe unlock new content or loop
-            }
-        }
-        triggerStageEvents()
-    }
-
-    private fun triggerStageEvents() {
-        // Hook in your world event spawning, dialog triggers, cutscenes, etc.
-        when (currentStage) {
-            StoryStage.THE_AWAKENING -> {
-                currentDialogue = Dialogue(
-                    "Village Elder", mutableListOf<String?>(
-                        "The prophecy awakens, young warrior...",
-                        "Darkness stirs once more in our land."
+        quests["find_lost_sword"] = Quest(
+            "find_lost_sword",
+            "Find the legendary katana in the Forbidden Forest."
+        ) { player.hasItemByName("katana") }.apply {
+            onComplete = { GameState.getInstance().playCutscene(Cutscene(
+                null,
+                listOf(
+                    CutsceneLine(
+                        "やった！刀を見つけた！!"
                     )
                 )
-            }
-
-            StoryStage.THE_LOST_SWORD -> {
-                currentDialogue = Dialogue(
-                    "Old Samurai", mutableListOf<String?>(
-                        "You must find the lost katana deep within the Forbidden Forest.",
-                        "Only then can you challenge the Shin Shogun."
-                    )
-                )
-            }
-
-            StoryStage.THE_SHIN_SHOGUN_RETURN -> {
-                currentDialogue = Dialogue(
-                    "Messenger", mutableListOf<String?>(
-                        "The Shin Shogun grows stronger every day.",
-                        "Prepare yourself for the coming battle."
-                    )
-                )
-            }
-
-            StoryStage.THE_FINAL_CONFRONTATION -> {
-                currentDialogue = Dialogue(
-                    "Your Spirit", mutableListOf<String?>(
-                        "This is it. Face the darkness and end this curse!"
-                    )
-                )
-            }
-
-            StoryStage.NEW_DAWN -> {
-                currentDialogue = Dialogue(
-                    "Village Elder", mutableListOf<String?>(
-                        "Peace has returned, but the world will always need heroes."
-                    )
-                )
-            }
+            )) }
         }
     }
 
-    fun clearDialogue() {
-        currentDialogue = null
+    fun giveQuest(questId: String) {
+        val quest = getQuest(questId)
+        if (quest != null && !quest.isCompleted()) {
+            // Add to active quests (already handled by StoryManager via quests map)
+            println("[QUEST ASSIGNED] ${quest.description}")
+            player.currentQuest = quest
+            activeQuests.add(quest)
+        } else {
+            println("[QUEST ERROR] Quest $questId not found or already completed")
+        }
     }
 
-    val activeQuests: MutableCollection<Quest?>
-        get() {
-            // Filter quests by current stage or all uncompleted quests
-            // For simplicity, return all uncompleted quests
-            val active: MutableList<Quest?> = ArrayList<Quest?>()
-            for (q in quests.values) {
-                if (!q.isCompleted()) active.add(q)
-            }
-            return active
-        }
+    val activeQuests: MutableCollection<Quest> = mutableSetOf()
 
     init {
         initQuests()
@@ -163,7 +111,6 @@ class StoryManager {
                 )
         }
     }
-
 
     class DialogueCodec(dialogue: Dialogue) : Codec<Dialogue> {
         val speaker: String?

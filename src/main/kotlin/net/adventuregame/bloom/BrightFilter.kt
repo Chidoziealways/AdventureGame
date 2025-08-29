@@ -1,6 +1,6 @@
 package net.adventuregame.bloom
 
-import com.chidozie.core.postProcessing.ImageRenderer
+import com.adv.core.postProcessing.ImageRenderer
 import org.lwjgl.opengl.GL11
 import org.lwjgl.opengl.GL13
 

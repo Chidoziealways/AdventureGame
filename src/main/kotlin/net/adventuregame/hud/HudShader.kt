@@ -1,6 +1,6 @@
 package net.adventuregame.hud
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 import org.joml.Matrix4f
 import org.joml.Vector2f
 

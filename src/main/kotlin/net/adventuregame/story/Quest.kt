@@ -7,19 +7,22 @@ class Quest(val id: String?, val description: String?, private var completionCon
 
     var onComplete: (() -> Unit)? = null
 
-    fun setOnCompleteRun(callback: () -> Unit) {
-        this.onComplete = callback
+    fun setOnCompleteRun(r: Runnable) {
+        onComplete = { r.run() }
     }
 
     fun isCompleted(): Boolean {
-        if (completed) return true
+        if (completed) return false  // already completed previously, so not “just completed”
+
         if (completionCondition.get()) {
             completed = true
-            onComplete?.invoke()
-            return true
+            onComplete?.invoke() // only triggers once
+            return true  // yes, just completed now
         }
-        return false
+
+        return false  // not completed yet
     }
+
 
     fun forceComplete() {
         completed = true

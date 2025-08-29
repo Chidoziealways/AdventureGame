@@ -13,7 +13,6 @@ repositories {
         dirs("libs")
     }
     mavenCentral()
-    maven { url = uri("https://maven.google.com") }
 }
 
 sourceSets {
@@ -33,6 +32,7 @@ dependencies {
     implementation(platform(libs.lwjgl))
     implementation("org.lwjgl:lwjgl")
     implementation("org.lwjgl:lwjgl-assimp")
+    implementation("org.lwjgl:lwjgl-freetype")
     implementation("org.lwjgl:lwjgl-bgfx")
     implementation("org.lwjgl:lwjgl-glfw")
     implementation("org.lwjgl:lwjgl-nanovg")
@@ -67,6 +67,7 @@ dependencies {
     runtimeOnly("org.lwjgl:lwjgl-assimp::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-bgfx::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-glfw::$lwjglNatives")
+    runtimeOnly("org.lwjgl:lwjgl-freetype::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-nanovg::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-nuklear::$lwjglNatives")
     runtimeOnly("org.lwjgl:lwjgl-openal::$lwjglNatives")
@@ -82,6 +83,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
 
     implementation("org.luaj:luaj-jse:3.0.1")
+
+    implementation("de.javagl:jgltf-model:2.0.4")
 }
 
 tasks.named("processResources") {

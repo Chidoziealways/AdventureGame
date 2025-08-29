@@ -1,6 +1,6 @@
 package net.adventuregame.guis
 
-import com.chidozie.core.renderEngine.Loader
+import com.adv.core.renderEngine.Loader
 import net.adventuregame.models.RawModel
 import net.adventuregame.toolbox.Maths
 import org.lwjgl.opengl.GL11
@@ -47,7 +47,9 @@ class GuiRenderer(loader: Loader) {
         private val guis: MutableList<GuiTexture> = ArrayList<GuiTexture>()
 
         fun addGui(gui: GuiTexture?) {
-            guis.add(gui!!)
+            if (gui != null) {
+                guis.add(gui)
+            }
         }
 
         fun removeGui(gui: GuiTexture?) {

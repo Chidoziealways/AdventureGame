@@ -1,6 +1,6 @@
 package net.adventuregame.codec
 
-import com.chidozie.core.textures.ModelTexture
+import com.adv.core.textures.ModelTexture
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 

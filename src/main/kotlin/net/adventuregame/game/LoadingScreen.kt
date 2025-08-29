@@ -1,11 +1,12 @@
 package net.adventuregame.game
 
-import com.chidozie.core.font.FontType
-import com.chidozie.core.font.GUIText
-import com.chidozie.core.font.TextMaster
-import com.chidozie.core.renderEngine.Loader
-import com.chidozie.core.renderEngine.WindowManager
+import com.adv.core.font.FontType
+import com.adv.core.font.GUIText
+import com.adv.core.font.TextMaster
+import com.adv.core.renderEngine.Loader
+import com.adv.core.renderEngine.WindowManager
 import org.joml.Vector2f
+import org.joml.Vector3f
 import org.lwjgl.opengl.GL11
 
 class LoadingScreen(
@@ -20,9 +21,10 @@ class LoadingScreen(
     fun run() {
         // Setup
         TextMaster.init(loader)
-        font = AdventureGame.font
-        loadingText = GUIText("Loading...", 2f, font, Vector2f(0f, 0f), 1f, true).apply {
-            setColour(1f, 1f, 1f)
+        font = AdventureGame.japaneseFont
+        loadingText = GUIText("Loading...", 2f, font).apply {
+            position = Vector2f(1000f, 900f)
+            colour = Vector3f(1f, 1f, 1f)
         }
 
         // Loop
@@ -44,14 +46,14 @@ class LoadingScreen(
             }
             LoadingStage.INIT_GL -> {
                 gameInit.initializeGLStuff()
-                currentStage = LoadingStage.INIT_WORLD
-            }
-            LoadingStage.INIT_WORLD -> {
-                gameInit.state!!.initWorld()
                 currentStage = LoadingStage.INIT_RENDERERS
             }
             LoadingStage.INIT_RENDERERS -> {
                 gameInit.state!!.initRenderers()
+                currentStage = LoadingStage.INIT_WORLD
+            }
+            LoadingStage.INIT_WORLD -> {
+                gameInit.state!!.initWorld()
                 currentStage = LoadingStage.DONE
             }
             else -> {}
@@ -59,7 +61,7 @@ class LoadingScreen(
     }
 
     private fun cleanup() {
-        TextMaster.removeText(loadingText)
+        loadingText.remove()
         TextMaster.cleanUp()
     }
 }

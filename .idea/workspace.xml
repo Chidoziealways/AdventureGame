@@ -4,55 +4,1157 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="Made a lot of random changes">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/scripts/LuaEngine.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entities/Entities.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/registries/EntityRegistry.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaEntityAPI.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaPlayerAPI.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaQuestAPI.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/entity/player.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/init.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/quests/findAGun.lua" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/quests/killTheBeast.lua" afterDir="false" />
+    <list default="true" id="bffa5e5e-3566-443d-87e9-bbbfed4c4e65" name="Changes" comment="Added support for scripts">
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-06-00.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-15-28.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-19-10.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-19-40.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-28-49.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-30-14.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-33-52.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-34-19.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-35-53.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-37-03.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-38-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-38-37.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-39-24.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-42-48.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-43-52.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-45-04.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-48-08.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-48-44.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/game-2025-08-29_16-51-17.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/s" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/Character.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/FontAtlas.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/FontManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/FontRenderer.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/FontType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/GUIText.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/TextMaster.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/TextMeshCreator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/TextMeshData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/Word.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/physics/AABB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/GLTFLoader.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/MultiModelKey.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/scripts/LuaEngine.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/GameThread.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/Vectors.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/characters/Person.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/cutscene/Cutscene.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/cutscene/CutsceneRender.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/MultiMeshEntity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/NationSelectScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/hostile/HostileMob.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/hostile/LuaHostileMobContext.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/passive/LuaPassiveMobContext.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/passive/PassiveMob.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/passive/Sheep.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/LuaPlayerContext.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/IntroScenes.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/StoryEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/fonts/japanese.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/fonts/korean.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/models/mobs/sheep.glb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/cutscenes/intro_bg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/Classes.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/debug.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/distance.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/mobs/HostileMob.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/mobs/Mob.lua" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/scripts/mobs/PassiveMob.lua" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/game.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/game.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingShader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/EntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/EntityRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/MasterRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/MasterRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/StaticShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/StaticShader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/TerrainShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/TerrainShader.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowBox.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowBox.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapEntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapEntityRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapMasterRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapMasterRenderer.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entities/Camera.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/Camera.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entities/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/Entity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entities/Light.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/Light.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/audio/AudioManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/audio/AudioManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/audio/Source.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/audio/Source.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/audio/Test.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/audio/Test.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/Character.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/FontRenderer.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/FontShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/FontShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/FontType.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/GUIText.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/Line.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/Line.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/MetaFile.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/PageMeshData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/font/PageMeshData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/TextMaster.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/TextMeshCreator.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/TextMeshData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/font/Word.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/gaussianBlur/HorizontalBlur.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/gaussianBlur/HorizontalBlur.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/gaussianBlur/HorizontalBlurShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/gaussianBlur/HorizontalBlurShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/gaussianBlur/VerticalBlur.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/gaussianBlur/VerticalBlur.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/gaussianBlur/VerticalBlurShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/gaussianBlur/VerticalBlurShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/ModelDataNM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/normalmap/ModelDataNM.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappedObjLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/normalmap/NormalMappedObjLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/normalmap/NormalMappingRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/NormalMappingShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/normalmap/NormalMappingShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/normalmap/VertexNM.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/normalmap/VertexNM.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/postProcessing/ContrastChanger.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/postProcessing/ContrastChanger.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/postProcessing/ContrastShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/postProcessing/ContrastShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/postProcessing/Fbo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/postProcessing/Fbo.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/postProcessing/ImageRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/postProcessing/ImageRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/postProcessing/PostProcessing.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/postProcessing/PostProcessing.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/AssimpModelLoader.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/EntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/EntityRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/KeyInputManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/KeyInputManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/Loader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/Loader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/MasterRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/MasterRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/ModelData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/ModelData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/OBJFileLoader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/OBJFileLoader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/TerrainRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/TerrainRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/Vertex.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/Vertex.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/renderEngine/WindowManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/renderEngine/WindowManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/scripts/LuaEngine.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/ShaderProgram.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shaders/ShaderProgram.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/StaticShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shaders/StaticShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shaders/TerrainShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shaders/TerrainShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowBox.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shadows/ShadowBox.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowFrameBuffer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shadows/ShadowFrameBuffer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapEntityRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shadows/ShadowMapEntityRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowMapMasterRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shadows/ShadowMapMasterRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/shadows/ShadowShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/shadows/ShadowShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/terrains/HeightsGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/terrains/HeightsGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/terrains/Terrain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/terrains/Terrain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/textures/ModelTexture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/textures/ModelTexture.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/textures/TerrainTexture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/textures/TerrainTexture.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/textures/TerrainTexturePack.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/textures/TerrainTexturePack.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/chidozie/core/textures/TextureData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/adv/core/textures/TextureData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/BrightFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/BrightFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/BrightFilterShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/BrightFilterShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/CombineFilter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/CombineFilter.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/CombineShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/bloom/CombineShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/codec/ModelTextureCodec.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/codec/ModelTextureCodec.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/data/CodecRegistry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/data/CodecRegistry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/Entity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/entity/Entity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureGame.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureGame.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/AdventureMain.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameInit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameInit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameLoop.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameLoop.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameState.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameStateSerializable.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/GameStateSerializable.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/LoadingScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/LoadingScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/TitleScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/game/TitleScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/gameDecor/Tree.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/gameDecor/Tree.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/KatanaItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/KatanaItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/gui/HotbarRenderer3D.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/gui/HotbarRenderer3D.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/guis/GuiRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/guis/GuiRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/guis/GuiShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/guis/GuiShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/hud/HudShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/hud/HudShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/GunItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/GunItem.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/Items.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/Items.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/BulletEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/BulletEntity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/ItemEntity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/items/entities/ItemEntity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/BadGuy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/hostile/BadGuy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/HostileMob.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/Mob.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/Mob.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/Pathfinding.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/mobs/Pathfinding.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/models/TexturedModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/models/TexturedModel.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/Particle.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/Particle.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleRenderer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleSystem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/ParticleSystem.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/粒子の先生.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/particles/粒子の先生.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/Inventory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/Inventory.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/Player.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/player/Player.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/registries/ItemRegistry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/registries/ItemRegistry.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/registries/Registry.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/registries/Registry.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/save/SaveManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/save/SaveManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaEntityAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaEntityAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaPlayerAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaPlayerAPI.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaQuestAPI.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/scripting/api/LuaQuestAPI.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/skybox/SkyBoxRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/skybox/SkyBoxRenderer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/skybox/SkyBoxShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/skybox/SkyBoxShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/sounds/Music.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/sounds/Music.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/Quest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/Quest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/StoryHandler.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/StoryHandler.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/StoryManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/story/StoryManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/toolbox/Maths.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/toolbox/Maths.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/toolbox/MousePicker.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/toolbox/MousePicker.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterFrameBuffers.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterFrameBuffers.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterRenderer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterRenderer.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterShader.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/net/adventuregame/water/WaterShader.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontFragmentShader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontFragmentShader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontVertexShader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/shaders/font/fontVertexShader.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_001.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_002.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_003.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_004.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_005.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_006.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_006.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_007.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_007.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_008.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_008.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_009.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_009.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_010.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_010.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_011.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_011.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_012.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_012.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_013.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_013.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_014.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_014.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_015.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_015.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_016.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_016.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_017.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_018.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_019.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_019.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_020.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_020.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_021.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_021.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_022.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_022.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_023.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_023.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_024.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_025.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_025.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_026.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_026.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_027.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_027.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_028.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_028.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_029.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_029.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_030.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_030.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_031.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_031.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_032.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_032.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_033.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_033.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_034.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_034.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_035.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_035.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_036.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_036.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_037.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_037.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_038.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_038.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_039.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_040.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_040.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_041.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_041.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_042.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_042.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_043.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_044.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_044.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_045.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_045.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_046.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_046.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_047.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_047.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_048.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_048.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_049.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_049.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_050.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_050.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_051.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_051.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_052.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_052.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_053.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_053.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_054.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_054.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_055.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_055.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_056.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_056.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_057.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_057.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_058.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_058.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_059.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_059.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_060.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_060.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_061.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_061.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_062.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_062.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_063.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_063.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_064.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_064.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_065.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_065.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_066.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_066.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_067.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_067.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_068.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_068.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_069.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_069.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_070.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_070.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_071.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_071.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_072.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_072.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_073.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_073.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_074.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_074.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_075.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_075.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_076.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_076.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_077.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_077.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_078.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_078.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_079.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_079.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_080.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_080.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_081.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_081.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_082.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_082.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_083.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_083.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_084.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_084.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_085.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_085.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_086.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_086.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_087.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_087.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_088.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_088.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_089.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_089.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_090.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_090.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_091.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_091.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_092.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_092.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_093.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_093.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_094.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_094.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_095.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_095.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_096.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_096.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_097.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_097.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_098.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_098.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_099.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_099.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_100.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_101.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_102.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_103.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_104.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_105.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_106.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_107.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_108.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_109.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_110.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_111.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_112.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_113.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_114.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_115.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_116.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_117.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_118.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_119.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_120.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_121.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_122.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_123.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_124.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_124.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_125.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_126.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_127.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_128.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_129.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_130.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_131.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_132.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_133.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_134.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_135.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_136.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_137.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_138.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_138.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_139.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_140.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_141.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_141.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_142.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_142.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_143.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_143.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_144.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_145.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_146.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_146.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_147.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_148.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_149.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_149.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_150.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_151.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_152.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_153.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_154.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_154.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_155.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_156.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_157.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_158.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_159.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_160.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_161.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_162.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_162.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_163.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_163.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_164.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_164.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_165.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_166.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_166.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_167.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_167.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_168.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_168.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_169.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_169.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_170.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_171.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_172.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_172.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_173.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_173.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_174.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_175.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_176.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_177.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_178.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_178.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_179.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_179.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_180.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_181.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_181.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_182.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_182.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_183.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_184.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_184.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_185.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_186.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_187.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_188.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_188.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_189.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_190.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_190.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_191.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_191.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_192.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_193.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_193.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_194.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_195.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_195.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_196.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_197.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_197.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_198.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_198.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_199.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_199.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_200.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_201.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_201.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_202.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_202.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_203.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_203.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_204.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_205.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_205.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_206.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_206.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_207.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_207.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_208.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_208.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_209.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_209.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_210.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_211.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_211.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_212.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_212.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_213.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_213.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_214.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_215.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_215.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_216.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_217.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_217.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_218.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_218.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_219.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_219.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_220.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_220.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_221.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_221.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_222.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_223.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_224.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_224.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_225.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_225.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_226.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_226.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_227.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_227.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_228.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_228.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_229.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_229.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_230.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_231.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_232.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_232.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_233.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_233.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_234.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_235.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_235.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_236.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_237.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_237.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_238.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_238.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_239.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_239.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_240.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_241.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_242.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_242.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_243.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_243.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_244.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_244.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_245.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_245.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_246.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_247.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_247.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_248.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_248.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_249.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_249.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_250.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_250.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_251.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_251.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_252.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_252.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_253.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_253.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_254.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_254.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_255.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_255.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_256.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_257.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_257.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_258.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_258.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_259.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_259.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_260.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_260.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_261.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_261.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_262.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_262.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_263.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_264.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_264.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_265.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_265.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_266.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_266.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_267.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_268.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_268.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_269.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_269.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_270.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_270.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_271.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_272.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_273.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_273.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_274.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_274.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_275.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_275.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_276.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_277.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_277.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_278.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_278.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_279.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_279.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_280.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_280.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_281.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_281.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_282.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_282.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_283.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_284.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_284.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_285.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_285.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_286.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_286.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_287.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_287.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_288.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_288.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_289.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_289.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_290.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_291.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_291.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_292.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_292.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_293.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_293.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_294.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_294.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_295.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_295.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_296.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_297.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_297.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_298.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_298.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_299.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_299.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_300.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_301.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_301.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_302.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_302.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_303.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_303.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_304.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_304.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_305.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_305.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_306.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_306.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_307.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_307.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_308.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_308.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_309.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_309.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_310.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_311.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_312.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_312.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_313.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_314.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_314.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_315.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_315.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_316.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_317.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_317.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_318.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_318.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_319.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_319.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_320.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_321.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_321.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_322.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_323.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_323.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_324.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_324.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_325.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_325.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_326.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_327.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_327.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_328.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_328.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_329.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_329.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_330.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_330.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_331.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_331.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_332.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_332.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_333.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_334.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_334.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_335.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_335.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_336.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_336.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_337.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_337.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_338.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_339.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_339.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_340.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_340.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_341.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_341.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_342.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_342.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_343.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_343.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_344.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_344.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_345.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_346.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_347.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_347.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_348.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_348.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_349.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_349.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_350.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_351.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_351.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_352.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_352.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_353.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_353.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_354.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_354.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_355.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_356.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_356.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_357.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_357.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_358.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_358.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_359.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_359.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_360.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_360.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_361.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_361.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_362.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_362.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_363.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_363.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_364.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_364.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_365.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_365.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_366.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_367.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_367.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_368.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_368.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_369.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_369.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_370.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_370.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_371.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_371.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_372.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_372.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_373.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_373.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_374.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_374.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_375.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_375.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_376.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_376.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_377.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_377.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_378.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_378.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_379.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_379.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_380.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_380.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_381.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_381.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_382.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_382.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_383.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_383.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_384.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_384.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_385.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_385.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_386.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_386.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_387.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_387.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_388.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_388.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_389.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_389.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_390.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_390.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_391.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_391.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_392.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_392.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_393.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_393.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_394.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_394.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_395.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_395.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_396.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_396.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_397.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_397.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_398.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_398.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_399.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_399.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_400.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_400.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_401.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_401.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_402.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_402.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_403.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_403.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_404.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_404.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_405.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_405.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_406.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_406.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_407.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_407.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_408.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_408.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_409.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_409.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_410.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_410.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_411.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_411.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_412.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_412.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_413.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_413.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_414.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_414.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_415.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_415.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_416.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_416.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_417.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_417.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_418.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_418.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_419.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_419.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_420.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_420.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_421.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_421.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_422.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_422.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_423.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_423.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_424.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_424.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_425.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_425.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_426.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_426.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_427.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_427.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_428.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_428.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_429.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_429.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_430.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_430.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_431.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_431.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_432.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_432.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_433.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_433.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_434.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_434.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_435.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_435.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_436.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_436.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_437.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_437.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_438.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_438.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_439.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_439.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_440.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_440.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_441.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_441.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_442.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_442.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_443.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_443.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_444.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_444.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_445.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_445.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_446.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_446.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_447.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_447.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_448.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_448.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_449.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_449.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_450.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_450.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_451.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_451.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_452.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_452.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_453.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_453.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_454.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_454.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_455.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_455.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_456.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_456.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_457.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_457.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_458.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_458.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_459.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_459.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_460.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_460.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_461.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_461.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_462.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_462.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_463.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_463.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_464.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_464.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_465.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_465.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_466.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_466.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_467.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_467.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_468.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_468.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_469.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_469.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_470.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_470.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_471.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_471.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_472.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_472.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_473.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_473.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_474.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_474.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_475.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_475.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_476.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_476.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_477.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_477.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_478.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_478.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_479.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_479.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_480.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_480.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_481.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_481.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_482.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_482.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_483.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/YuMincho/yuMincho_483.tga" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/arial.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/arial.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/calibri.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/calibri.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/harrington.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/harrington.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/sans.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/sans.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/segoe.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/segoe.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/segoeUI.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/segoeUI.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/tahoma.fnt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/assets/adventuregame/textures/font/tahoma.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/entity/player.lua" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/entity/player.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/index.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/index.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/quests/findAGun.lua" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/quests/findAGun.lua" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/scripts/quests/killTheBeast.lua" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/scripts/quests/killTheBeast.lua" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +1188,7 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="AdventureGame" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="other" type="c8890929:TasksNode$1" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -100,20 +1202,20 @@
       <list>
         <option value="module-info" />
         <option value="Enum" />
-        <option value="Kotlin Script" />
         <option value="Package Object" />
         <option value="Scala Worksheet" />
         <option value="kotlin.jupyter.empty" />
-        <option value="Kotlin Data Class" />
         <option value="Kotlin Script Gradle.gradle" />
         <option value="Kotlin Enum" />
         <option value="GLSL Shader" />
-        <option value="Class" />
-        <option value="Kotlin Class" />
-        <option value="Kotlin File" />
         <option value="Tutorial" />
-        <option value="Kotlin Object" />
         <option value="NewLua" />
+        <option value="Class" />
+        <option value="Kotlin Script" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Data Class" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -132,11 +1234,12 @@
     &quot;accountId&quot;: &quot;ee876d6c-b085-4210-9149-0c41a8ef3615&quot;
   }
 }</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="C:\Users\Hanzo\.gradle\wrapper\dists\gradle-8.14.3-bin\cv11ve7ro1n3o1j4so8xd9n66\gradle-8.14.3" javaHome="C:\Program Files\Java\jdk-24" gradleVersion="8.14.3" />
   <component name="JvmLoggingSettingsStorage">
     <option name="loggerId" value="Slf4j" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -183,12 +1286,12 @@
     &quot;ignore.preview.features.used&quot;: &quot;true&quot;,
     &quot;jdk.selected.JDK&quot;: &quot;corretto-21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hanzo/IdeaProjects/AdventureGame/build.gradle.kts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hanzo/IdeaProjects/AdventureGame/src/main/resources/assets/adventuregame/fonts&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/uzowu/OneDrive/Desktop/AdventureGAme/src/main/java/net/chidozie/adventuregame/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.19975787&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   },
   &quot;keyToStringList&quot;: {
     &quot;jdk.preference.JDK&quot;: [
@@ -198,11 +1301,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hanzo\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\fonts" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\build\libs" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures\icon" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures\gui" />
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\models\mobs" />
-      <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\uzowu\IdeaProjects\AdventureGame\src\main\resources\assets\adventuregame\textures" />
@@ -215,11 +1318,16 @@
       <recent name="net.adventuregame.items.entities" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="net.adventuregame.mobs.passive" />
       <recent name="net.adventuregame.entities" />
       <recent name="net.adventuregame.game" />
     </key>
     <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
-      <recent name="net.adventuregame.gui" />
+      <recent name="net.adventuregame.mobs.hostile" />
+      <recent name="net.adventuregame.mobs." />
+      <recent name="net.adventuregame.mobs" />
+      <recent name="com.chidozie.core.scripts" />
+      <recent name="com.chidozie.core." />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="net.adventuregame.player" />
@@ -299,6 +1407,11 @@
     <configuration name="AdventureGame-0.0.1.jar" type="JarApplication" temporary="true">
       <option name="JAR_PATH" value="$PROJECT_DIR$/build/libs/AdventureGame-0.0.1.jar" />
       <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
       <item itemvalue="Application.Run" />
@@ -402,7 +1515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1753949987620</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added support for scripts">
+      <option name="closed" value="true" />
+      <created>1753962164004</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753962164004</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -423,7 +1544,8 @@
     <MESSAGE value="Added SAVE AND LOAD" />
     <MESSAGE value="Commit before changing laptop" />
     <MESSAGE value="Made a lot of random changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a lot of random changes" />
+    <MESSAGE value="Added support for scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added support for scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -439,7 +1561,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/chidozie/core/renderEngine/Vertex.java</url>
           <line>15</line>
-          <properties class="com.chidozie.core.renderEngine.Vertex" method="&lt;init&gt;">
+          <properties class="com.chidozie.core.renderEngine.Vertex">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>

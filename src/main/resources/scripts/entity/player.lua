@@ -8,5 +8,8 @@ Entity.on {
     type = "Player1",
     onDeath = function(self)
         print(self:getName() .. "was a good person.")
+    end,
+    onDamage = function(self)
+        print("DAMAGED")
     end
 }

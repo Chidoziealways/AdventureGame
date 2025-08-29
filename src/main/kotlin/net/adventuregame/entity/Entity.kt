@@ -11,18 +11,20 @@ import org.slf4j.LoggerFactory
 import java.util.function.Function
 
 open class Entity {
-    var model: TexturedModel?
     open var position: Vector3f = Vector3f()
     var rotX: Float
     var rotY: Float
     var rotZ: Float
     var scale: Float
 
+    open var models: List<TexturedModel> = listOf()
+
     var textureIndex: Int = 0
         private set
 
-    constructor(model: TexturedModel?, position: Vector3f, rotX: Float, rotY: Float, rotZ: Float, scale: Float) {
-        this.model = model
+    open fun GetModels(): List<TexturedModel> = models
+
+    constructor(position: Vector3f, rotX: Float, rotY: Float, rotZ: Float, scale: Float) {
         this.position = position
         this.rotX = rotX
         this.rotY = rotY
@@ -31,7 +33,6 @@ open class Entity {
     }
 
     constructor(
-        model: TexturedModel,
         index: Int,
         position: Vector3f,
         rotX: Float,
@@ -40,7 +41,6 @@ open class Entity {
         scale: Float
     ) {
         this.textureIndex = index
-        this.model = model
         this.position = position
         this.rotX = rotX
         this.rotY = rotY
@@ -50,14 +50,16 @@ open class Entity {
 
     val textureXOffset: Float
         get() {
-            val column = textureIndex % model?.texture!!.numberOfRows
-            return column.toFloat() / model?.texture!!.numberOfRows.toFloat()
+            val model = GetModels().firstOrNull() ?: return 0f
+            val column = textureIndex % model.texture!!.numberOfRows
+            return column.toFloat() / model.texture.numberOfRows.toFloat()
         }
 
     val textureYOffset: Float
         get() {
-            val row = textureIndex / model?.texture!!.numberOfRows
-            return row.toFloat() / model?.texture!!.numberOfRows.toFloat()
+            val model = GetModels().firstOrNull() ?: return 0f
+            val row = textureIndex / model.texture!!.numberOfRows
+            return row.toFloat() / model.texture.numberOfRows.toFloat()
         }
 
     fun increasePosition(dx: Float, dy: Float, dz: Float) {
@@ -77,9 +79,8 @@ open class Entity {
         private val log: Logger? = LoggerFactory.getLogger(Entity::class.java)
         val CODEC: Codec<Entity?>? =
             RecordCodecBuilder.create<Entity?>(Function { instance: RecordCodecBuilder.Instance<Entity?>? ->
-                instance!!.group<TexturedModel, Int?, Vector3f?, Float?, Float?, Float?, Float?>(
-                    TexturedModelCodec.CODEC.fieldOf("model")
-                        .forGetter<Entity?> { entity: Entity? -> entity!!.model },
+                instance!!.group(
+                    TexturedModelCodec.CODEC.listOf().fieldOf("models").forGetter { it?.GetModels() },
                     Codec.INT.optionalFieldOf("textureIndex", 0)
                         .forGetter<Entity?> { obj: Entity? -> obj!!.textureIndex },
                     Vector3fCodec.CODEC!!.fieldOf("position")
@@ -90,10 +91,12 @@ open class Entity {
                     Codec.FLOAT.fieldOf("scale").forGetter<Entity?> { entity: Entity? -> entity!!.scale }
                 ).apply<Entity?>(
                     instance
-                ) { model: TexturedModel?, index: Int?, position: Vector3f?, rotX: Float?, rotY: Float?, rotZ: Float?, scale: Float? ->
+                ) { models: List<TexturedModel>, index: Int?, position: Vector3f?, rotX: Float?, rotY: Float?, rotZ: Float?, scale: Float? ->
                     Entity(
-                        model!!, index!!, position!!, rotX!!, rotY!!, rotZ!!, scale!!
-                    )
+                        index!!, position!!, rotX!!, rotY!!, rotZ!!, scale!!
+                    ).apply {
+                        this.models = models
+                    }
                 }
             }
             )

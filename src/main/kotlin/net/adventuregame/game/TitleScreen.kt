@@ -1,12 +1,11 @@
 package net.adventuregame.game
 
-import com.chidozie.core.audio.AudioManager
-import com.chidozie.core.audio.Source
-import com.chidozie.core.font.FontType
-import com.chidozie.core.font.GUIText
-import com.chidozie.core.font.TextMaster
-import com.chidozie.core.renderEngine.Loader
-import com.chidozie.core.renderEngine.WindowManager
+import com.adv.core.audio.AudioManager
+import com.adv.core.audio.Source
+import com.adv.core.font.GUIText
+import com.adv.core.font.TextMaster
+import com.adv.core.renderEngine.Loader
+import com.adv.core.renderEngine.WindowManager
 import net.adventuregame.guis.GuiRenderer
 import net.adventuregame.guis.GuiTexture
 import org.joml.Vector2f
@@ -37,27 +36,30 @@ class TitleScreen(private val window: WindowManager, loader: Loader) {
         startButton = GuiTexture(loader.loadGameTexture("gui/start_button"), Vector2f(0f, -0.3f), Vector2f(0.4f, 0.2f))
 
         // Load and play music
-        AudioManager.loadSound("ao_to_natsu").also { buffer ->
+        /*AudioManager.loadSound("ao_to_natsu").also { buffer ->
             musicSource.apply {
                 setLooping(true)
                 setVolume(0.5f)
                 setPosition(Vector3f(0f, 0f, 0f))
                 play(buffer)
             }
-        }
+        }*/
 
         window.toggleMouseLock()
 
         // Load fonts and text
         TextMaster.init(loader)
-        val font = AdventureGame.font
+        val japaneseFont = AdventureGame.japaneseFont
+        val koreanFont = AdventureGame.koreanFont
 
-        title = GUIText("Adventure Game", 3f, font, Vector2f(0f, 0f), 0.5f, true).apply {
-            setColour(1f, 0f, 0f)
+        title = GUIText("冒険ゲーム", 5f, japaneseFont).apply {
+            position = Vector2f(1000f, 850f)
+            colour = Vector3f(1f, 0f, 0f)
         }
 
-        enter = GUIText("Press the Enter Key to Start!!", 2f, font, Vector2f(0f, 0.9f), 0.9f, true).apply {
-            setColour(0f, 1f, 1f)
+        enter = GUIText("모험 게임", 5f, koreanFont).apply {
+            position = Vector2f(1000f, 600f)
+            colour = Vector3f(0f, 1f, 1f)
         }
     }
 

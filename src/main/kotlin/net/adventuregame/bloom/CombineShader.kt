@@ -1,6 +1,6 @@
 package net.adventuregame.bloom
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 
 class CombineShader : ShaderProgram(VERTEX_FILE, FRAGMENT_FILE) {
     private var location_colourTexture = 0

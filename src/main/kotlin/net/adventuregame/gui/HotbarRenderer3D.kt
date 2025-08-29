@@ -15,7 +15,7 @@ class HotbarRenderer3D(
 ) {
 
     fun render() {
-        val inventory = GameState.player?.inventory ?: return
+        val inventory = GameState.getInstance().player.inventory
         val items = inventory.allItems
 
         val projection = Matrix4f().ortho(-1f, 1f, -1f, 1f, 0.1f, 100f)

@@ -6,6 +6,7 @@ import net.adventuregame.story.StoryManager
 import org.luaj.vm2.LuaTable
 import org.luaj.vm2.LuaValue
 import org.luaj.vm2.lib.OneArgFunction
+import org.luaj.vm2.lib.jse.CoerceLuaToJava
 import java.util.function.Supplier
 
 object LuaQuestAPI {
@@ -14,40 +15,21 @@ object LuaQuestAPI {
 
         table.set("add", object : OneArgFunction() {
             override fun call(arg: LuaValue): LuaValue {
-                val storyManager = GameState.storyManager ?: return LuaValue.NIL
+                val storyManager = GameState.storyManager ?: return NIL
 
-                if (!arg.istable()) {
-                    println("⚠️ Quest:add() expects a table, idiot.")
-                    return LuaValue.NIL
-                }
-
-                val table = arg.checktable()
-                val id = table.get("id").optjstring(null)
-                val description = table.get("description").optjstring("")
-
-                if (id == null) {
-                    println("❌ Quest must have an ID.")
-                    return LuaValue.NIL
-                }
-
-                val conditionFn = table.get("condition")
-                val condition = Supplier {conditionFn.call().toboolean()}
-
-                val quest = Quest(id, description, condition) // Default condition, modder should override
-
-                val onCompleteFn = table.get("onComplete")
-                if (!onCompleteFn.isnil()) {
-                    quest.setOnCompleteRun {
-                        onCompleteFn.call()
-                    }
+                val quest = try {
+                    CoerceLuaToJava.coerce(arg, Quest::class.java) as Quest
+                } catch (e: Exception) {
+                    println("❌ Argument to Quest:add() must be a Java Quest object.")
+                    return NIL
                 }
 
                 println("Using StoryManager instance: ${storyManager.hashCode()}")
-                storyManager.addQuest(id, quest)
+                storyManager.addQuest(quest.id!!, quest)
 
-                println("🧾 Lua-defined quest added: $id")
-                println("🧾 Lua quest added: $id | description = \"$description\"")
-                return LuaValue.TRUE
+                println("🧾 Lua-defined quest added: ${quest.id}")
+                println("🧾 Lua quest added: ${quest.id} | description = \"${quest.description}\"")
+                return TRUE
             }
         })
 

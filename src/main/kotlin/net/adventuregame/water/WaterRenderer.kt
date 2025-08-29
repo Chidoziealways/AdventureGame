@@ -1,7 +1,7 @@
 package net.adventuregame.water
 
-import com.chidozie.core.renderEngine.Loader
-import com.chidozie.core.renderEngine.WindowManager
+import com.adv.core.renderEngine.Loader
+import com.adv.core.renderEngine.WindowManager
 import net.adventuregame.entity.Camera
 import net.adventuregame.entity.Light
 import net.adventuregame.models.RawModel

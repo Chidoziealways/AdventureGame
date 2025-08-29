@@ -7,7 +7,7 @@ import net.adventuregame.story.StoryManager
 
 data class GameStateSerializable(
     val seed: Int,
-    val player: Player?,
+    val player: Player,
     val storyManager: StoryManager?
     //val entities: List<Entity?>
 ) {

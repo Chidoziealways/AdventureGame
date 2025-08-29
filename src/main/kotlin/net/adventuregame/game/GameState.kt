@@ -1,23 +1,27 @@
 package net.adventuregame.game
 
-import com.chidozie.core.audio.AudioManager
-import com.chidozie.core.font.TextMaster
-import com.chidozie.core.normalmap.NormalMappedObjLoader
-import com.chidozie.core.postProcessing.Fbo
-import com.chidozie.core.postProcessing.PostProcessing
-import com.chidozie.core.renderEngine.Loader
-import com.chidozie.core.renderEngine.MasterRenderer
-import com.chidozie.core.renderEngine.OBJFileLoader
-import com.chidozie.core.renderEngine.WindowManager
-import com.chidozie.core.scripts.LuaEngine
-import com.chidozie.core.terrains.Terrain
-import com.chidozie.core.textures.ModelTexture
-import com.chidozie.core.textures.TerrainTexture
-import com.chidozie.core.textures.TerrainTexturePack
+import com.adv.core.audio.AudioManager
+import com.adv.core.font.TextMaster
+import com.adv.core.normalmap.NormalMappedObjLoader
+import com.adv.core.postProcessing.Fbo
+import com.adv.core.postProcessing.PostProcessing
+import com.adv.core.renderEngine.Loader
+import com.adv.core.renderEngine.MasterRenderer
+import com.adv.core.renderEngine.OBJFileLoader
+import com.adv.core.renderEngine.WindowManager
+import com.adv.core.scripts.LuaEngine
+import com.adv.core.terrains.Terrain
+import com.adv.core.textures.ModelTexture
+import com.adv.core.textures.TerrainTexture
+import com.adv.core.textures.TerrainTexturePack
+import net.adventuregame.GameThread
+import net.adventuregame.cutscene.Cutscene
+import net.adventuregame.cutscene.CutsceneRender
 import net.adventuregame.data.CodecRegistry
 import net.adventuregame.entity.Camera
 import net.adventuregame.entity.Entity
 import net.adventuregame.entity.Light
+import net.adventuregame.entity.MultiMeshEntity
 import net.adventuregame.gameDecor.Tree
 import net.adventuregame.gui.HotbarRenderer3D
 import net.adventuregame.guis.GuiRenderer
@@ -27,13 +31,16 @@ import net.adventuregame.items.Items
 import net.adventuregame.items.entities.GunEntity
 import net.adventuregame.items.entities.ItemEntity
 import net.adventuregame.items.entities.KatanaEntity
-import net.adventuregame.mobs.BadGuy
+import net.adventuregame.mobs.hostile.BadGuy
+import net.adventuregame.mobs.hostile.HostileMob
 import net.adventuregame.mobs.Mob
+import net.adventuregame.mobs.passive.Sheep
 import net.adventuregame.models.TexturedModel
 import net.adventuregame.particles.ParticleSystem
 import net.adventuregame.particles.ParticleTexture
 import net.adventuregame.particles.粒子の先生
 import net.adventuregame.player.Player
+import net.adventuregame.story.IntroScenes
 import net.adventuregame.story.StoryHandler
 import net.adventuregame.story.StoryManager
 import net.adventuregame.toolbox.MousePicker
@@ -45,6 +52,7 @@ import org.apache.logging.log4j.LogManager
 import org.apache.logging.log4j.Logger
 import org.apache.logging.log4j.Marker
 import org.apache.logging.log4j.MarkerManager
+import org.joml.Vector2f
 import org.joml.Vector3f
 import org.joml.Vector4f
 import java.util.*
@@ -59,6 +67,8 @@ class GameState private constructor(window: WindowManager) {
 
     var camera: Camera? = null
     var terrain: Terrain? = null
+
+    var player: Player
 
     private var storyHandler: StoryHandler? = null
 
@@ -77,7 +87,7 @@ class GameState private constructor(window: WindowManager) {
         println("Game runtime StoryManager: ${storyManager.hashCode()}")
         LuaEngine.loadAllScripts()
         storyHandler = StoryHandler(this)
-        camera = Camera(player!!)
+        camera = Camera(player)
 
         // Renderer & picker
         renderer = MasterRenderer(loader, camera)
@@ -85,21 +95,13 @@ class GameState private constructor(window: WindowManager) {
         picker = MousePicker(camera!!, renderer!!.projectionMatrix, terrain, entities)
 
         // Put player in the world
-        entities.add(player!!)
+        entities.add(player)
     }
 
     /** 2) Fonts, GUI text, audio & advancements  */
     fun loadFontsAndAudio() {
-        TextMaster.init(loader)
-        /*val font = FontType(
-            loader.loadFontTextureAtlas("yuMincho"),
-            File("src/main/resources/assets/adventuregame/textures/font/yuMincho.fnt")
-        )*/
-
-        //GUIText title = new GUIText("Adventure Game", 3, font, new Vector2f(0f,0f), 0.5f, true);
-        //title.setColour(1,0,0);
         AudioManager.init()
-        AudioManager.setListenerData(player!!.position)
+        AudioManager.setListenerData(player.position)
     }
 
     /** 3) Populate the world with lights, flora, props, mobs & pickups  */
@@ -125,7 +127,9 @@ class GameState private constructor(window: WindowManager) {
             val x = rand.nextFloat() * 1000
             val z = rand.nextFloat() * -1000
             val y = terrain!!.getHeightOfTerrain(x, z)
-            entities.add(Entity(fern, rand.nextInt(4), Vector3f(x, y, z), 0f, 0f, 0f, 1f))
+            entities.add(Entity(rand.nextInt(4), Vector3f(x, y, z), 0f, 0f, 0f, 1f).apply {
+                this.models = listOf(fern)
+            })
         }
 
         // Barrel with normal map
@@ -137,14 +141,18 @@ class GameState private constructor(window: WindowManager) {
         barrel.texture.shineDamper = 10f
         barrel.texture.reflectivity = 0.5f
         barrel.texture.specularMap = loader.loadGameTexture("specularmaps/barrelS")
-        normalMapEntities.add(Entity(barrel, Vector3f(75f, 10f, -75f), 0f, 0f, 0f, 1f))
+        normalMapEntities.add(Entity(Vector3f(75f, 10f, -75f), 0f, 0f, 0f, 1f).apply {
+            this.models = listOf(barrel)
+        })
 
         // Bad guy
-        val bg = BadGuy(Vector3f(100f, 0f, -50f), Vector3f(0f, 0f, 0f), 1f, 20f, "BadGuy1")
+        val bg = BadGuy(Vector3f(100f, terrain!!.getHeightOfTerrain(100f, -50f), -50f), Vector3f(0f, 0f, 0f), 1f, 20f)
         entities.add(bg)
 
+        val sheep = Sheep(position = Vector3f(100f, terrain!!.getHeightOfTerrain(100f, -50f), -50f), rotation = Vector3f(0f, 0f, 0f), scale = 1f)
+        entities.add(sheep)
 
-        if(!player!!.hasItemByName("pistol")) {
+        if(!player.hasItemByName("pistol")) {
             val x = 214.8f + 5f
             val z = -1108 + 5f
             val y = terrain!!.getHeightOfTerrain(x, z)
@@ -154,7 +162,7 @@ class GameState private constructor(window: WindowManager) {
                 entities.add(it)
             } as GunEntity
         }
-        if(!player!!.hasItemByName("katana")) {
+        if(!player.hasItemByName("katana")) {
             val x = 214.8f + 5f
             val z = -1108 + 5f
             val y = terrain!!.getHeightOfTerrain(x, z)
@@ -174,6 +182,7 @@ class GameState private constructor(window: WindowManager) {
         waterRenderer = WaterRenderer(loader, wsh, renderer!!.projectionMatrix, fbos)
         waters.add(WaterTile(1000f, -1000f, -10f))
         粒子の先生.init(loader, renderer!!.projectionMatrix!!)
+        cutsceneRenderer = CutsceneRender(guiRenderer!!, AdventureGame.fontManager)
 
         val pt = ParticleTexture(loader.loadParticleTexture("fire"), 8, false)
         particleSystem = ParticleSystem(pt, 50f, 25f, 0.3f, 4f, 1f)
@@ -191,28 +200,33 @@ class GameState private constructor(window: WindowManager) {
 
     /** Called once per frame to advance logic  */
     fun update() {
-        player!!.move(terrain)
+        player.move(terrain)
         storyHandler!!.update()
         camera!!.move()
+        粒子の先生.update(camera!!)
         for (e in ArrayList(entities)) {
-            if (e is BadGuy) e.updateAI(terrain!!)
+            if (e is HostileMob) e.updateAI(terrain!!)
+            if (e is HostileMob) e.tickPath(terrain!!)
             if (e is ItemEntity) e.update()
         }
+        cutsceneRenderer?.update(WindowManager.frameTimeSeconds)
         picker!!.update()
 
-        particleSystem!!.generateParticles(player!!.position)
+        GameThread.tick()
+
+        particleSystem!!.generateParticles(player.position)
     }
 
     /** Called once per frame to draw everything  */
     fun render() {
-        renderer!!.renderShadowMap(entities, lights[0])
-        renderer!!.renderScene(entities, normalMapEntities, terrains, lights, camera, Vector4f(0f, 1f, 0f, 100f))
-        waterRenderer!!.render(waters, camera!!, lights[0])
-        粒子の先生.update(camera!!)
-        粒子の先生.renderParticles(camera!!)
-        hotbarRenderer!!.render()
-        guiRenderer!!.render()
+        renderer?.renderShadowMap(entities, lights[0])
+        renderer?.renderScene(entities, normalMapEntities, multiMeshEntities, terrains, lights, camera, Vector4f(0f, 1f, 0f, 100f))
+        waterRenderer?.render(waters, camera!!, lights[0])
         TextMaster.render()
+        cutsceneRenderer?.render()
+        粒子の先生.renderParticles(camera!!)
+        hotbarRenderer?.render()
+        guiRenderer?.render()
     }
 
     /** Cleanup on exit  */
@@ -247,6 +261,10 @@ class GameState private constructor(window: WindowManager) {
         )
     }
 
+    fun playCutscene(cutscene: Cutscene, duration: Int = 50) {
+        cutsceneRenderer?.start(cutscene, duration)
+    }
+
 
     companion object {
         @JvmStatic
@@ -254,8 +272,6 @@ class GameState private constructor(window: WindowManager) {
 
         private val log: Logger = LogManager.getLogger(GameState::class.java)
         private val mark: Marker = MarkerManager.getMarker("GAMESTATE")
-        @JvmField
-        var player: Player? = null
         @JvmField
         var storyManager: StoryManager? = null
         @JvmField
@@ -283,10 +299,12 @@ class GameState private constructor(window: WindowManager) {
             instance = null
         }
 
-        private val loader = Loader()
+        private val loader = AdventureGame.loader
         private var renderer: MasterRenderer? = null
+        private var cutsceneRenderer: CutsceneRender? = null
         private var hotbarRenderer: HotbarRenderer3D? = null
         private var entities: MutableList<Entity> = ArrayList()
+        private var multiMeshEntities: MutableList<MultiMeshEntity> = ArrayList()
         private val terrains: MutableList<Terrain> = ArrayList()
         private val lights: MutableList<Light> = ArrayList()
         private val normalMapEntities: MutableList<Entity> = ArrayList()
@@ -335,7 +353,7 @@ class GameState private constructor(window: WindowManager) {
                 //entities = serializable.entities as MutableList<Entity?>
                 terrain = Terrain(0, -1, loader, texturePack, blendMap, serializable.seed)
             }.also {
-                log.info("Inventory: ${serializable.player!!.inventory}")
+                log.info("Inventory: ${serializable.player.inventory}")
             }
         }
     }

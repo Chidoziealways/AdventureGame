@@ -1,10 +1,10 @@
 package net.adventuregame.player
 
-import com.chidozie.core.renderEngine.Loader
-import com.chidozie.core.renderEngine.OBJFileLoader
-import com.chidozie.core.renderEngine.WindowManager
-import com.chidozie.core.terrains.Terrain
-import com.chidozie.core.textures.ModelTexture
+import com.adv.core.renderEngine.Loader
+import com.adv.core.renderEngine.OBJFileLoader
+import com.adv.core.renderEngine.WindowManager
+import com.adv.core.terrains.Terrain
+import com.adv.core.textures.ModelTexture
 import com.mojang.serialization.Codec
 import com.mojang.serialization.codecs.RecordCodecBuilder
 import net.adventuregame.codec.Vector3fCodec
@@ -13,12 +13,14 @@ import net.adventuregame.game.AdventureMain
 import net.adventuregame.game.GameState
 import net.adventuregame.game.GameState.Companion.addEntity
 import net.adventuregame.game.GameState.Companion.getInstance
+import net.adventuregame.game.Nation
 import net.adventuregame.items.GunItem
 import net.adventuregame.items.Item
 import net.adventuregame.items.entities.BulletEntity
 import net.adventuregame.mobs.Mob
 import net.adventuregame.models.RawModel
 import net.adventuregame.models.TexturedModel
+import net.adventuregame.story.Quest
 import net.adventuregame.toolbox.MousePicker
 import net.adventuregame.toolbox.Settings
 import org.joml.Vector3f
@@ -33,8 +35,17 @@ import kotlin.math.sin
 class Player(
     position: Vector3f, rotX: Float, rotY: Float, rotZ: Float,
     scale: Float
-) : Mob(playerTMod, 0, position, Vector3f(rotX, rotY, rotZ), scale, 20f, false, "Player1", RUN_SPEED) {
+) : Mob(index = 0, position = position, rotation = Vector3f(rotX, rotY, rotZ), scale = scale, maxHealth = 20f, isHostile = false, name = "Player1", speed = RUN_SPEED) {
     private val defeatedBosses: MutableSet<String> = HashSet()
+
+    var seenIntro: Boolean = false
+
+    override fun GetModels(): List<TexturedModel> {
+        return listOf(playerTMod)
+    }
+
+    var currentQuest: Quest? = null
+    var chosenNation: Nation? = null
 
     private var window = AdventureMain.window
     private var currentSpeed = 0f
@@ -52,7 +63,6 @@ class Player(
     private var picker: MousePicker?
 
     override fun move(terrain: Terrain?) {
-        super.move(terrain)
         checkInputs()
         super.increaseRotation(0f, currentTurnSpeed * WindowManager.frameTimeSeconds, 0f)
         val distance: Float = currentSpeed * WindowManager.frameTimeSeconds
@@ -126,7 +136,7 @@ class Player(
             }
 
             if (window.isKeyPressed(GLFW.GLFW_KEY_F6)) window.toggleMouseLock()
-            if (window.isKeyPressed(GLFW.GLFW_KEY_F5)) Objects.requireNonNull<Camera?>(getInstance().camera)
+            if (window.isKeyPressed(GLFW.GLFW_KEY_F5)) Objects.requireNonNull<Camera>(getInstance().camera)
                 .toggleCameraMode()
         }
     }
@@ -163,6 +173,10 @@ class Player(
         }
     }
 
+    override fun updateAI(terrain: Terrain) {
+        //Doesn't use AI, hence do NOTHING'
+    }
+
     val direction: Vector3f
         get() {
             val yaw = Math.toRadians(rotY.toDouble()).toFloat()
@@ -180,7 +194,7 @@ class Player(
     fun initAfterDecode() {
         this.picker = GameState.picker
         this.window = AdventureMain.window
-        this.model = playerTMod
+        this.models = listOf(playerTMod)
         // Anything else that gets set outside constructor
     }
 
@@ -212,41 +226,46 @@ class Player(
 
         private const val SELECT_COOLDOWN_MS: Long = 200
 
-
         private val loader = Loader()
         private val playerMod: RawModel? = OBJFileLoader.loadOBJ("person", loader)
         private val playerTMod = TexturedModel(playerMod, ModelTexture(loader.loadGameTexture("playerTexture")))
 
-        fun fromCodec(position: Vector3f?, rotation: Vector3f, scale: Float, inventory: Inventory): Player {
+        fun fromCodec(position: Vector3f?, rotation: Vector3f, scale: Float, inventory: Inventory, seenIntro: Boolean, chosenNation: Nation): Player {
             val p = Player(position!!, rotation.x, rotation.y, rotation.z, scale)
             p.inventory = inventory
+            p.seenIntro = seenIntro
+            p.chosenNation = chosenNation
             p.initAfterDecode() // reconnect dependencies
             return p
         }
 
         val CODEC =
-            RecordCodecBuilder.create<Player?>(Function { instance: RecordCodecBuilder.Instance<Player?>? ->
-                instance!!.group<Vector3f?, Vector3f?, Float?, Inventory>(
+            RecordCodecBuilder.create<Player>(Function { instance: RecordCodecBuilder.Instance<Player> ->
+                instance.group(
                     Vector3fCodec.CODEC.fieldOf("position")
-                        .forGetter<Player?> { obj: Player? -> obj!!.position },
-                    Vector3fCodec.CODEC.fieldOf("rotation").forGetter<Player?> { i: Player? ->
+                        .forGetter<Player> { obj: Player -> obj.position },
+                    Vector3fCodec.CODEC.fieldOf("rotation").forGetter<Player> { i: Player ->
                         Vector3f(
-                            i!!.rotX,
+                            i.rotX,
                             i.rotY,
                             i.rotZ
                         )
                     },
-                    Codec.FLOAT.fieldOf("scale").forGetter<Player?>(Function { i: Player? -> i!!.scale }),
-                    Inventory.Companion.CODEC.fieldOf("inventory")
-                        .forGetter<Player?> { i: Player? -> i!!.inventory }
-                ).apply<Player?>(
+                    Codec.FLOAT.fieldOf("scale").forGetter<Player> { i: Player -> i.scale },
+                    Inventory.CODEC.fieldOf("inventory")
+                        .forGetter<Player> { i: Player -> i.inventory },
+                    Codec.BOOL.fieldOf("seenIntro").forGetter { it.seenIntro },
+                    Nation.CODEC.fieldOf("chosenNation").forGetter { it.chosenNation }
+                ).apply<Player>(
                     instance
-                ) { position: Vector3f?, rotation: Vector3f?, scale: Float?, inventory: Inventory? ->
+                ) { position: Vector3f, rotation: Vector3f, scale: Float, inventory: Inventory, seenIntro: Boolean, chosenNation: Nation ->
                     fromCodec(
                         position,
-                        rotation!!,
-                        scale!!,
-                        inventory!!
+                        rotation,
+                        scale,
+                        inventory,
+                        seenIntro,
+                        chosenNation
                     )
                 }
             })

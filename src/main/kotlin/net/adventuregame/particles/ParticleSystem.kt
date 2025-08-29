@@ -1,6 +1,6 @@
 package net.adventuregame.particles
 
-import com.chidozie.core.renderEngine.WindowManager
+import com.adv.core.renderEngine.WindowManager
 import org.joml.Matrix4f
 import org.joml.Vector3f
 import org.joml.Vector4f

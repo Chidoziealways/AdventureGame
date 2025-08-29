@@ -1,6 +1,6 @@
 package net.adventuregame.particles
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 import org.joml.Matrix4f
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory

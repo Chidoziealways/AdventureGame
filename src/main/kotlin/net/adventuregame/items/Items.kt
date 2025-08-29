@@ -1,7 +1,7 @@
 package net.adventuregame.items
 
-import com.chidozie.core.renderEngine.OBJFileLoader
-import com.chidozie.core.textures.ModelTexture
+import com.adv.core.renderEngine.OBJFileLoader
+import com.adv.core.textures.ModelTexture
 import net.adventuregame.models.TexturedModel
 import net.adventuregame.registries.ItemRegistry
 

@@ -1,6 +1,6 @@
 package net.adventuregame.water
 
-import com.chidozie.core.renderEngine.WindowManager
+import com.adv.core.renderEngine.WindowManager
 import net.adventuregame.game.AdventureMain
 import org.lwjgl.opengl.GL11
 import org.lwjgl.opengl.GL14

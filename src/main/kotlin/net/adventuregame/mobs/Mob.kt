@@ -1,6 +1,6 @@
 package net.adventuregame.mobs
 
-import com.chidozie.core.terrains.Terrain
+import com.adv.core.terrains.Terrain
 import net.adventuregame.entity.Entity
 import net.adventuregame.game.GameState.Companion.getEntities
 import net.adventuregame.models.TexturedModel
@@ -10,29 +10,35 @@ import org.luaj.vm2.LuaValue
 import org.luaj.vm2.lib.jse.CoerceJavaToLua
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import java.util.UUID
 
 abstract class Mob(
-    model: TexturedModel,
+    val id: UUID = UUID.randomUUID(),
     index: Int,
     override var position: Vector3f,
     rotation: Vector3f,
     scale: Float,
     protected var maxHealth: Float,
-    protected var isHostile: Boolean,
-    var name: String?,
+    var isHostile: Boolean,
+    var name: String = "Mob",
     protected var speed: Float
 ) : Entity(
-    model, index,
+    index,
     position, rotation.x, rotation.y, rotation.z, scale
 ) {
-    protected var health: Float = maxHealth
+    abstract override fun GetModels(): List<TexturedModel>
+
+    var health: Float = maxHealth
+    private var path: MutableList<Vector3f>? = null // Path to follow
 
     open fun Move(direction: Vector3f?) {
         print("hh")
     }
 
+    fun getUUID(): UUID = id
+
     open fun move(terrain: Terrain?) {
-        LuaEntityAPI.getEventsForType(this.name ?: return)
+        LuaEntityAPI.getEventsForType(this.name)
             ?.get("onMove")
             ?.let { it.call(CoerceJavaToLua.coerce(this)) }
     }
@@ -41,7 +47,7 @@ abstract class Mob(
     open fun TakeDamage(damage: Float, Attacker: Mob?) {
         health -= damage
 
-        LuaEntityAPI.getEventsForType(this.name ?: return)
+        LuaEntityAPI.getEventsForType(this.name)
             ?.get("onDamage")
             ?.let { it.call(CoerceJavaToLua.coerce(this), LuaValue.valueOf(damage.toInt())) }
 
@@ -49,7 +55,7 @@ abstract class Mob(
     }
 
     open fun Die() {
-        LuaEntityAPI.getEventsForType(this.name ?: return)
+        LuaEntityAPI.getEventsForType(this.name)
             ?.get("onDeath")
             ?.let { it.call(CoerceJavaToLua.coerce(this)) }
     }
@@ -82,6 +88,14 @@ abstract class Mob(
             }
         }
         return nearbyMobs
+    }
+
+    abstract fun updateAI(terrain: Terrain)
+
+    fun setPath(newPath: List<Vector3f>?) {
+        //println("SetPath to NewPath: $newPath")
+        this.path = newPath?.toMutableList()
+        //println("Path is: $path")
     }
 
     companion object {

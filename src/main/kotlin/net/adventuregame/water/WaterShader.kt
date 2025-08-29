@@ -1,6 +1,6 @@
 package net.adventuregame.water
 
-import com.chidozie.core.shaders.ShaderProgram
+import com.adv.core.shaders.ShaderProgram
 import net.adventuregame.entity.Camera
 import net.adventuregame.entity.Light
 import net.adventuregame.toolbox.Maths

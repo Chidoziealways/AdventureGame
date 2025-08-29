@@ -9,8 +9,12 @@ import org.joml.Vector3f
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
-open class ItemEntity(model: TexturedModel, pos: Vector3f, rot: Vector3f, scale: Float, private val item: Item) : Entity(model, pos, rot.x, rot.y, rot.z, scale){
+open class ItemEntity(var model: TexturedModel, pos: Vector3f, rot: Vector3f, scale: Float, private val item: Item) : Entity(pos, rot.x, rot.y, rot.z, scale){
     private val log: Logger = LoggerFactory.getLogger(ItemEntity::class.java)
+
+    override fun GetModels(): List<TexturedModel> {
+        return listOf(model)
+    }
 
     open fun update() {
         // Optional: idle animation or rotation
@@ -18,8 +22,8 @@ open class ItemEntity(model: TexturedModel, pos: Vector3f, rot: Vector3f, scale:
 
 
         // Check if player is nearby
-        val player = GameState.player // You must have a global access or pass it in
-        if (position.distance(player!!.position) < 2.0f) {
+        val player = GameState.getInstance().player // You must have a global access or pass it in
+        if (position.distance(player.position) < 2.0f) {
             // Add the gun item to the player's inventory
             player.inventory.addItem(item)
             log.info("Added to Inventory")

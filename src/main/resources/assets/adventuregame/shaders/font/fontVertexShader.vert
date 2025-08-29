@@ -5,11 +5,11 @@ in vec2 textureCoords;
 
 out vec2 pass_textureCoords;
 
-uniform vec2 translation;
+uniform vec2 translation;       // top-left corner of text in pixels
+uniform mat4 projectionMatrix;  // orthographic projection
 
 void main(void){
-
-    gl_Position = vec4(position + translation * vec2(2.0, -2.0), 0.0, 1.0);
+    vec2 pos = position + translation;
+    gl_Position = projectionMatrix * vec4(pos, 0.0, 1.0);
     pass_textureCoords = textureCoords;
-
 }
